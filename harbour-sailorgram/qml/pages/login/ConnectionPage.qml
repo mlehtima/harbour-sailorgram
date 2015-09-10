@@ -1,6 +1,5 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
 import "../../models"
 import "../../components"
 import "../../js/Settings.js" as Settings
@@ -8,7 +7,6 @@ import "../../js/Settings.js" as Settings
 Page
 {
     property Context context
-    property bool initialized: false
 
     id: connectionpage
     allowedOrientations: defaultAllowedOrientations
@@ -17,16 +15,14 @@ Page
         if(forwardNavigation || (connectionpage.status !== PageStatus.Active))
             return;
 
-        var phonenumber = Settings.get("phonenumber");
-
-        if(phonenumber === false) {
+        if(!context.telegram.phoneNumber.length) {
             pageStack.replace(Qt.resolvedUrl("PhoneNumberPage.qml"), { "context": connectionpage.context });
             return;
         }
 
         timlogin.restart();
         timdisplaystatus.restart();
-        context.telegram.phoneNumber = phonenumber;
+        context.telegram.connectToDC(context.apiAddress, context.apiPort);
     }
 
     Timer
@@ -39,7 +35,7 @@ Page
     Timer
     {
         id: timdisplaystatus
-        interval: context.heartbeat.interval / 2
+        //interval: context.heartbeat.interval / 2
         running: true
     }
 

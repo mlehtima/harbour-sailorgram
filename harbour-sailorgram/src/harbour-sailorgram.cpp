@@ -30,35 +30,25 @@
 
 #include <QtQuick>
 #include <sailfishapp.h>
-#include <telegramqmlinitializer.h>
+#include <telegram.h>
 #include "dbus/screenblank.h"
 #include "dbus/notifications/notifications.h"
 #include "filepicker/folderlistmodel.h"
-#include "localstorage/telegramlocalstorage.h"
-#include "telegramcalendar.h"
-#include "heartbeat.h"
 #include "sailorgram.h"
 
 int main(int argc, char *argv[])
 {
     QScopedPointer<QGuiApplication> application(SailfishApp::application(argc, argv));
     application->setApplicationName("harbour-sailorgram");
-    application->setApplicationVersion("0.7");
-
-    TelegramQmlInitializer::init("harbour.sailorgram.TelegramQml");
+    application->setApplicationVersion("0.79");
 
     qmlRegisterType<SailorGram>("harbour.sailorgram.SailorGram", 1, 0, "SailorGram");
-    qmlRegisterType<HeartBeat>("harbour.sailorgram.SailorGram", 1, 0, "HeartBeat");
+    qmlRegisterType<Telegram>("harbour.sailorgram.Telegram", 1, 0, "Telegram");
     qmlRegisterType<ScreenBlank>("harbour.sailorgram.DBus", 1, 0, "ScreenBlank");
     qmlRegisterType<Notifications>("harbour.sailorgram.DBus", 1, 0, "Notifications");
     qmlRegisterType<FolderListModel>("harbour.sailorgram.Pickers", 1, 0, "FolderListModel");
-    qmlRegisterType<TelegramLocalStorage>("harbour.sailorgram.Telegram", 1, 0, "TelegramLocalStorage");
-    qmlRegisterSingletonType<TelegramCalendar>("harbour.sailorgram.TelegramCalendar", 1, 0, "TelegramCalendar", &TelegramCalendar::initialize);
 
     QScopedPointer<QQuickView> view(SailfishApp::createView());
-    QQmlEngine* engine = view->engine();
-    QObject::connect(engine, SIGNAL(quit()), application.data(), SLOT(quit()));
-
     view->setSource(SailfishApp::pathTo("qml/harbour-sailorgram.qml"));
     view->show();
     return application->exec();

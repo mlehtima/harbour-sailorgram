@@ -1,0 +1,3 @@
+[submodule "LibTelegram"]
+	path = LibTelegram
+	url = https://github.com/Dax89/LibTelegram

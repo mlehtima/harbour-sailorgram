@@ -49,9 +49,10 @@ ApplicationWindow
                 context.backgrounddisabled = parseInt(Settings.transactionGet(tx, "backgrounddisabled"));
                 context.chatheaderhidden = parseInt(Settings.transactionGet(tx, "chatheaderhidden"));
             });
+
         }
 
-        Component.onDestruction: context.heartbeat.quit()
+        //Component.onDestruction: context.heartbeat.quit()
     }
 
     id: mainwindow

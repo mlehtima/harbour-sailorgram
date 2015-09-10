@@ -15,18 +15,13 @@ TARGET = harbour-sailorgram
 CONFIG += sailfishapp
 QT += sql dbus
 
-LIBS += -L$$OUT_PWD/../libqtelegram-ae -L$$OUT_PWD/../telegramqml -lssl -lcrypto -lz -lqtelegram-ae -ltelegramqml
-INCLUDEPATH +=  /usr/include/openssl $$PWD/../telegramqml $$PWD/../libqtelegram-ae
+LIBS += -L$$OUT_PWD/../LibTelegram -lTelegram
+INCLUDEPATH +=  /usr/include/openssl $$PWD/../LibTelegram
 
-# TelegramQml
-libtelegram_qml.files = $$OUT_PWD/../telegramqml/*.so*
-libtelegram_qml.path = /usr/share/$$TARGET/lib
-INSTALLS += libtelegram_qml
-
-# LibQTelegram-AE
-libqtelegram_ae.files = $$OUT_PWD/../libqtelegram-ae/*.so*
-libqtelegram_ae.path = /usr/share/$$TARGET/lib
-INSTALLS += libqtelegram_ae
+# LibTelegram
+libtelegram.files = $$OUT_PWD/../LibTelegram/*.so*
+libtelegram.path = /usr/share/$$TARGET/lib
+INSTALLS += libtelegram
 
 # Telegram Public Key
 server_pub.files = $$PWD/server.pub
@@ -34,12 +29,9 @@ server_pub.path = /usr/share/$$TARGET
 INSTALLS += server_pub
 
 SOURCES += src/harbour-sailorgram.cpp \
-    src/localstorage/telegramlocalstorage.cpp \
-    src/telegramcalendar.cpp \
     src/dbus/notifications/notifications.cpp \
     src/sailorgram.cpp \
     src/filepicker/folderlistmodel.cpp \
-    src/heartbeat.cpp \
     src/dbus/screenblank.cpp
 
 OTHER_FILES += qml/harbour-sailorgram.qml \
@@ -152,12 +144,9 @@ TRANSLATIONS += translations/harbour-sailorgram-be.ts \
                 translations/harbour-sailorgram.ts
 
 HEADERS += \
-    src/localstorage/telegramlocalstorage.h \
-    src/telegramcalendar.h \
     src/dbus/notifications/notifications.h \
     src/sailorgram.h \
     src/filepicker/folderlistmodel.h \
-    src/heartbeat.h \
     src/dbus/screenblank.h
 
 RESOURCES += \

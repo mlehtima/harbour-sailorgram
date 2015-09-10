@@ -1,6 +1,5 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-        libqtelegram-ae \
-        telegramqml \
+        LibTelegram \
         harbour-sailorgram

@@ -2,46 +2,26 @@
 #define SAILORGRAM_H
 
 #include <QObject>
-#include <QUrl>
-#include <QFile>
+#include <QGuiApplication>
+#include <QDir>
 #include <QStandardPaths>
-#include <QImage>
-#include <QMimeDatabase>
-#include <telegramqml.h>
 #include <telegram.h>
-#include <objects/types.h>
 
 class SailorGram : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(TelegramQml* telegram READ telegram WRITE setTelegram NOTIFY telegramChanged)
+    Q_PROPERTY(QString telegramConfigPath READ telegramConfigPath CONSTANT FINAL)
+    Q_PROPERTY(QString telegramPublicKey READ telegramPublicKey CONSTANT FINAL)
 
     public:
         explicit SailorGram(QObject *parent = 0);
-        TelegramQml* telegram() const;
-        void setTelegram(TelegramQml* telegram);
+        QString telegramConfigPath() const;
+        QString telegramPublicKey() const;
 
     private:
-        void moveMediaTo(FileLocationObject* locationobj, const QString& destination);
-
-    signals:
-        void telegramChanged();
-
-    public slots:
-        void sleep();
-        void wake();
-        bool fileIsPhoto(const QString& filepath);
-        bool fileIsVideo(const QString& filepath);
-        QString fileName(const QString& filepath);
-        QSize imageSize(const QString& filepath);
-        FileLocationObject *mediaLocation(MessageMediaObject* messagemediaobject);
-        void moveMediaToDownloads(MessageMediaObject* messagemediaobject);
-        void moveMediaToGallery(MessageMediaObject* messagemediaobject);
-
-    private:
-        TelegramQml* _telegram;
-        QMimeDatabase _mimedb;
+        static const QString TELEGRAM_CONFIG;
+        static const QString TELEGRAM_PUBLIC_KEY;
 };
 
 #endif // SAILORGRAM_H
