@@ -10,7 +10,7 @@ QtObject
     id: context
 
     readonly property string apiAddress: "149.154.167.50"
-    readonly property string apiPort: 443
+    readonly property int apiPort: 443
     readonly property string version: "0.79"
 
     property bool sendwithreturn: false
