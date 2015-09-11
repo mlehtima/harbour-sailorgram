@@ -28,5 +28,11 @@ QtObject
         dcId: 2
         storagePath: sailorgram.telegramConfigPath
         publicKey: sailorgram.telegramPublicKey
+
+        onSignInRequested: {
+            pageStack.completeAnimation();
+            context.telegram.sendSms();
+            pageStack.replace(Qt.resolvedUrl("../pages/login/AuthorizationPage.qml"), { "context": context });
+        }
     }
 }
