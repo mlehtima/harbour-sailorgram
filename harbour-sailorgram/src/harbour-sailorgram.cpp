@@ -31,6 +31,7 @@
 #include <QtQuick>
 #include <sailfishapp.h>
 #include <telegram.h>
+#include <model/contactmodel.h>
 #include "dbus/screenblank.h"
 #include "dbus/notifications/notifications.h"
 #include "filepicker/folderlistmodel.h"
@@ -43,7 +44,10 @@ int main(int argc, char *argv[])
     application->setApplicationVersion("0.79");
 
     qmlRegisterType<SailorGram>("harbour.sailorgram.SailorGram", 1, 0, "SailorGram");
+
+    qmlRegisterType<ContactModel>("harbour.sailorgram.Telegram", 1, 0, "ContactModel");
     qmlRegisterType<Telegram>("harbour.sailorgram.Telegram", 1, 0, "Telegram");
+
     qmlRegisterType<ScreenBlank>("harbour.sailorgram.DBus", 1, 0, "ScreenBlank");
     qmlRegisterType<Notifications>("harbour.sailorgram.DBus", 1, 0, "Notifications");
     qmlRegisterType<FolderListModel>("harbour.sailorgram.Pickers", 1, 0, "FolderListModel");

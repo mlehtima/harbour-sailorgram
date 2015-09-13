@@ -238,6 +238,13 @@ Minimilängd är 5 tecken.</translation>
     </message>
 </context>
 <context>
+    <name>ContactsPage</name>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Kontakter</translation>
+    </message>
+</context>
+<context>
     <name>ConversationInfoPage</name>
     <message>
         <source>Actions</source>
@@ -746,10 +753,6 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
         <source>Geo</source>
         <translation>Geo</translation>
     </message>
-    <message>
-        <source>Last Seen %1</source>
-        <translation>Sågs senast %1</translation>
-    </message>
 </context>
 <context>
     <name>UserInfo</name>
@@ -775,13 +778,6 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
     <message>
         <source>Profile</source>
         <translation>Profil</translation>
-    </message>
-</context>
-<context>
-    <name>UsersPage</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Kontakter</translation>
     </message>
 </context>
 </TS>

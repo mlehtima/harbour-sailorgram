@@ -235,6 +235,13 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
+    <name>ContactsPage</name>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Επαφές</translation>
+    </message>
+</context>
+<context>
     <name>ConversationInfoPage</name>
     <message>
         <source>Actions</source>
@@ -742,10 +749,6 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
         <source>Geo</source>
         <translation>Γέω</translation>
     </message>
-    <message>
-        <source>Last Seen %1</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>UserInfo</name>
@@ -771,13 +774,6 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     <message>
         <source>Profile</source>
         <translation>Προφίλ</translation>
-    </message>
-</context>
-<context>
-    <name>UsersPage</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Επαφές</translation>
     </message>
 </context>
 </TS>

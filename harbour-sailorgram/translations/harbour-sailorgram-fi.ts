@@ -238,6 +238,13 @@ Vähimmäispituus on 5 merkkiä.</translation>
     </message>
 </context>
 <context>
+    <name>ContactsPage</name>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Yhteyshenkilöt</translation>
+    </message>
+</context>
+<context>
     <name>ConversationInfoPage</name>
     <message>
         <source>Actions</source>
@@ -746,10 +753,6 @@ Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta v
         <source>Geo</source>
         <translation>Sijainti</translation>
     </message>
-    <message>
-        <source>Last Seen %1</source>
-        <translation>Viimeksi paikalla: %1</translation>
-    </message>
 </context>
 <context>
     <name>UserInfo</name>
@@ -775,13 +778,6 @@ Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta v
     <message>
         <source>Profile</source>
         <translation>Profiili</translation>
-    </message>
-</context>
-<context>
-    <name>UsersPage</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Yhteyshenkilöt</translation>
     </message>
 </context>
 </TS>

@@ -1,15 +1,15 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../models"
-import "../../items/user"
+import "../../items/contact"
 import "../../menus"
 
 Page
 {
     property Context context
 
-    id: userspage
+    id: contactspage
     allowedOrientations: defaultAllowedOrientations
 
     SilicaListView
@@ -23,19 +23,22 @@ Page
             contentWidth: parent.width
             contentHeight: Theme.itemSizeSmall
 
-            menu: UserMenu {
-                id: usermenu
-                context: userspage.context
+            /*
+            menu: ContactMenu {
+                id: contactmenu
+                context: contactspage.context
                 user: context.telegram.user(item.userId)
             }
+            */
 
-            onClicked: pageStack.replace(Qt.resolvedUrl("../conversations/ConversationPage.qml"), { "context": userspage.context, "dialog": context.telegram.fakeDialogObject(item.userId, false) } )
+            onClicked: pageStack.replace(Qt.resolvedUrl("../conversations/ConversationPage.qml"), { "context": contactspage.context, "dialog": context.telegram.fakeDialogObject(item.userId, false) } )
 
-            UserItem {
+            ContactItem {
                 id: useritem
                 anchors.fill: parent
-                context: userspage.context
-                user: context.telegram.user(item.userId)
+                context: contactspage.context
+                firstName: contactFirstName
+                lastName: contactLastName
             }
         }
     }

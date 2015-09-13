@@ -238,6 +238,13 @@ Minimum sind 5 Zeichen.</translation>
     </message>
 </context>
 <context>
+    <name>ContactsPage</name>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Kontakte</translation>
+    </message>
+</context>
+<context>
     <name>ConversationInfoPage</name>
     <message>
         <source>Actions</source>
@@ -747,10 +754,6 @@ wähle einen Kontakt über &quot;Kontakte&quot; im Pull-Down-Menü</translation>
         <source>Geo</source>
         <translation>Position</translation>
     </message>
-    <message>
-        <source>Last Seen %1</source>
-        <translation>zuletzt gesehen %1</translation>
-    </message>
 </context>
 <context>
     <name>UserInfo</name>
@@ -776,13 +779,6 @@ wähle einen Kontakt über &quot;Kontakte&quot; im Pull-Down-Menü</translation>
     <message>
         <source>Profile</source>
         <translation>Profil</translation>
-    </message>
-</context>
-<context>
-    <name>UsersPage</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Kontakte</translation>
     </message>
 </context>
 </TS>

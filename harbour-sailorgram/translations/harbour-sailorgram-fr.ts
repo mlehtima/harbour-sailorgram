@@ -238,6 +238,13 @@ La longueur minimum est de 5 caractères.</translation>
     </message>
 </context>
 <context>
+    <name>ContactsPage</name>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Contacts</translation>
+    </message>
+</context>
+<context>
     <name>ConversationInfoPage</name>
     <message>
         <source>Actions</source>
@@ -746,10 +753,6 @@ Choississez un contact en appuyant sur &quot;Contacts&quot; sur le Menu au-dessu
         <source>Geo</source>
         <translation>Géo</translation>
     </message>
-    <message>
-        <source>Last Seen %1</source>
-        <translation>Dernière connexion : %1</translation>
-    </message>
 </context>
 <context>
     <name>UserInfo</name>
@@ -775,13 +778,6 @@ Choississez un contact en appuyant sur &quot;Contacts&quot; sur le Menu au-dessu
     <message>
         <source>Profile</source>
         <translation>Profil</translation>
-    </message>
-</context>
-<context>
-    <name>UsersPage</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Contacts</translation>
     </message>
 </context>
 </TS>

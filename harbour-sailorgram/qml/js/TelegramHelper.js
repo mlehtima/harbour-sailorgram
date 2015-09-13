@@ -1,6 +1,5 @@
 .pragma library
 
-.import harbour.sailorgram.TelegramCalendar 1.0 as TelegramCalendar
 .import "TelegramConstants.js" as TelegramConstants
 
 function completeName(user)
@@ -49,8 +48,8 @@ function userStatus(user)
         case TelegramConstants.typeUserStatusOnline:
             return qsTr("Online");
 
-        case TelegramConstants.typeUserStatusOffline:
-            return qsTr("Last Seen %1").arg(TelegramCalendar.TelegramCalendar.timeToString(user.status.wasOnline));
+        //case TelegramConstants.typeUserStatusOffline:
+            //return qsTr("Last Seen %1").arg(TelegramCalendar.TelegramCalendar.timeToString(user.status.wasOnline));
 
         default:
             break;

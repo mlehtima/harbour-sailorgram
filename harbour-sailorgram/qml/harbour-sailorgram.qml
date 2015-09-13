@@ -50,6 +50,7 @@ ApplicationWindow
                 context.chatheaderhidden = parseInt(Settings.transactionGet(tx, "chatheaderhidden"));
             });
 
+            context.telegram.connectToDC(context.apiAddress, context.apiPort);
         }
 
         //Component.onDestruction: context.heartbeat.quit()

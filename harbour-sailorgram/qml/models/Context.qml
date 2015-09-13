@@ -22,6 +22,10 @@ QtObject
     property ErrorsModel errors: ErrorsModel { }
     property SailorGram sailorgram: SailorGram { }
 
+    property ContactModel contacts: ContactModel {
+        telegram: context.telegram
+    }
+
     property Telegram telegram: Telegram {
         apiId: 27782
         apiHash: "5ce096f34c8afab871edce728e6d64c9"
@@ -31,8 +35,18 @@ QtObject
 
         onSignInRequested: {
             pageStack.completeAnimation();
-            context.telegram.sendSms();
+            context.telegram.sendCode(); // NOTE: Change to sendSms()
             pageStack.replace(Qt.resolvedUrl("../pages/login/AuthorizationPage.qml"), { "context": context });
+        }
+
+        onConnectedChanged: {
+            if(!connected)
+                return;
+
+            pageStack.completeAnimation();
+
+            // NOTE: Change to ConversationsPage.qml
+            pageStack.replace(Qt.resolvedUrl("../pages/contacts/ContactsPage.qml"), { "context": context });
         }
     }
 }

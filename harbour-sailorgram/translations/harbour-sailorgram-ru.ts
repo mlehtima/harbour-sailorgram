@@ -238,6 +238,13 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
+    <name>ContactsPage</name>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Контакты</translation>
+    </message>
+</context>
+<context>
     <name>ConversationInfoPage</name>
     <message>
         <source>Actions</source>
@@ -746,10 +753,6 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
         <source>Geo</source>
         <translation>Местоположение</translation>
     </message>
-    <message>
-        <source>Last Seen %1</source>
-        <translation>Был в сети в %1</translation>
-    </message>
 </context>
 <context>
     <name>UserInfo</name>
@@ -775,13 +778,6 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     <message>
         <source>Profile</source>
         <translation>Профиль</translation>
-    </message>
-</context>
-<context>
-    <name>UsersPage</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Контакты</translation>
     </message>
 </context>
 </TS>

@@ -1,6 +1,6 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../peer"
 import "../../js/TelegramHelper.js" as TelegramHelper
@@ -8,7 +8,8 @@ import "../../js/TelegramHelper.js" as TelegramHelper
 Item
 {
     property Context context
-    property User user
+    property string firstName
+    property string lastName
 
     id: contactitem
 
@@ -19,7 +20,7 @@ Item
         width: contactitem.height
         height: contactitem.height
         context: contactitem.context
-        user: contactitem.user
+        //user: contactitem.user
     }
 
     Column
@@ -31,7 +32,7 @@ Item
             id: lblfullname
             width: parent.width
             elide: Text.ElideRight
-            text: TelegramHelper.completeName(user)
+            text: firstName + " " + lastName
         }
 
         Row
@@ -40,7 +41,7 @@ Item
 
             Label {
                 id: lblstaticstatus
-                text: TelegramHelper.userStatus(user)
+                //text: TelegramHelper.userStatus(user)
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.highlightColor
             }

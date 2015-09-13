@@ -238,6 +238,13 @@ Minimumslængde er fem tegn.</translation>
     </message>
 </context>
 <context>
+    <name>ContactsPage</name>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Kontakter</translation>
+    </message>
+</context>
+<context>
     <name>ConversationInfoPage</name>
     <message>
         <source>Actions</source>
@@ -746,10 +753,6 @@ Vælg en kontakt fra menuen ovenfor</translation>
         <source>Geo</source>
         <translation>Geo</translation>
     </message>
-    <message>
-        <source>Last Seen %1</source>
-        <translation>Sidst Set %1</translation>
-    </message>
 </context>
 <context>
     <name>UserInfo</name>
@@ -775,13 +778,6 @@ Vælg en kontakt fra menuen ovenfor</translation>
     <message>
         <source>Profile</source>
         <translation>Profil</translation>
-    </message>
-</context>
-<context>
-    <name>UsersPage</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Kontakter</translation>
     </message>
 </context>
 </TS>

@@ -238,6 +238,13 @@ A lonxitude mínima é de 5 caracteres.</translation>
     </message>
 </context>
 <context>
+    <name>ContactsPage</name>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Contactos</translation>
+    </message>
+</context>
+<context>
     <name>ConversationInfoPage</name>
     <message>
         <source>Actions</source>
@@ -746,10 +753,6 @@ Elixa un contacto seleccionando &quot;Contactos&quot; no menu despregable</trans
         <source>Geo</source>
         <translation>Xeo</translation>
     </message>
-    <message>
-        <source>Last Seen %1</source>
-        <translation>Última vez %1</translation>
-    </message>
 </context>
 <context>
     <name>UserInfo</name>
@@ -775,13 +778,6 @@ Elixa un contacto seleccionando &quot;Contactos&quot; no menu despregable</trans
     <message>
         <source>Profile</source>
         <translation>Perfil</translation>
-    </message>
-</context>
-<context>
-    <name>UsersPage</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Contactos</translation>
     </message>
 </context>
 </TS>

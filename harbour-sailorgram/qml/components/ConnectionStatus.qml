@@ -8,5 +8,5 @@ GlassItem
     property Context context
 
     id: connectionstatus
-    color: forceActive || context.heartbeat.connected ? "lime" : "red"
+    color: forceActive || context.telegram.connected ? "lime" : "red"
 }

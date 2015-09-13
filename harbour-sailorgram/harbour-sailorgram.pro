@@ -45,7 +45,6 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/pages/login/PhoneNumberPage.qml \
     qml/pages/login/AuthorizationPage.qml \
     qml/js/Settings.js \
-    qml/items/user/UserItem.qml \
     qml/js/CountryList.js \
     qml/items/messageitem/MessageBar.qml \
     qml/items/conversation/ConversationItem.qml \
@@ -58,8 +57,7 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/components/PopupMessage.qml \
     qml/pages/conversations/ConversationsPage.qml \
     qml/pages/conversations/ConversationPage.qml \
-    qml/pages/users/UserPage.qml \
-    qml/pages/users/UsersPage.qml \
+    qml/pages/contacts/UserPage.qml \
     qml/menus/UserMenu.qml \
     qml/components/ClickableLabel.qml \
     qml/items/messageitem/media/MessageThumbnail.qml \
@@ -71,7 +69,7 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/items/peer/PeerItem.qml \
     qml/items/peer/PeerImage.qml \
     qml/pages/conversations/ConversationInfoPage.qml \
-    qml/items/user/UserInfo.qml \
+    qml/items/contact/UserInfo.qml \
     qml/items/chat/ChatInfo.qml \
     qml/js/TelegramAction.js \
     qml/pages/chat/AddContactsPage.qml \
@@ -116,7 +114,9 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/pages/settings/DebugSettingsPage.qml \
     qml/components/DebugLabel.qml \
     qml/pages/settings/debug/ErrorsPage.qml \
-    qml/models/ErrorsModel.qml
+    qml/models/ErrorsModel.qml \
+    qml/pages/contacts/ContactsPage.qml \
+    qml/items/contact/ContactItem.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

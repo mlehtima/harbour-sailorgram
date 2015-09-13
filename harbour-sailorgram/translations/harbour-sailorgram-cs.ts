@@ -238,6 +238,13 @@ Minimální délka je 5 znaků .</translation>
     </message>
 </context>
 <context>
+    <name>ContactsPage</name>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Kontakty</translation>
+    </message>
+</context>
+<context>
     <name>ConversationInfoPage</name>
     <message>
         <source>Actions</source>
@@ -746,10 +753,6 @@ Přidejte osobu výběrem &quot;Kontakty&quot; z menu</translation>
         <source>Geo</source>
         <translation>GPS</translation>
     </message>
-    <message>
-        <source>Last Seen %1</source>
-        <translation>Naposled uviděn %1</translation>
-    </message>
 </context>
 <context>
     <name>UserInfo</name>
@@ -775,13 +778,6 @@ Přidejte osobu výběrem &quot;Kontakty&quot; z menu</translation>
     <message>
         <source>Profile</source>
         <translation>Profil</translation>
-    </message>
-</context>
-<context>
-    <name>UsersPage</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Kontakty</translation>
     </message>
 </context>
 </TS>
