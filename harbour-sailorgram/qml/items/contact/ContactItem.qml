@@ -19,8 +19,7 @@ Item
         anchors { left: parent.left; top: parent.top }
         width: contactitem.height
         height: contactitem.height
-        context: contactitem.context
-        //user: contactitem.user
+        fallbackText: TelegramHelper.fullName(firstName, lastName)
     }
 
     Column
@@ -32,7 +31,7 @@ Item
             id: lblfullname
             width: parent.width
             elide: Text.ElideRight
-            text: firstName + " " + lastName
+            text: TelegramHelper.fullName(firstName, lastName)
         }
 
         Row

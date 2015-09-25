@@ -6,7 +6,7 @@ import "../../js/TelegramHelper.js" as TelegramHelper
 
 Image
 {
-    property string dialogTitle
+    property string fallbackText
 
     id: imgpeer
     fillMode: Image.PreserveAspectFit
@@ -31,7 +31,7 @@ Image
         Label {
             anchors.centerIn: parent
             font.bold: true
-            text: TelegramHelper.fallbackText(dialogTitle)
+            text: TelegramHelper.fallbackLetters(fallbackText)
         }
     }
 

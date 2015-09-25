@@ -2,7 +2,12 @@
 
 .import "TelegramConstants.js" as TelegramConstants
 
-function completeName(user)
+function fullName(firstname, lastname)
+{
+    return firstname + " " + lastname;
+}
+
+function completeName(user) // NOTE: Deprecated
 {
     return user.firstName + " " + user.lastName;
 }
@@ -12,7 +17,7 @@ function phoneNumber(user)
     return completePhoneNumber(user.phone);
 }
 
-function fallbackText(text)
+function fallbackLetters(text)
 {
     var splittext = text.split(" ");
 

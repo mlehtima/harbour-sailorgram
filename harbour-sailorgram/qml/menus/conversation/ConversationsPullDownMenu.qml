@@ -35,8 +35,7 @@ PullDownMenu
     MenuItem
     {
         text: qsTr("Contacts")
-        onClicked: pageStack.push(Qt.resolvedUrl("../../pages/users/UsersPage.qml"), { "context": conversationspulldownmenu.context })
+        onClicked: pageStack.push(Qt.resolvedUrl("../../pages/contacts/ContactsPage.qml"), { "context": conversationspulldownmenu.context })
     }
-
 }
 

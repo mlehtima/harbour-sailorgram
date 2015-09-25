@@ -26,7 +26,7 @@ Item
             id: conversationimage
             width: conversationitem.height
             height: conversationitem.height
-            dialogTitle: conversationitem.dialogTitle
+            fallbackText: conversationitem.dialogTitle
         }
 
         Column
