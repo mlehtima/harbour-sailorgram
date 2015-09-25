@@ -312,22 +312,6 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
         <source>Connecting...</source>
         <translation>Ansluter...</translation>
     </message>
-    <message>
-        <source>Deleting Secret Chat</source>
-        <translation>Tar bort hemlig chatt</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Ta bort</translation>
-    </message>
-    <message>
-        <source>Deleting Conversation</source>
-        <translation>Tar bort konversation</translation>
-    </message>
-    <message>
-        <source>Deleting Group</source>
-        <translation>Tar bort grupp</translation>
-    </message>
 </context>
 <context>
     <name>ConversationsPullDownMenu</name>

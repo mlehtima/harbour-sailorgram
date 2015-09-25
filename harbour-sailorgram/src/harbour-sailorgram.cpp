@@ -32,6 +32,7 @@
 #include <sailfishapp.h>
 #include <telegram.h>
 #include <model/contactmodel.h>
+#include <model/dialogmodel.h>
 #include "dbus/screenblank.h"
 #include "dbus/notifications/notifications.h"
 #include "filepicker/folderlistmodel.h"
@@ -45,7 +46,9 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<SailorGram>("harbour.sailorgram.SailorGram", 1, 0, "SailorGram");
 
+    qmlRegisterType<TelegramDatabase>("harbour.sailorgram.Telegram", 1, 0, "TelegramDatabase");
     qmlRegisterType<ContactModel>("harbour.sailorgram.Telegram", 1, 0, "ContactModel");
+    qmlRegisterType<DialogModel>("harbour.sailorgram.Telegram", 1, 0, "DialogModel");
     qmlRegisterType<Telegram>("harbour.sailorgram.Telegram", 1, 0, "Telegram");
 
     qmlRegisterType<ScreenBlank>("harbour.sailorgram.DBus", 1, 0, "ScreenBlank");

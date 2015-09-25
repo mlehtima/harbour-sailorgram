@@ -312,22 +312,6 @@ wähle einen Kontakt über &quot;Kontakte&quot; im Pull-Down-Menü</translation>
         <source>Connecting...</source>
         <translation>Verbinden...</translation>
     </message>
-    <message>
-        <source>Deleting Secret Chat</source>
-        <translation>Geheime Konversation wird gelöscht</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Löschen</translation>
-    </message>
-    <message>
-        <source>Deleting Conversation</source>
-        <translation>Unterhaltung löschen</translation>
-    </message>
-    <message>
-        <source>Deleting Group</source>
-        <translation>Gruppe löschen</translation>
-    </message>
 </context>
 <context>
     <name>ConversationsPullDownMenu</name>

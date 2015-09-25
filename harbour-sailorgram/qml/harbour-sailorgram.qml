@@ -37,7 +37,21 @@ import "js/Settings.js" as Settings
 
 ApplicationWindow
 {
-    default property alias context: context
+    readonly property alias context: context
+
+    Component
+    {
+        id: connectionpage
+
+        ConnectionPage { context: mainwindow.context }
+    }
+
+    Component
+    {
+        id: phonenumberpage
+
+        PhoneNumberPage { context: mainwindow.context }
+    }
 
     Context
     {
@@ -49,23 +63,19 @@ ApplicationWindow
                 context.backgrounddisabled = parseInt(Settings.transactionGet(tx, "backgrounddisabled"));
                 context.chatheaderhidden = parseInt(Settings.transactionGet(tx, "chatheaderhidden"));
             });
-
-            context.telegram.connectToDC(context.apiAddress, context.apiPort);
         }
 
         //Component.onDestruction: context.heartbeat.quit()
     }
 
     id: mainwindow
+    cover: CoverPage { context: mainwindow.context }
 
-    cover: CoverPage {
-        context: mainwindow.context
-    }
+    initialPage: {
+        if(context.telegram.phoneNumber.length)
+            return connectionpage;
 
-    initialPage: Component {
-        ConnectionPage {
-            context: mainwindow.context
-        }
+        return phonenumberpage;
     }
 }
 

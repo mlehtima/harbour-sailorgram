@@ -312,22 +312,6 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
         <source>Connecting...</source>
         <translation>Злучэнне...</translation>
     </message>
-    <message>
-        <source>Deleting Secret Chat</source>
-        <translation>Выдаленне сакрэтнай гаворкі</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Выдаліць</translation>
-    </message>
-    <message>
-        <source>Deleting Conversation</source>
-        <translation>Выдаленне размовы</translation>
-    </message>
-    <message>
-        <source>Deleting Group</source>
-        <translation>Выдаленне групы</translation>
-    </message>
 </context>
 <context>
     <name>ConversationsPullDownMenu</name>

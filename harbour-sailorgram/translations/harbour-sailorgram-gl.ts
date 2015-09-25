@@ -312,22 +312,6 @@ Elixa un contacto seleccionando &quot;Contactos&quot; no menu despregable</trans
         <source>Connecting...</source>
         <translation>Conectando...</translation>
     </message>
-    <message>
-        <source>Deleting Secret Chat</source>
-        <translation>Borrando chat segredo</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Borrar</translation>
-    </message>
-    <message>
-        <source>Deleting Conversation</source>
-        <translation>Borrando conversa</translation>
-    </message>
-    <message>
-        <source>Deleting Group</source>
-        <translation>Borrando grupo</translation>
-    </message>
 </context>
 <context>
     <name>ConversationsPullDownMenu</name>

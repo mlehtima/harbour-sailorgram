@@ -307,22 +307,6 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
         <source>Connecting...</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Deleting Secret Chat</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation type="unfinished">Διαγραφή</translation>
-    </message>
-    <message>
-        <source>Deleting Conversation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Deleting Group</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ConversationsPullDownMenu</name>

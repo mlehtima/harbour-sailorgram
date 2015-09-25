@@ -312,22 +312,6 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
         <source>Connecting...</source>
         <translation>در حال اتصال…‏</translation>
     </message>
-    <message>
-        <source>Deleting Secret Chat</source>
-        <translation>در حال حذف گپ محرمانه</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>حذف</translation>
-    </message>
-    <message>
-        <source>Deleting Conversation</source>
-        <translation>در حال حذف گفت‌وگو</translation>
-    </message>
-    <message>
-        <source>Deleting Group</source>
-        <translation>در حال حذف گروه</translation>
-    </message>
 </context>
 <context>
     <name>ConversationsPullDownMenu</name>

@@ -37,7 +37,7 @@ CoverBackground
         Label
         {
             width: parent.width
-            text: !context.telegram.connected ? qsTr("Disconnected") : qsTr("Connected")
+            text: !context.telegram.dcConnected ? qsTr("Disconnected") : qsTr("Connected")
             horizontalAlignment: Text.AlignHCenter
             truncationMode: TruncationMode.Fade
             color: Theme.secondaryColor
@@ -47,7 +47,7 @@ CoverBackground
         Label
         {
             width: parent.width
-            text: (context.telegram.unreadCount == 1) ? qsTr("%1 unread message").arg(context.telegram.unreadCount) : qsTr("%1 unread messages").arg(context.telegram.unreadCount)
+            text: (context.telegram.unreadCount === 1) ? qsTr("%1 unread message").arg(context.telegram.unreadCount) : qsTr("%1 unread messages").arg(context.telegram.unreadCount)
             visible: context.telegram.unreadCount > 0
             wrapMode: Text.WordWrap
             truncationMode: TruncationMode.Fade
@@ -60,7 +60,7 @@ CoverBackground
 
     CoverActionList
     {
-        enabled: pageStack.currentPage.isMediaPage !== true
+        enabled: true //FIXME: pageStack.currentPage.isMediaPage !== true
 
         CoverAction
         {

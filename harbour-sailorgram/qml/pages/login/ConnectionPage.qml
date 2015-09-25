@@ -15,14 +15,11 @@ Page
         if(forwardNavigation || (connectionpage.status !== PageStatus.Active))
             return;
 
-        if(!context.telegram.phoneNumber.length) {
-            pageStack.replace(Qt.resolvedUrl("PhoneNumberPage.qml"), { "context": connectionpage.context });
-            return;
-        }
-
         timlogin.restart();
         timdisplaystatus.restart();
-        context.telegram.connectToDC(context.apiAddress, context.apiPort);
+
+        if(!context.telegram.dcConnected)
+            context.telegram.connectToDC(context.apiAddress, context.apiPort);
     }
 
     Timer

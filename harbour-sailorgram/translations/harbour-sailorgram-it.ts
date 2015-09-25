@@ -312,22 +312,6 @@ Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
         <source>Connecting...</source>
         <translation>Connessione...</translation>
     </message>
-    <message>
-        <source>Deleting Secret Chat</source>
-        <translation>Rimozione chat segreta</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Elimina</translation>
-    </message>
-    <message>
-        <source>Deleting Conversation</source>
-        <translation>Rimozione conversazione</translation>
-    </message>
-    <message>
-        <source>Deleting Group</source>
-        <translation>Rimozione gruppo</translation>
-    </message>
 </context>
 <context>
     <name>ConversationsPullDownMenu</name>

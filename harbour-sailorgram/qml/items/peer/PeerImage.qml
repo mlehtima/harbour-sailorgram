@@ -6,20 +6,7 @@ import "../../js/TelegramHelper.js" as TelegramHelper
 
 Image
 {
-    property Context context
-    property Dialog dialog
-    //property Chat chat
-    //property User user
-
-    /*
-    onUserChanged: {
-        if(!user)
-            return;
-
-        if(!user.photo.photoSmall.download.downloaded)
-            context.telegram.getFile(user.photo.photoSmall);
-    }
-    */
+    property string dialogTitle
 
     id: imgpeer
     fillMode: Image.PreserveAspectFit
@@ -44,7 +31,7 @@ Image
         Label {
             anchors.centerIn: parent
             font.bold: true
-            //FIXME: text: TelegramHelper.fallbackText(imgpeer.dialog, TelegramHelper.isChat(imgpeer.dialog) ? imgpeer.chat : imgpeer.user)
+            text: TelegramHelper.fallbackText(dialogTitle)
         }
     }
 

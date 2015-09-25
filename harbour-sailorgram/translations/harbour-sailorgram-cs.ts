@@ -312,22 +312,6 @@ Přidejte osobu výběrem &quot;Kontakty&quot; z menu</translation>
         <source>Connecting...</source>
         <translation>Připojování...</translation>
     </message>
-    <message>
-        <source>Deleting Secret Chat</source>
-        <translation>Vymazání tajného rozhovoru</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Vymazat</translation>
-    </message>
-    <message>
-        <source>Deleting Conversation</source>
-        <translation>Vymazání rozhovoru</translation>
-    </message>
-    <message>
-        <source>Deleting Group</source>
-        <translation>Vymazání skupiny</translation>
-    </message>
 </context>
 <context>
     <name>ConversationsPullDownMenu</name>

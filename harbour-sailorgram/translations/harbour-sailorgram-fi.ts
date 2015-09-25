@@ -312,22 +312,6 @@ Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta v
         <source>Connecting...</source>
         <translation>Yhdistää...</translation>
     </message>
-    <message>
-        <source>Deleting Secret Chat</source>
-        <translation>Salainen keskustelu poistetaan</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Poista</translation>
-    </message>
-    <message>
-        <source>Deleting Conversation</source>
-        <translation>Keskustelu poistetaan</translation>
-    </message>
-    <message>
-        <source>Deleting Group</source>
-        <translation>Ryhmä poistetaan</translation>
-    </message>
 </context>
 <context>
     <name>ConversationsPullDownMenu</name>

@@ -12,7 +12,7 @@
 # The name of your application
 TARGET = harbour-sailorgram
 
-CONFIG += sailfishapp
+CONFIG += sailfishapp c++11
 QT += sql dbus
 
 LIBS += -L$$OUT_PWD/../LibTelegram -lTelegram

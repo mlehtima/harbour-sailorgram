@@ -39,14 +39,12 @@ QtObject
             pageStack.replace(Qt.resolvedUrl("../pages/login/AuthorizationPage.qml"), { "context": context });
         }
 
-        onConnectedChanged: {
-            if(!connected)
+        onLoggedInChanged: {
+            if(!loggedIn)
                 return;
 
             pageStack.completeAnimation();
-
-            // NOTE: Change to ConversationsPage.qml
-            pageStack.replace(Qt.resolvedUrl("../pages/contacts/ContactsPage.qml"), { "context": context });
+            pageStack.replace(Qt.resolvedUrl("../pages/conversations/ConversationsPage.qml"), { "context": context });
         }
     }
 }

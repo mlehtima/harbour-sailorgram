@@ -312,22 +312,6 @@ Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het tr
         <source>Connecting...</source>
         <translation>Bezig met verbinden...</translation>
     </message>
-    <message>
-        <source>Deleting Secret Chat</source>
-        <translation>Bezig met het verwijderen van het geheime chatgesprek</translation>
-    </message>
-    <message>
-        <source>Delete</source>
-        <translation>Verwijderen</translation>
-    </message>
-    <message>
-        <source>Deleting Conversation</source>
-        <translation>Bezig met het verwijderen van het gesprek</translation>
-    </message>
-    <message>
-        <source>Deleting Group</source>
-        <translation>Bezig met het verwijderen van de groep</translation>
-    </message>
 </context>
 <context>
     <name>ConversationsPullDownMenu</name>

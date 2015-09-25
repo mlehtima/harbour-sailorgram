@@ -30,7 +30,7 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../../components"
 import "../../menus/conversation"
@@ -52,7 +52,6 @@ Page
             return;
 
         pageStack.pushAttached(Qt.resolvedUrl("../settings/SettingsPage.qml"), { "context": conversationspage.context });
-        context.foregroundDialog = context.telegram.nullDialog; // Reset Foreground Dialog
     }
 
     SilicaListView
@@ -75,7 +74,7 @@ Page
 
         header: PageHeader {
             id: pageheader
-            title: context.heartbeat.connected ? qsTr("Chats") : qsTr("Connecting...")
+            title: context.telegram.dcConnected ? qsTr("Chats") : qsTr("Connecting...")
 
             ConnectionStatus {
                 context: conversationspage.context
@@ -83,18 +82,20 @@ Page
             }
         }
 
-        model: DialogsModel {
+        model: DialogModel {
             telegram: conversationspage.context.telegram
         }
 
         delegate: ListItem {
             function displayConversation() {
+                /*
                 if(item.encrypted) {
                     pageStack.push(Qt.resolvedUrl("../secretconversations/SecretConversationPage.qml"), { "context": conversationspage.context, "dialog": item });
                     return;
                 }
 
                 pageStack.push(Qt.resolvedUrl("ConversationPage.qml"), { "context": conversationspage.context, "dialog": item })
+                */
             }
 
             id: dialogitem
@@ -102,6 +103,7 @@ Page
             contentHeight: Theme.itemSizeSmall
             onClicked: displayConversation()
 
+            /*
             menu: ContextMenu {
                 MenuItem {
                     text: qsTr("Delete")
@@ -125,9 +127,10 @@ Page
                     }
                 }
             }
+            */
 
             Component.onCompleted: {
-                if(!item.encrypted && !conversationItemComponent) {
+                if(/* !item.encrypted && */ !conversationItemComponent) {
                     conversationItemComponent = Qt.createComponent("../../items/conversation/ConversationItem.qml");
 
                     if(conversationItemComponent.status === Component.Error) {
@@ -135,6 +138,7 @@ Page
                         return;
                     }
                 }
+                /*
                 else if(item.encrypted && !secretConversationItemComponent) {
                     secretConversationItemComponent = Qt.createComponent("../../items/secretconversation/SecretConversationItem.qml");
 
@@ -143,9 +147,10 @@ Page
                         return;
                     }
                 }
+                */
 
-                var c = !item.encrypted ? conversationItemComponent : secretConversationItemComponent;
-                c.createObject(contentItem, {"anchors.fill": contentItem, "context": conversationspage.context, "dialog": item });
+                var c = conversationItemComponent; //!item.encrypted ? conversationItemComponent : secretConversationItemComponent;
+                c.createObject(contentItem, {"anchors.fill": contentItem, "context": conversationspage.context, "dialogTitle": dialogTitle, "lastMessage": dialogLastMessage, "unreadCount": dialogUnreadCount });
             }
         }
     }
