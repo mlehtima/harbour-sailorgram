@@ -295,44 +295,6 @@ Minimumslængde er fem tegn.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationsPage</name>
-    <message>
-        <source>No Chats
-
-Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
-        <translation>Ingen Chats
-
-Vælg en kontakt fra menuen ovenfor</translation>
-    </message>
-    <message>
-        <source>Chats</source>
-        <translation>Chats</translation>
-    </message>
-    <message>
-        <source>Connecting...</source>
-        <translation>Forbinder...</translation>
-    </message>
-</context>
-<context>
-    <name>ConversationsPullDownMenu</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Kontakter</translation>
-    </message>
-    <message>
-        <source>Profile</source>
-        <translation>Profil</translation>
-    </message>
-    <message>
-        <source>New Secret Chat</source>
-        <translation>Ny hemmelig Chat</translation>
-    </message>
-    <message>
-        <source>New Group</source>
-        <translation>Ny Gruppe</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -398,6 +360,44 @@ Vælg en kontakt fra menuen ovenfor</translation>
     <message>
         <source>Not Connected</source>
         <translation>Ikke forbundet</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPullDownMenu</name>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished">Profil</translation>
+    </message>
+    <message>
+        <source>New Secret Chat</source>
+        <translation type="unfinished">Ny Hemmelig Chat</translation>
+    </message>
+    <message>
+        <source>New Group</source>
+        <translation type="unfinished">Ny Gruppe</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Kontakter</translation>
+    </message>
+</context>
+<context>
+    <name>DialogsPage</name>
+    <message>
+        <source>No Chats
+
+Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
+        <translation type="unfinished">Ingen Chats
+
+Vælg en kontakt fra menuen ovenfor</translation>
+    </message>
+    <message>
+        <source>Chats</source>
+        <translation type="unfinished">Chats</translation>
+    </message>
+    <message>
+        <source>Connecting...</source>
+        <translation type="unfinished">Forbinder...</translation>
     </message>
 </context>
 <context>

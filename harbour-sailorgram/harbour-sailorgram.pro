@@ -47,7 +47,6 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/js/Settings.js \
     qml/js/CountryList.js \
     qml/items/messageitem/MessageBar.qml \
-    qml/items/conversation/ConversationItem.qml \
     qml/items/messageitem/MessageItem.qml \
     qml/js/TelegramHelper.js \
     qml/items/messageitem/MessageText.qml \
@@ -55,8 +54,7 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/items/messageitem/media/MessagePhoto.qml \
     qml/items/messageitem/media/MessageDocument.qml \
     qml/components/PopupMessage.qml \
-    qml/pages/conversations/ConversationsPage.qml \
-    qml/pages/conversations/ConversationPage.qml \
+    qml/pages/dialogs/ConversationPage.qml \
     qml/pages/contacts/UserPage.qml \
     qml/menus/UserMenu.qml \
     qml/components/ClickableLabel.qml \
@@ -65,17 +63,15 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/pages/picker/FilePickerPage.qml \
     qml/components/pickers/FilePicker.qml \
     qml/pages/login/SignUpPage.qml \
-    qml/items/conversation/ConversationImage.qml \
     qml/items/peer/PeerItem.qml \
     qml/items/peer/PeerImage.qml \
-    qml/pages/conversations/ConversationInfoPage.qml \
+    qml/pages/dialogs/ConversationInfoPage.qml \
     qml/items/contact/UserInfo.qml \
     qml/items/chat/ChatInfo.qml \
     qml/js/TelegramAction.js \
     qml/pages/chat/AddContactsPage.qml \
     qml/menus/MessageMenu.qml \
     qml/pages/chat/CreateChatPage.qml \
-    qml/menus/conversation/ConversationsPullDownMenu.qml \
     qml/menus/chat/ChatInfoMenu.qml \
     qml/cover/CoverPage.qml \
     qml/components/cover/CoverLabel.qml \
@@ -116,7 +112,11 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/pages/settings/debug/ErrorsPage.qml \
     qml/models/ErrorsModel.qml \
     qml/pages/contacts/ContactsPage.qml \
-    qml/items/contact/ContactItem.qml
+    qml/items/contact/ContactItem.qml \
+    qml/pages/dialogs/DialogsPage.qml \
+    qml/items/dialog/DialogImage.qml \
+    qml/items/dialog/DialogItem.qml \
+    qml/menus/dialog/DialogPullDownMenu.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

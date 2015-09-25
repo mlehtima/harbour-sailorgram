@@ -295,44 +295,6 @@ La lunghezza minima è di 5 caratteri.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationsPage</name>
-    <message>
-        <source>No Chats
-
-Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
-        <translation>Nessuna conversazione
-
-Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
-    </message>
-    <message>
-        <source>Chats</source>
-        <translation>Conversazioni</translation>
-    </message>
-    <message>
-        <source>Connecting...</source>
-        <translation>Connessione...</translation>
-    </message>
-</context>
-<context>
-    <name>ConversationsPullDownMenu</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Contatti</translation>
-    </message>
-    <message>
-        <source>Profile</source>
-        <translation>Profilo</translation>
-    </message>
-    <message>
-        <source>New Secret Chat</source>
-        <translation>Nuova chat segreta</translation>
-    </message>
-    <message>
-        <source>New Group</source>
-        <translation>Nuovo gruppo</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -398,6 +360,44 @@ Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
     <message>
         <source>Not Connected</source>
         <translation>Non connesso</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPullDownMenu</name>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished">Profilo</translation>
+    </message>
+    <message>
+        <source>New Secret Chat</source>
+        <translation type="unfinished">Nuova chat segreta</translation>
+    </message>
+    <message>
+        <source>New Group</source>
+        <translation type="unfinished">Nuovo gruppo</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Contatti</translation>
+    </message>
+</context>
+<context>
+    <name>DialogsPage</name>
+    <message>
+        <source>No Chats
+
+Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
+        <translation type="unfinished">Nessuna conversazione
+
+Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
+    </message>
+    <message>
+        <source>Chats</source>
+        <translation type="unfinished">Chat</translation>
+    </message>
+    <message>
+        <source>Connecting...</source>
+        <translation type="unfinished">Connessione...</translation>
     </message>
 </context>
 <context>

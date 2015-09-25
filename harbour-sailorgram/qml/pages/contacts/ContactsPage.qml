@@ -31,7 +31,7 @@ Page
             }
             */
 
-            onClicked: pageStack.replace(Qt.resolvedUrl("../conversations/ConversationPage.qml"), { "context": contactspage.context, "dialog": context.telegram.fakeDialogObject(item.userId, false) } )
+            onClicked: pageStack.replace(Qt.resolvedUrl("../dialogs/ConversationPage.qml"), { "context": contactspage.context, "dialog": context.telegram.fakeDialogObject(item.userId, false) } )
 
             ContactItem {
                 id: useritem

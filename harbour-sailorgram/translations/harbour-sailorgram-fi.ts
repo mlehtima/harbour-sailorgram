@@ -295,44 +295,6 @@ Vähimmäispituus on 5 merkkiä.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationsPage</name>
-    <message>
-        <source>No Chats
-
-Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
-        <translation>Ei keskusteluja.
-
-Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta valikosta.</translation>
-    </message>
-    <message>
-        <source>Chats</source>
-        <translation>Keskustelut </translation>
-    </message>
-    <message>
-        <source>Connecting...</source>
-        <translation>Yhdistää...</translation>
-    </message>
-</context>
-<context>
-    <name>ConversationsPullDownMenu</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Yhteyshenkilöt</translation>
-    </message>
-    <message>
-        <source>Profile</source>
-        <translation>Profiili</translation>
-    </message>
-    <message>
-        <source>New Secret Chat</source>
-        <translation>Uusi salainen keskustelu</translation>
-    </message>
-    <message>
-        <source>New Group</source>
-        <translation>Uusi ryhmä</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -398,6 +360,44 @@ Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta v
     <message>
         <source>Not Connected</source>
         <translation>Ei yhdistetty</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPullDownMenu</name>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished">Profiili</translation>
+    </message>
+    <message>
+        <source>New Secret Chat</source>
+        <translation type="unfinished">Uusi salainen keskustelu</translation>
+    </message>
+    <message>
+        <source>New Group</source>
+        <translation type="unfinished">Uusi ryhmä</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Yhteyshenkilöt</translation>
+    </message>
+</context>
+<context>
+    <name>DialogsPage</name>
+    <message>
+        <source>No Chats
+
+Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
+        <translation type="unfinished">Ei keskusteluja.
+
+Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta valikosta.</translation>
+    </message>
+    <message>
+        <source>Chats</source>
+        <translation type="unfinished">Keskustelut</translation>
+    </message>
+    <message>
+        <source>Connecting...</source>
+        <translation type="unfinished">Yhdistää...</translation>
     </message>
 </context>
 <context>

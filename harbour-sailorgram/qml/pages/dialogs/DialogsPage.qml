@@ -44,14 +44,14 @@ Page
     property Component conversationItemComponent
     property Component secretConversationItemComponent;
 
-    id: conversationspage
+    id: dialogspage
     allowedOrientations: defaultAllowedOrientations
 
     onStatusChanged: {
-        if(conversationspage.status !== PageStatus.Active)
+        if(dialogspage.status !== PageStatus.Active)
             return;
 
-        pageStack.pushAttached(Qt.resolvedUrl("../settings/SettingsPage.qml"), { "context": conversationspage.context });
+        pageStack.pushAttached(Qt.resolvedUrl("../settings/SettingsPage.qml"), { "context": dialogspage.context });
     }
 
     SilicaListView
@@ -59,7 +59,7 @@ Page
         ConversationsPullDownMenu
         {
             id: conversationsmenu
-            context: conversationspage.context
+            context: dialogspage.context
         }
 
         ViewPlaceholder
@@ -77,13 +77,13 @@ Page
             title: context.telegram.dcConnected ? qsTr("Chats") : qsTr("Connecting...")
 
             ConnectionStatus {
-                context: conversationspage.context
+                context: dialogspage.context
                 anchors { verticalCenter: pageheader.extraContent.verticalCenter; left: pageheader.extraContent.left; leftMargin: -Theme.horizontalPageMargin }
             }
         }
 
         model: DialogModel {
-            telegram: conversationspage.context.telegram
+            telegram: dialogspage.context.telegram
         }
 
         delegate: ListItem {
@@ -131,7 +131,7 @@ Page
 
             Component.onCompleted: {
                 if(/* !item.encrypted && */ !conversationItemComponent) {
-                    conversationItemComponent = Qt.createComponent("../../items/conversation/ConversationItem.qml");
+                    conversationItemComponent = Qt.createComponent("../../items/dialog/DialogItem.qml");
 
                     if(conversationItemComponent.status === Component.Error) {
                         console.log(conversationItemComponent.errorString());
@@ -150,7 +150,7 @@ Page
                 */
 
                 var c = conversationItemComponent; //!item.encrypted ? conversationItemComponent : secretConversationItemComponent;
-                c.createObject(contentItem, {"anchors.fill": contentItem, "context": conversationspage.context, "dialogTitle": dialogTitle, "lastMessage": dialogLastMessage, "unreadCount": dialogUnreadCount });
+                c.createObject(contentItem, {"anchors.fill": contentItem, "context": dialogspage.context, "dialogTitle": dialogTitle, "lastMessage": dialogLastMessage, "unreadCount": dialogUnreadCount });
             }
         }
     }

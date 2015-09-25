@@ -295,44 +295,6 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
-    <name>ConversationsPage</name>
-    <message>
-        <source>No Chats
-
-Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
-        <translation>Няма гаворак
-
-Абярыце кантакт з меню Кантакты уверсе</translation>
-    </message>
-    <message>
-        <source>Chats</source>
-        <translation>Гаворкі</translation>
-    </message>
-    <message>
-        <source>Connecting...</source>
-        <translation>Злучэнне...</translation>
-    </message>
-</context>
-<context>
-    <name>ConversationsPullDownMenu</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Кантакты</translation>
-    </message>
-    <message>
-        <source>Profile</source>
-        <translation>Профіль</translation>
-    </message>
-    <message>
-        <source>New Secret Chat</source>
-        <translation>Новая сакрэтная гаворка</translation>
-    </message>
-    <message>
-        <source>New Group</source>
-        <translation>Новая група</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -398,6 +360,44 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     <message>
         <source>Not Connected</source>
         <translation>Няма злучэння</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPullDownMenu</name>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished">Профіль</translation>
+    </message>
+    <message>
+        <source>New Secret Chat</source>
+        <translation type="unfinished">Новая сакрэтная гаворка</translation>
+    </message>
+    <message>
+        <source>New Group</source>
+        <translation type="unfinished">Новая група</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Кантакты</translation>
+    </message>
+</context>
+<context>
+    <name>DialogsPage</name>
+    <message>
+        <source>No Chats
+
+Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
+        <translation type="unfinished">Няма гаворак
+
+Абярыце кантакт з меню Кантакты уверсе</translation>
+    </message>
+    <message>
+        <source>Chats</source>
+        <translation type="unfinished">Гаворкі</translation>
+    </message>
+    <message>
+        <source>Connecting...</source>
+        <translation type="unfinished">Злучэнне...</translation>
     </message>
 </context>
 <context>

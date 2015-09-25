@@ -1,6 +1,6 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../js/TelegramHelper.js" as TelegramHelper
 
 Image
@@ -15,7 +15,7 @@ Image
             telegram.getFile(user.photo.photoSmall);
     }
 
-    id: imgconversation
+    id: imgdialog
     fillMode: Image.PreserveAspectFit
     asynchronous: true
 
@@ -30,7 +30,7 @@ Image
         id: imgfallback
         anchors.fill: parent
         color: Theme.secondaryHighlightColor
-        radius: imgconversation.width * 0.5
+        radius: imgdialog.width * 0.5
         visible: TelegramHelper.isChat(dialog) || (user.photo.photoSmall.download.location.length <= 0)
 
         Label {

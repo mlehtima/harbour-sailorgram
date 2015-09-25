@@ -44,7 +44,7 @@ QtObject
                 return;
 
             pageStack.completeAnimation();
-            pageStack.replace(Qt.resolvedUrl("../pages/conversations/ConversationsPage.qml"), { "context": context });
+            pageStack.replace(Qt.resolvedUrl("../pages/dialogs/DialogsPage.qml"), { "context": context });
         }
     }
 }

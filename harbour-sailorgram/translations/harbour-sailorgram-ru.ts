@@ -295,44 +295,6 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
-    <name>ConversationsPage</name>
-    <message>
-        <source>No Chats
-
-Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
-        <translation>Диалогов нет
-
-Выберите контакта из меню &apos;Контакты&apos;</translation>
-    </message>
-    <message>
-        <source>Chats</source>
-        <translation>Диалоги</translation>
-    </message>
-    <message>
-        <source>Connecting...</source>
-        <translation>Подключение...</translation>
-    </message>
-</context>
-<context>
-    <name>ConversationsPullDownMenu</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Контакты</translation>
-    </message>
-    <message>
-        <source>Profile</source>
-        <translation>Профиль</translation>
-    </message>
-    <message>
-        <source>New Secret Chat</source>
-        <translation>Создать тайный диалог</translation>
-    </message>
-    <message>
-        <source>New Group</source>
-        <translation>Создать беседу</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -398,6 +360,44 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     <message>
         <source>Not Connected</source>
         <translation>Нет подключения</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPullDownMenu</name>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished">Профиль</translation>
+    </message>
+    <message>
+        <source>New Secret Chat</source>
+        <translation type="unfinished">Создать тайный диалог</translation>
+    </message>
+    <message>
+        <source>New Group</source>
+        <translation type="unfinished">Создать беседу</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Контакты</translation>
+    </message>
+</context>
+<context>
+    <name>DialogsPage</name>
+    <message>
+        <source>No Chats
+
+Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
+        <translation type="unfinished">Диалогов нет
+
+Выберите контакта из меню &apos;Контакты&apos;</translation>
+    </message>
+    <message>
+        <source>Chats</source>
+        <translation type="unfinished">Диалоги</translation>
+    </message>
+    <message>
+        <source>Connecting...</source>
+        <translation type="unfinished">Подключение...</translation>
     </message>
 </context>
 <context>

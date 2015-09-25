@@ -14,7 +14,7 @@ Item
     property int unreadCount: 0
     property bool muted: false
 
-    id: conversationitem
+    id: dialogitem
 
     Row
     {
@@ -24,9 +24,9 @@ Item
         PeerImage
         {
             id: conversationimage
-            width: conversationitem.height
-            height: conversationitem.height
-            fallbackText: conversationitem.dialogTitle
+            width: dialogitem.height
+            height: dialogitem.height
+            fallbackText: dialogitem.dialogTitle
         }
 
         Column
@@ -36,7 +36,7 @@ Item
 
             Row
             {
-                height: conversationitem.height / 2
+                height: dialogitem.height / 2
                 anchors { left: parent.left; right: parent.right; rightMargin: Theme.paddingMedium }
                 spacing: Theme.paddingSmall
 
@@ -98,7 +98,7 @@ Item
 
             Row
             {
-                height: conversationitem.height / 2
+                height: dialogitem.height / 2
                 anchors { left: parent.left; right: parent.right; rightMargin: Theme.paddingMedium }
 
                 Label
@@ -110,7 +110,7 @@ Item
                     verticalAlignment: Text.AlignVCenter
                     font.pixelSize: Theme.fontSizeExtraSmall
                     //font.italic: TelegramHelper.isActionMessage(message)
-                    text: conversationitem.lastMessage
+                    text: dialogitem.lastMessage
                 }
 
                 Rectangle
@@ -119,7 +119,7 @@ Item
                     width: parent.height
                     height: parent.height
                     color: Theme.secondaryHighlightColor
-                    visible: conversationitem.unreadCount > 0
+                    visible: dialogitem.unreadCount > 0
                     radius: width * 0.5
 
                     Label
@@ -129,7 +129,7 @@ Item
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
                         font.bold: true
-                        text: conversationitem.unreadCount
+                        text: dialogitem.unreadCount
                     }
                 }
             }

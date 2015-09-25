@@ -295,44 +295,6 @@ Minimilängd är 5 tecken.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationsPage</name>
-    <message>
-        <source>No Chats
-
-Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
-        <translation>Ingen chatt
-
-Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</translation>
-    </message>
-    <message>
-        <source>Chats</source>
-        <translation>Chattar</translation>
-    </message>
-    <message>
-        <source>Connecting...</source>
-        <translation>Ansluter...</translation>
-    </message>
-</context>
-<context>
-    <name>ConversationsPullDownMenu</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Kontakter</translation>
-    </message>
-    <message>
-        <source>Profile</source>
-        <translation>Profil</translation>
-    </message>
-    <message>
-        <source>New Secret Chat</source>
-        <translation>Ny hemlig chatt</translation>
-    </message>
-    <message>
-        <source>New Group</source>
-        <translation>Ny grupp</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -398,6 +360,44 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
     <message>
         <source>Not Connected</source>
         <translation>Ej ansluten</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPullDownMenu</name>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished">Profil</translation>
+    </message>
+    <message>
+        <source>New Secret Chat</source>
+        <translation type="unfinished">Ny hemlig chatt</translation>
+    </message>
+    <message>
+        <source>New Group</source>
+        <translation type="unfinished">Ny grupp</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Kontakter</translation>
+    </message>
+</context>
+<context>
+    <name>DialogsPage</name>
+    <message>
+        <source>No Chats
+
+Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
+        <translation type="unfinished">Ingen chatt
+
+Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</translation>
+    </message>
+    <message>
+        <source>Chats</source>
+        <translation type="unfinished">Chattar</translation>
+    </message>
+    <message>
+        <source>Connecting...</source>
+        <translation type="unfinished">Ansluter...</translation>
     </message>
 </context>
 <context>

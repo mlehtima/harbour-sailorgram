@@ -16,7 +16,7 @@ Page
     property Chat chat
     property User user
 
-    id: conversationpage
+    id: dialogpage
     allowedOrientations: defaultAllowedOrientations
 
     Component.onCompleted: {

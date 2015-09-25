@@ -295,44 +295,6 @@ De minimale lengte is 5 tekens.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationsPage</name>
-    <message>
-        <source>No Chats
-
-Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
-        <translation>Geen chatgesprekken
-
-Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het trekmenu</translation>
-    </message>
-    <message>
-        <source>Chats</source>
-        <translation>Chatgesprekken</translation>
-    </message>
-    <message>
-        <source>Connecting...</source>
-        <translation>Bezig met verbinden...</translation>
-    </message>
-</context>
-<context>
-    <name>ConversationsPullDownMenu</name>
-    <message>
-        <source>Contacts</source>
-        <translation>Contactpersonen</translation>
-    </message>
-    <message>
-        <source>Profile</source>
-        <translation>Profiel</translation>
-    </message>
-    <message>
-        <source>New Secret Chat</source>
-        <translation>Nieuw geheim chatgesprek</translation>
-    </message>
-    <message>
-        <source>New Group</source>
-        <translation>Nieuwe groep</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -398,6 +360,44 @@ Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het tr
     <message>
         <source>Not Connected</source>
         <translation>Niet verbonden</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPullDownMenu</name>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished">Profiel</translation>
+    </message>
+    <message>
+        <source>New Secret Chat</source>
+        <translation type="unfinished">Nieuw geheim chatgesprek</translation>
+    </message>
+    <message>
+        <source>New Group</source>
+        <translation type="unfinished">Nieuwe groep</translation>
+    </message>
+    <message>
+        <source>Contacts</source>
+        <translation type="unfinished">Contactpersonen</translation>
+    </message>
+</context>
+<context>
+    <name>DialogsPage</name>
+    <message>
+        <source>No Chats
+
+Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
+        <translation type="unfinished">Geen chatgesprekken
+
+Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het trekmenu</translation>
+    </message>
+    <message>
+        <source>Chats</source>
+        <translation type="unfinished">Chatgesprekken </translation>
+    </message>
+    <message>
+        <source>Connecting...</source>
+        <translation type="unfinished">Bezig met verbinden...</translation>
     </message>
 </context>
 <context>
