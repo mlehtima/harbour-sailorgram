@@ -54,6 +54,27 @@ function userStatus(user)
     return qsTr("Unknown");
 }
 
+function messageDate(message)
+{
+    var messagedate = message.date;
+    var now = new Date(Date.now());
+
+    console.log(messagedate);
+
+    if(now === messagedate)
+        return Qt.formatDateTime(messagedate, "HH:mm");
+
+    var MS_PER_DAY = 1000 * 60 * 60 * 24;
+    var daydiff = (now - messagedate) / MS_PER_DAY;
+
+    if(daydiff < 7)
+        return Qt.formatDateTime(messagedate, "ddd HH:mm");
+    else if(messagedate.getYear() === now.getYear())
+        return Qt.formatDateTime(messagedate, "dd MMM");
+
+    return Qt.formatDateTime(messagedate, "dd MMM yy");
+}
+
 function isChat(dialog)
 {
     if(!dialog)

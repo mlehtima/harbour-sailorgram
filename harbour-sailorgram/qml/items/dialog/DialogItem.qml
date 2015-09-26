@@ -71,7 +71,7 @@ Item
                     font.pixelSize: Theme.fontSizeTiny
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignRight
-                    text: "00:00" //TelegramCalendar.timeToString(message.date)
+                    text: TelegramHelper.printableDate(telegramDialog.topMessage.date)
 
                     width: {
                         var w = parent.width - lbltitle.contentWidth;
