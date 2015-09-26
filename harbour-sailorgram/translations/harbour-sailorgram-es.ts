@@ -741,6 +741,10 @@ Elije un contacto seleccionando &quot;Contactos&quot; en el menú de desplegable
         <source>Geo</source>
         <translation>Geo</translation>
     </message>
+    <message>
+        <source>Last Seen %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>UserInfo</name>

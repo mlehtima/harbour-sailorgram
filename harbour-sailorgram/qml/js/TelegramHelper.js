@@ -30,49 +30,40 @@ function fallbackLetters(text)
 
 function userStatus(user)
 {
-    switch(user.status.classType)
-    {
-        case TelegramConstants.typeUserStatusRecently:
-            return qsTr("Recently");
+    if(user.status.isOnline)
+        return qsTr("Online");
 
-        case TelegramConstants.typeUserStatusLastMonth:
-            return qsTr("Last Month");
+    if(user.status.isOffline)
+        return qsTr("Last Seen %1").arg(printableDate(user.status.wasOnline));
 
-        case TelegramConstants.typeUserStatusLastWeek:
-            return qsTr("Last Week");
+    if(user.status.isRecently)
+        return qsTr("Recently");
 
-        case TelegramConstants.typeUserStatusOnline:
-            return qsTr("Online");
+    if(user.status.isLastMonth)
+        return qsTr("Last Month");
 
-        //case TelegramConstants.typeUserStatusOffline:
-            //return qsTr("Last Seen %1").arg(TelegramCalendar.TelegramCalendar.timeToString(user.status.wasOnline));
-
-        default:
-            break;
-    }
+    if(user.status.isLastWeek)
+        return qsTr("Last Week");
 
     return qsTr("Unknown");
 }
 
-function messageDate(message)
+function printableDate(date)
 {
-    var messagedate = message.date;
     var now = new Date(Date.now());
 
-    console.log(messagedate);
-
-    if(now === messagedate)
-        return Qt.formatDateTime(messagedate, "HH:mm");
+    if(now === date)
+        return Qt.formatDateTime(date, "HH:mm");
 
     var MS_PER_DAY = 1000 * 60 * 60 * 24;
-    var daydiff = (now - messagedate) / MS_PER_DAY;
+    var daydiff = (now - date) / MS_PER_DAY;
 
     if(daydiff < 7)
-        return Qt.formatDateTime(messagedate, "ddd HH:mm");
-    else if(messagedate.getYear() === now.getYear())
-        return Qt.formatDateTime(messagedate, "dd MMM");
+        return Qt.formatDateTime(date, "ddd HH:mm");
+    else if(date.getYear() === now.getYear())
+        return Qt.formatDateTime(date, "dd MMM");
 
-    return Qt.formatDateTime(messagedate, "dd MMM yy");
+    return Qt.formatDateTime(date, "dd MMM yy");
 }
 
 function isChat(dialog)

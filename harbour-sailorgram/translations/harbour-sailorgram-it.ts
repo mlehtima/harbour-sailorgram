@@ -741,6 +741,10 @@ Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
         <source>Geo</source>
         <translation>Posizione</translation>
     </message>
+    <message>
+        <source>Last Seen %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>UserInfo</name>

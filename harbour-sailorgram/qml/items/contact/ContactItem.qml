@@ -38,7 +38,7 @@ Item
 
             Label {
                 id: lblstaticstatus
-                //text: TelegramHelper.userStatus(user)
+                text: TelegramHelper.userStatus(telegramContact.user)
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: Theme.highlightColor
             }

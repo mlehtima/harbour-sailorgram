@@ -741,6 +741,10 @@ Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta v
         <source>Geo</source>
         <translation>Sijainti</translation>
     </message>
+    <message>
+        <source>Last Seen %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>UserInfo</name>

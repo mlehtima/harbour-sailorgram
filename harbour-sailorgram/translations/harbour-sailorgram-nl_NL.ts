@@ -741,6 +741,10 @@ Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het tr
         <source>Geo</source>
         <translation>Geolocatie</translation>
     </message>
+    <message>
+        <source>Last Seen %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>UserInfo</name>

@@ -741,6 +741,10 @@ Přidejte osobu výběrem &quot;Kontakty&quot; z menu</translation>
         <source>Geo</source>
         <translation>GPS</translation>
     </message>
+    <message>
+        <source>Last Seen %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>UserInfo</name>
