@@ -33,8 +33,8 @@ import Sailfish.Silica 1.0
 import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../../components"
-import "../../menus/conversation"
-import "../../items/conversation"
+import "../../menus/dialog"
+import "../../items/dialog"
 import "../../js/TelegramHelper.js" as TelegramHelper
 import "../../js/TelegramConstants.js" as TelegramConstants
 
@@ -56,7 +56,7 @@ Page
 
     SilicaListView
     {
-        ConversationsPullDownMenu
+        DialogPullDownMenu
         {
             id: conversationsmenu
             context: dialogspage.context
@@ -82,7 +82,7 @@ Page
             }
         }
 
-        model: DialogModel {
+        model: DialogsModel {
             telegram: dialogspage.context.telegram
         }
 
@@ -103,11 +103,11 @@ Page
             contentHeight: Theme.itemSizeSmall
             onClicked: displayConversation()
 
-            /*
             menu: ContextMenu {
                 MenuItem {
                     text: qsTr("Delete")
 
+                    /*
                     onClicked: {
                         var msg = qsTr("Deleting Conversation");
 
@@ -125,32 +125,14 @@ Page
                                 context.telegram.messagesDeleteHistory(TelegramHelper.peerId(item));
                         });
                     }
+                    */
                 }
             }
-            */
 
-            Component.onCompleted: {
-                if(/* !item.encrypted && */ !conversationItemComponent) {
-                    conversationItemComponent = Qt.createComponent("../../items/dialog/DialogItem.qml");
-
-                    if(conversationItemComponent.status === Component.Error) {
-                        console.log(conversationItemComponent.errorString());
-                        return;
-                    }
-                }
-                /*
-                else if(item.encrypted && !secretConversationItemComponent) {
-                    secretConversationItemComponent = Qt.createComponent("../../items/secretconversation/SecretConversationItem.qml");
-
-                    if(secretConversationItemComponent.status === Component.Error) {
-                        console.log(secretConversationItemComponent.errorString());
-                        return;
-                    }
-                }
-                */
-
-                var c = conversationItemComponent; //!item.encrypted ? conversationItemComponent : secretConversationItemComponent;
-                c.createObject(contentItem, {"anchors.fill": contentItem, "context": dialogspage.context, "dialogTitle": dialogTitle, "lastMessage": dialogLastMessage, "unreadCount": dialogUnreadCount });
+            DialogItem
+            {
+                anchors.fill: parent
+                telegramDialog: dialog
             }
         }
     }

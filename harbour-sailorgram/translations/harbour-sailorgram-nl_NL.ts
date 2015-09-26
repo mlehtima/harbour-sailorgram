@@ -399,6 +399,10 @@ Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het tr
         <source>Connecting...</source>
         <translation type="unfinished">Bezig met verbinden...</translation>
     </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished">Verwijderen</translation>
+    </message>
 </context>
 <context>
     <name>ErrorsPage</name>

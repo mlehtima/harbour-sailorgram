@@ -399,6 +399,10 @@ Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta v
         <source>Connecting...</source>
         <translation type="unfinished">Yhdistää...</translation>
     </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished">Poista</translation>
+    </message>
 </context>
 <context>
     <name>ErrorsPage</name>

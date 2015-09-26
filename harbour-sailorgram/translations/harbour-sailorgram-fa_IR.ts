@@ -399,6 +399,10 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
         <source>Connecting...</source>
         <translation type="unfinished">در حال اتصال…‏</translation>
     </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished">حذف</translation>
+    </message>
 </context>
 <context>
     <name>ErrorsPage</name>

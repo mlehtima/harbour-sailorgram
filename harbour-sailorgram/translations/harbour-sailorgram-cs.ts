@@ -399,6 +399,10 @@ Přidejte osobu výběrem &quot;Kontakty&quot; z menu</translation>
         <source>Connecting...</source>
         <translation type="unfinished">Připojuji...</translation>
     </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished">Vymazat</translation>
+    </message>
 </context>
 <context>
     <name>ErrorsPage</name>

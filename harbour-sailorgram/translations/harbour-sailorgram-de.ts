@@ -399,6 +399,10 @@ wähle einen Kontakt über &quot;Kontakte&quot; im Pull-Down-Menü</translation>
         <source>Connecting...</source>
         <translation type="unfinished">Verbinden...</translation>
     </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished">Löschen</translation>
+    </message>
 </context>
 <context>
     <name>ErrorsPage</name>

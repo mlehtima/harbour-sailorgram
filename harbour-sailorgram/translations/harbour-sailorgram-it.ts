@@ -399,6 +399,10 @@ Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
         <source>Connecting...</source>
         <translation type="unfinished">Connessione...</translation>
     </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished">Elimina</translation>
+    </message>
 </context>
 <context>
     <name>ErrorsPage</name>

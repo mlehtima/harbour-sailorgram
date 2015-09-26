@@ -399,6 +399,10 @@ Elije un contacto seleccionando &quot;Contactos&quot; en el menú de desplegable
         <source>Connecting...</source>
         <translation type="unfinished">Conectando...</translation>
     </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished">Borrar</translation>
+    </message>
 </context>
 <context>
     <name>ErrorsPage</name>

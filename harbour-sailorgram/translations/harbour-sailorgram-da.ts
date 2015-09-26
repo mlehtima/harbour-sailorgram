@@ -399,6 +399,10 @@ Vælg en kontakt fra menuen ovenfor</translation>
         <source>Connecting...</source>
         <translation type="unfinished">Forbinder...</translation>
     </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished">Slet</translation>
+    </message>
 </context>
 <context>
     <name>ErrorsPage</name>

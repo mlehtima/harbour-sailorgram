@@ -22,9 +22,6 @@ QtObject
     property ErrorsModel errors: ErrorsModel { }
     property SailorGram sailorgram: SailorGram { }
 
-    property ContactModel contacts: ContactModel {
-        telegram: context.telegram
-    }
 
     property Telegram telegram: Telegram {
         apiId: 27782

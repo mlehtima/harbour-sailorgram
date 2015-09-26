@@ -1,6 +1,7 @@
 .pragma library
 
 .import "TelegramConstants.js" as TelegramConstants
+.import harbour.sailorgram.Telegram 1.0 as Telegram
 
 function fullName(firstname, lastname)
 {
@@ -83,7 +84,33 @@ function peerId(dialog)
     return dialog.peer.userId;
 }
 
-function messageContent(message)
+function mediaType(messagemedia)
+{
+    if(messagemedia.isDocument)
+        return qsTr("Document");
+
+    if(messagemedia.isContact)
+        return qsTr("Contact");
+
+    if(messagemedia.isVideo)
+        return qsTr("Video");
+
+    if(messagemedia.isUnsupported)
+        return qsTr("Unsupported");
+
+    if(messagemedia.isAudio)
+        return qsTr("Audio");
+
+    if(messagemedia.isPhoto)
+        return qsTr("Photo");
+
+    if(messagemedia.isGeo)
+        return qsTr("Geo");
+
+    return qsTr("Unknown");
+}
+
+function messageContent(message) // NOTE: Deprecated
 {
     if(message.media)
     {

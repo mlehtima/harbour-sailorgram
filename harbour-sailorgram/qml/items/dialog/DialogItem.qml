@@ -8,11 +8,7 @@ import "../../js/TelegramAction.js" as TelegramAction
 
 Item
 {
-    property Context context
-    property string dialogTitle
-    property string lastMessage
-    property int unreadCount: 0
-    property bool muted: false
+    property Dialog telegramDialog
 
     id: dialogitem
 
@@ -26,7 +22,7 @@ Item
             id: conversationimage
             width: dialogitem.height
             height: dialogitem.height
-            fallbackText: dialogitem.dialogTitle
+            fallbackText: telegramDialog.title
         }
 
         Column
@@ -44,15 +40,15 @@ Item
                     id: imgchat
                     width: lbltitle.contentHeight
                     height: lbltitle.contentHeight
-                    visible: false //TelegramHelper.isChat(dialog)
-                    source: "" //TelegramHelper.isChat(dialog) ? "image://theme/icon-s-chat" : ""
+                    visible: telegramDialog.isChat
+                    source: telegramDialog.isChat ? "image://theme/icon-s-chat" : ""
                     anchors.verticalCenter: parent.verticalCenter
                     fillMode: Image.PreserveAspectFit
                 }
 
                 Label {
                     id: lbltitle
-                    text: dialogTitle
+                    text: telegramDialog.title
                     verticalAlignment: Text.AlignVCenter
                     height: parent.height
                     color: Theme.highlightColor
@@ -109,8 +105,14 @@ Item
                     elide: Text.ElideRight
                     verticalAlignment: Text.AlignVCenter
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    //font.italic: TelegramHelper.isActionMessage(message)
-                    text: dialogitem.lastMessage
+                    font.italic: telegramDialog.topMessage.isService
+
+                    text: {
+                        if(telegramDialog.topMessage.isMedia)
+                            return TelegramHelper.mediaType(telegramDialog.topMessage.media);
+
+                        return telegramDialog.topMessage.message;
+                    }
                 }
 
                 Rectangle
@@ -119,7 +121,7 @@ Item
                     width: parent.height
                     height: parent.height
                     color: Theme.secondaryHighlightColor
-                    visible: dialogitem.unreadCount > 0
+                    visible: telegramDialog.unreadCount > 0
                     radius: width * 0.5
 
                     Label
@@ -129,7 +131,7 @@ Item
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
                         font.bold: true
-                        text: dialogitem.unreadCount
+                        text: telegramDialog.unreadCount
                     }
                 }
             }

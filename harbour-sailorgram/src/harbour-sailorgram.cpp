@@ -31,8 +31,9 @@
 #include <QtQuick>
 #include <sailfishapp.h>
 #include <telegram.h>
-#include <model/contactmodel.h>
-#include <model/dialogmodel.h>
+#include <model/contacts/contactsmodel.h>
+#include <model/dialogs/dialogsmodel.h>
+#include <model/dialogs/dialogmodel.h>
 #include "dbus/screenblank.h"
 #include "dbus/notifications/notifications.h"
 #include "filepicker/folderlistmodel.h"
@@ -47,9 +48,16 @@ int main(int argc, char *argv[])
     qmlRegisterType<SailorGram>("harbour.sailorgram.SailorGram", 1, 0, "SailorGram");
 
     qmlRegisterType<TelegramDatabase>("harbour.sailorgram.Telegram", 1, 0, "TelegramDatabase");
-    qmlRegisterType<ContactModel>("harbour.sailorgram.Telegram", 1, 0, "ContactModel");
+    qmlRegisterType<ContactsModel>("harbour.sailorgram.Telegram", 1, 0, "ContactsModel");
+    qmlRegisterType<DialogsModel>("harbour.sailorgram.Telegram", 1, 0, "DialogsModel");
     qmlRegisterType<DialogModel>("harbour.sailorgram.Telegram", 1, 0, "DialogModel");
     qmlRegisterType<Telegram>("harbour.sailorgram.Telegram", 1, 0, "Telegram");
+
+    qmlRegisterType<DialogObject>("harbour.sailorgram.Telegram", 1, 0, "Dialog");
+    qmlRegisterType<ContactObject>("harbour.sailorgram.Telegram", 1, 0, "Contact");
+    qmlRegisterType<UserObject>("harbour.sailorgram.Telegram", 1, 0, "User");
+    qmlRegisterType<MessageObject>("harbour.sailorgram.Telegram", 1, 0, "Message");
+    qmlRegisterType<MessageMediaObject>("harbour.sailorgram.Telegram", 1, 0, "MessageMediaObject");
 
     qmlRegisterType<ScreenBlank>("harbour.sailorgram.DBus", 1, 0, "ScreenBlank");
     qmlRegisterType<Notifications>("harbour.sailorgram.DBus", 1, 0, "Notifications");

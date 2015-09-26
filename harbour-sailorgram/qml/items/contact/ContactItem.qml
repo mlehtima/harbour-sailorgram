@@ -7,9 +7,7 @@ import "../../js/TelegramHelper.js" as TelegramHelper
 
 Item
 {
-    property Context context
-    property string firstName
-    property string lastName
+    property Contact telegramContact
 
     id: contactitem
 
@@ -19,7 +17,7 @@ Item
         anchors { left: parent.left; top: parent.top }
         width: contactitem.height
         height: contactitem.height
-        fallbackText: TelegramHelper.fullName(firstName, lastName)
+        fallbackText: TelegramHelper.fullName(telegramContact.user.firstName, telegramContact.user.lastName)
     }
 
     Column
@@ -31,7 +29,7 @@ Item
             id: lblfullname
             width: parent.width
             elide: Text.ElideRight
-            text: TelegramHelper.fullName(firstName, lastName)
+            text: TelegramHelper.fullName(telegramContact.user.firstName, telegramContact.user.lastName)
         }
 
         Row

@@ -399,6 +399,10 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
         <source>Connecting...</source>
         <translation type="unfinished">Ansluter...</translation>
     </message>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished">Ta bort</translation>
+    </message>
 </context>
 <context>
     <name>ErrorsPage</name>
