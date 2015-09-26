@@ -3,9 +3,9 @@
 .import "TelegramConstants.js" as TelegramConstants
 .import harbour.sailorgram.Telegram 1.0 as Telegram
 
-function fullName(firstname, lastname)
+function fullName(user)
 {
-    return firstname + " " + lastname;
+    return user.firstName+ " " + user.lastName;
 }
 
 function completeName(user) // NOTE: Deprecated
