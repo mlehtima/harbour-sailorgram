@@ -23,6 +23,7 @@ Item
             width: dialogitem.height
             height: dialogitem.height
             fallbackText: telegramDialog.title
+            telegramDialog: dialogitem.telegramDialog
         }
 
         Column

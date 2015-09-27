@@ -18,6 +18,7 @@ Item
         width: contactitem.height
         height: contactitem.height
         fallbackText: TelegramHelper.fullName(telegramContact.user)
+        telegramUser: telegramContact.user
     }
 
     Column

@@ -6,27 +6,27 @@ import "../../js/TelegramHelper.js" as TelegramHelper
 
 Image
 {
+    property Dialog telegramDialog
+    property User telegramUser
     property string fallbackText
 
     id: imgpeer
     fillMode: Image.PreserveAspectFit
     asynchronous: true
 
-    /*
     source: {
-        if(TelegramHelper.isChat(dialog))
-            return "";
+        if(telegramUser)
+            return telegramUser.photo.photoSmall;
 
-        return user.photo.photoSmall.download.location;
+        return "";
     }
-    */
 
     Rectangle {
         id: imgfallback
         anchors.fill: parent
         color: Theme.secondaryHighlightColor
         radius: imgpeer.width * 0.5
-        //visible: TelegramHelper.isChat(dialog) || (user.photo.photoSmall.download.location.length <= 0)
+        visible: !telegramUser || telegramUser.photo.isEmpty //TODO: Chat management
 
         Label {
             anchors.centerIn: parent
@@ -40,21 +40,13 @@ Image
         id: imgpeertype
         anchors { bottom: parent.bottom; right: parent.right }
         fillMode: Image.PreserveAspectFit
-        //FIXME: visible: dialog && (dialog.encrypted || TelegramHelper.isChat(dialog))
+         visible: telegramDialog && telegramDialog.isChat
 
-        /*
         source: {
-            if(!dialog)
-                return "";
-
-            if(dialog.encrypted)
-                return "image://theme/icon-s-secure"
-
-            if(TelegramHelper.isChat(dialog))
+            if(telegramDialog && telegramDialog.isChat)
                 return "image://theme/icon-s-chat";
 
             return "";
         }
-        */
     }
 }
