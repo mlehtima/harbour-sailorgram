@@ -18,6 +18,14 @@ Image
         if(telegramUser)
             return telegramUser.photo.photoSmall;
 
+        if(telegramDialog)
+        {
+            if(telegramDialog.isChat)
+                return telegramDialog.chat.photo.photoSmall;
+
+            return telegramDialog.user.photo.photoSmall;
+        }
+
         return "";
     }
 
@@ -26,7 +34,19 @@ Image
         anchors.fill: parent
         color: Theme.secondaryHighlightColor
         radius: imgpeer.width * 0.5
-        visible: !telegramUser || telegramUser.photo.isEmpty //TODO: Chat management
+
+        visible: {
+            if(telegramUser && telegramUser.photo.isEmpty)
+                return true;
+
+            if(telegramDialog && telegramDialog.isChat && telegramDialog.chat.photo.isEmpty)
+                return true;
+
+            if(telegramDialog && !telegramDialog.isChat && telegramDialog.user.photo.isEmpty)
+                return true;
+
+            return false;
+        }
 
         Label {
             anchors.centerIn: parent

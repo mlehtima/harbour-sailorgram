@@ -58,6 +58,8 @@ int main(int argc, char *argv[])
     qmlRegisterType<UserObject>("harbour.sailorgram.Telegram", 1, 0, "User");
     qmlRegisterType<UserProfilePhotoObject>("harbour.sailorgram.Telegram", 1, 0, "UserProfilePhoto");
     qmlRegisterType<UserStatusObject>("harbour.sailorgram.Telegram", 1, 0, "UserStatusObject");
+    qmlRegisterType<ChatObject>("harbour.sailorgram.Telegram", 1, 0, "Chat");
+    qmlRegisterType<ChatPhotoObject>("harbour.sailorgram.Telegram", 1, 0, "ChatPhoto");
     qmlRegisterType<MessageObject>("harbour.sailorgram.Telegram", 1, 0, "Message");
     qmlRegisterType<MessageMediaObject>("harbour.sailorgram.Telegram", 1, 0, "MessageMediaObject");
     qmlRegisterType<MessageMediaObject>("harbour.sailorgram.Telegram", 1, 0, "MessageMediaObject");
