@@ -19,7 +19,7 @@ Page
         timdisplaystatus.restart();
 
         if(!context.telegram.dcConnected)
-            context.telegram.connectToDC(context.apiAddress, context.apiPort);
+            context.telegram.connectToDC(context.apiAddress, context.apiPort, context.dcId);
     }
 
     Timer

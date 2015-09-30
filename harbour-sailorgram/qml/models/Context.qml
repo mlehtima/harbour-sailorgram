@@ -11,6 +11,7 @@ QtObject
 
     readonly property string apiAddress: "149.154.167.50"
     readonly property int apiPort: 443
+    readonly property int dcId: 2
     readonly property string version: "0.79"
 
     property bool sendwithreturn: false
@@ -26,7 +27,6 @@ QtObject
     property Telegram telegram: Telegram {
         apiId: 27782
         apiHash: "5ce096f34c8afab871edce728e6d64c9"
-        dcId: 2
         storagePath: sailorgram.telegramConfigPath
         publicKey: sailorgram.telegramPublicKey
 
