@@ -27,6 +27,9 @@ QtObject
     property Telegram telegram: Telegram {
         apiId: 27782
         apiHash: "5ce096f34c8afab871edce728e6d64c9"
+        deviceModel: "Sailfish OS"
+        osVersion: "Linux"
+        applicationVersion: context.version
         storagePath: sailorgram.telegramConfigPath
         publicKey: sailorgram.telegramPublicKey
 

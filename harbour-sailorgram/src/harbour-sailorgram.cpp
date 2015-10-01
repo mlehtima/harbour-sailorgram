@@ -42,8 +42,6 @@
 int main(int argc, char *argv[])
 {
     QScopedPointer<QGuiApplication> application(SailfishApp::application(argc, argv));
-    application->setApplicationName("harbour-sailorgram");
-    application->setApplicationVersion("0.79");
 
     qmlRegisterType<SailorGram>("harbour.sailorgram.SailorGram", 1, 0, "SailorGram");
 
