@@ -1,21 +1,21 @@
 import QtQuick 2.1
-import harbour.sailorgram.TelegramQml 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../js/TelegramHelper.js" as TelegramHelper
 
 Image
 {
-    property Message message
+    property Message telegramMessage
 
     id: messagestatus
-    visible: message.out && !TelegramHelper.isActionMessage(message)
+    visible: telegramMessage.isOut && !telegramMessage.isService
     fillMode: Image.PreserveAspectFit
 
     source: {
-        if(!message.unread)
+        if(!telegramMessage.isUnread)
             return "qrc:///res/read.png";
 
-        if(message.sent)
-            return "qrc:///res/sent.png";
+        /* FIXME: if(telegramMessage.sent)
+            return "qrc:///res/sent.png"; */
 
         return "qrc:///res/out.png";
     }

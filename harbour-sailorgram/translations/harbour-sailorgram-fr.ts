@@ -288,13 +288,6 @@ La longueur minimum est de 5 caractères.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation>Charger plus de messages</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -360,6 +353,13 @@ La longueur minimum est de 5 caractères.</translation>
     <message>
         <source>Not Connected</source>
         <translation>Non connecté</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPage</name>
+    <message>
+        <source>Load more messages</source>
+        <translation type="unfinished">Charger plus de messages</translation>
     </message>
 </context>
 <context>

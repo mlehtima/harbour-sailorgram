@@ -1,16 +1,12 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../models"
-import "../conversation"
 import "../../js/TelegramHelper.js" as TelegramHelper
 
 Item
 {
-    property Context context
-    property Dialog dialog
-    property Chat chat
-    property User user
+    property Dialog telegramDialog
 
     id: peeritem
 
@@ -20,10 +16,8 @@ Item
         anchors { left: parent.left; top: parent.top }
         width: peeritem.height
         height: peeritem.height
-        context: peeritem.context
-        dialog: peeritem.dialog
-        chat: peeritem.chat
-        user: peeritem.user
+        telegramDialog: peeritem.telegramDialog
+        telegramUser: peeritem.telegramDialog.user
     }
 
     Column
@@ -43,7 +37,7 @@ Item
                 source: "image://theme/icon-s-secure"
                 anchors.verticalCenter: lbltitle.verticalCenter
                 fillMode: Image.PreserveAspectFit
-                visible: peeritem.dialog.encrypted
+                visible: false //FIXME: peeritem.telegramDialog.encrypted
             }
 
             Label
@@ -51,7 +45,7 @@ Item
                 id: lbltitle
                 width: parent.width
                 elide: Text.ElideRight
-                text: TelegramHelper.isChat(dialog) ? chat.title : TelegramHelper.completeName(user)
+                text: telegramDialog.title
             }
         }
 
@@ -66,10 +60,12 @@ Item
                 color: Theme.highlightColor
 
                 text: {
-                    if(TelegramHelper.isChat(dialog))
+                    if(telegramDialog.isChat) {
+                        var chat = telegramDialog.chat;
                         return chat.participantsCount === 1 ? qsTr("%1 member").arg(chat.participantsCount) : qsTr("%1 members").arg(chat.participantsCount);
+                    }
 
-                    return TelegramHelper.userStatus(user);
+                    return TelegramHelper.userStatus(telegramDialog.user);
                 }
             }
         }

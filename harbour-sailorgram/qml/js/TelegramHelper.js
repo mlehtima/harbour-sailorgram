@@ -5,7 +5,7 @@
 
 function fullName(user)
 {
-    return user.firstName+ " " + user.lastName;
+    return user.firstName + " " + user.lastName;
 }
 
 function completeName(user) // NOTE: Deprecated

@@ -1,7 +1,6 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
-import harbour.sailorgram.TelegramCalendar 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../../menus"
 import "media"
@@ -11,7 +10,8 @@ import "../../js/TelegramHelper.js" as TelegramHelper
 ListItem
 {
     property Context context
-    property Message message
+    property Message telegramMessage
+    property User telegramFromUser
 
     function remorseNeeded(mediatype, type) {
         if(loader.item.fileHandler.downloaded) // No remorse for downloaded medias
@@ -33,13 +33,13 @@ ListItem
         if(!loader.item.fileHandler.downloaded)
             loader.item.fileHandler.download();
 
-        if((message.media.classType === TelegramConstants.typeMessageMediaPhoto) || (type === "image")) {
-            pageStack.push(Qt.resolvedUrl("../../pages/media/MediaPhotoPage.qml"), { "context": messageitem.context, "message": messageitem.message, "fileHandler": loader.item.fileHandler });
+        if((telegramMessage.media.classType === TelegramConstants.typeMessageMediaPhoto) || (type === "image")) {
+            pageStack.push(Qt.resolvedUrl("../../pages/media/MediaPhotoPage.qml"), { "context": messageitem.context, "message": messageitem.telegramMessage, "fileHandler": loader.item.fileHandler });
             return;
         }
 
-        if((message.media.classType === TelegramConstants.typeMessageMediaVideo) || (message.media.classType === TelegramConstants.typeMessageMediaAudio) || (type === "audio") || (type === "video")) {
-            pageStack.push(Qt.resolvedUrl("../../pages/media/MediaPlayerPage.qml"), { "context": messageitem.context, "message": messageitem.message, "fileHandler": loader.item.fileHandler });
+        if((telegramMessage.media.classType === TelegramConstants.typeMessageMediaVideo) || (telegramMessage.media.classType === TelegramConstants.typeMessageMediaAudio) || (type === "audio") || (type === "video")) {
+            pageStack.push(Qt.resolvedUrl("../../pages/media/MediaPlayerPage.qml"), { "context": messageitem.context, "message": messageitem.telegramMessage, "fileHandler": loader.item.fileHandler });
             return;
         }
 
@@ -51,21 +51,21 @@ ListItem
     }
 
     function displayMedia() {
-        if(!message.media)
+        if(!telegramMessage.media)
             return;
 
         var type = "";
-        var canbeviewed = (message.media.classType === TelegramConstants.typeMessageMediaPhoto) ||
-                          (message.media.classType === TelegramConstants.typeMessageMediaVideo) ||
-                          (message.media.classType === TelegramConstants.typeMessageMediaAudio);
+        var canbeviewed = (telegramMessage.media.classType === TelegramConstants.typeMessageMediaPhoto) ||
+                          (telegramMessage.media.classType === TelegramConstants.typeMessageMediaVideo) ||
+                          (telegramMessage.media.classType === TelegramConstants.typeMessageMediaAudio);
 
-        if(message.media.classType === TelegramConstants.typeMessageMediaDocument) {
-            var mime = message.media.document.mimeType;
+        if(telegramMessage.media.classType === TelegramConstants.typeMessageMediaDocument) {
+            var mime = telegramMessage.media.document.mimeType;
             type = mime.split("/")[0];
             canbeviewed = ((type === "video") || (type === "audio") || (type === "image")) ? true : false;
         }
 
-        if(!remorseNeeded(message.media.classType, type)) {
+        if(!remorseNeeded(telegramMessage.media.classType, type)) {
             openOrDownloadMedia(canbeviewed, type);
             return;
         }
@@ -79,24 +79,27 @@ ListItem
     contentWidth: parent.width
     contentHeight: content.height
 
+    /*
     menu: MessageMenu {
         id: messagemenu
         context: messageitem.context
-        message: messageitem.message
+        message: messageitem.telegramMessage
         messageMediaItem: loader.item
 
         onCancelRequested: loader.item.cancelTransfer()
         onDownloadRequested: loader.item.download()
     }
+    */
 
     onClicked: displayMedia()
 
+    /*
     Component {
         id: documentcomponent
 
         MessageDocument {
             context: messageitem.context
-            message: messageitem.message
+            message: messageitem.telegramMessage
         }
     }
 
@@ -105,7 +108,7 @@ ListItem
 
         MessagePhoto {
             context: messageitem.context
-            message: messageitem.message
+            message: messageitem.telegramMessage
         }
     }
 
@@ -114,7 +117,7 @@ ListItem
 
         MessageAudio {
             context: messageitem.context
-            message: messageitem.message
+            message: messageitem.telegramMessage
         }
     }
 
@@ -123,9 +126,10 @@ ListItem
 
         MessageVideo {
             context: messageitem.context
-            message: messageitem.message
+            message: messageitem.telegramMessage
         }
     }
+    */
 
     Column
     {
@@ -135,9 +139,9 @@ ListItem
         Label
         {
             id: lbluser
-            anchors { left: message.out ? parent.left : undefined; right: message.out ? undefined : parent.right }
-            visible: !TelegramHelper.isActionMessage(message) && !message.out
-            text: (!TelegramHelper.isActionMessage(message) && message.out) ? "" : TelegramHelper.completeName(context.telegram.user(message.fromId))
+            anchors { left: telegramMessage.isOut ? parent.left : undefined; right: telegramMessage.isOut ? undefined : parent.right }
+            visible: !telegramMessage.isService && !telegramMessage.isOut
+            text: (!telegramMessage.isService && telegramMessage.isOut) ? "" : TelegramHelper.fullName(telegramFromUser)
             font.bold: true
             font.pixelSize: Theme.fontSizeMedium
             wrapMode: Text.NoWrap
@@ -146,6 +150,7 @@ ListItem
             color: Theme.secondaryHighlightColor
         }
 
+        /*
         Loader
         {
             id: loader
@@ -169,12 +174,13 @@ ListItem
             onLoaded: {
             }
         }
+        */
 
         MessageText
         {
             id: messagetext
             width: parent.width
-            message: messageitem.message
+            telegramMessage: messageitem.telegramMessage
         }
     }
 }

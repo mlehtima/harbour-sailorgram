@@ -288,13 +288,6 @@ De minimale lengte is 5 tekens.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation>Meer berichten laden</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -360,6 +353,13 @@ De minimale lengte is 5 tekens.</translation>
     <message>
         <source>Not Connected</source>
         <translation>Niet verbonden</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPage</name>
+    <message>
+        <source>Load more messages</source>
+        <translation type="unfinished">Meer berichten laden</translation>
     </message>
 </context>
 <context>

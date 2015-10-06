@@ -288,13 +288,6 @@ Minimum sind 5 Zeichen.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -359,6 +352,13 @@ Minimum sind 5 Zeichen.</translation>
     </message>
     <message>
         <source>Not Connected</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DialogPage</name>
+    <message>
+        <source>Load more messages</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -288,13 +288,6 @@ Minimilängd är 5 tecken.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation>Läs in fler meddelanden</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -360,6 +353,13 @@ Minimilängd är 5 tecken.</translation>
     <message>
         <source>Not Connected</source>
         <translation>Ej ansluten</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPage</name>
+    <message>
+        <source>Load more messages</source>
+        <translation type="unfinished">Läs in fler meddelanden</translation>
     </message>
 </context>
 <context>

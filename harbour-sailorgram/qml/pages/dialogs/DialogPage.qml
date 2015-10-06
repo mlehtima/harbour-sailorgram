@@ -1,53 +1,29 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../models"
-import "../../menus/conversation"
 import "../../components"
 import "../../items/peer"
-import "../../items/user"
 import "../../items/messageitem"
 import "../../js/TelegramHelper.js" as TelegramHelper
 
 Page
 {
     property Context context
-    property Dialog dialog
-    property Chat chat
-    property User user
+    property Dialog telegramDialog
 
     id: dialogpage
     allowedOrientations: defaultAllowedOrientations
-
-    Component.onCompleted: {
-        if(TelegramHelper.isChat(dialog))
-            chat = context.telegram.chat(dialog.peer.chatId);
-        else
-            user = context.telegram.user(dialog.peer.userId);
-    }
 
     onStatusChanged: {
         if(status !== PageStatus.Active)
             return;
 
-        pageStack.pushAttached(Qt.resolvedUrl("ConversationInfoPage.qml"), { "context": conversationpage.context, "dialog": conversationpage.dialog, "chat": conversationpage.chat, "user": conversationpage.user });
-        context.foregroundDialog = conversationpage.dialog;
-
-        messagemodel.telegram = conversationpage.context.telegram;
-        messagemodel.dialog = conversationpage.dialog;
-        messagemodel.setReaded();
+        //pageStack.pushAttached(Qt.resolvedUrl("ConversationInfoPage.qml"), { "context": dialogpage.context, "dialog": dialogpage.dialog, "chat": dialogpage.chat, "user": dialogpage.user });
+        //context.foregroundDialog = dialogpage.dialog;
     }
 
     RemorsePopup { id: remorsepopup }
-
-    Timer
-    {
-        id: refreshtimer
-        repeat: true
-        interval: 10000
-        onTriggered: messagemodel.refresh()
-        Component.onCompleted: start()
-    }
 
     PopupMessage
     {
@@ -65,7 +41,7 @@ Page
             MenuItem
             {
                 text: qsTr("Load more messages")
-                onClicked: messagemodel.loadMore()
+                //FIXME: onClicked: messagemodel.loadMore()
             }
         }
 
@@ -74,11 +50,8 @@ Page
             id: header
             visible: !context.chatheaderhidden
             anchors { left: parent.left; top: parent.top; right: parent.right; leftMargin: Theme.horizontalPageMargin; topMargin: context.chatheaderhidden ? 0 : Theme.paddingMedium }
-            height: context.chatheaderhidden ? 0 : (conversationpage.isPortrait ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall)
-            context: conversationpage.context
-            dialog: conversationpage.dialog
-            chat: conversationpage.chat
-            user: conversationpage.user
+            height: context.chatheaderhidden ? 0 : (dialogpage.isPortrait ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall)
+            telegramDialog: dialogpage.telegramDialog
         }
 
         SilicaListView
@@ -94,23 +67,20 @@ Page
             BusyIndicator {
                 anchors.centerIn: parent
                 size: BusyIndicatorSize.Large
-                running: messagemodel.refreshing
+                //FIXME: running: messagemodel.refreshing
             }
 
-            model: MessagesModel {
-                id: messagemodel
-
-                onCountChanged: {
-                    if(!count)
-                        return;
-
-                    messagemodel.setReaded(); /* We are in this chat, always mark these messages as read */
-                }
+            model: DialogModel {
+                id: dialogmodel
+                reversed: true
+                telegram: context.telegram
+                dialog: dialogpage.telegramDialog
             }
 
             delegate: MessageItem {
-                context: conversationpage.context
-                message: item
+                context: dialogpage.context
+                telegramMessage: message
+                telegramFromUser: fromUser
             }
         }
 
@@ -118,8 +88,8 @@ Page
         {
             id: messagebar
             anchors { left: parent.left; bottom: parent.bottom; right: parent.right }
-            context: conversationpage.context
-            dialog: conversationpage.dialog
+            context: dialogpage.context
+            dialog: dialogpage.telegramDialog
         }
     }
 }

@@ -288,13 +288,6 @@ Vähimmäispituus on 5 merkkiä.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation>Lataa lisää viestejä</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -360,6 +353,13 @@ Vähimmäispituus on 5 merkkiä.</translation>
     <message>
         <source>Not Connected</source>
         <translation>Ei yhdistetty</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPage</name>
+    <message>
+        <source>Load more messages</source>
+        <translation type="unfinished">Lataa lisää viestejä</translation>
     </message>
 </context>
 <context>

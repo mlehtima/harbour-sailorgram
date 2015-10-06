@@ -288,13 +288,6 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
-    <name>ConversationPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation>بارگیری پیام‌های بیش‌تر</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -360,6 +353,13 @@ Minimum length is 5 characters.</source>
     <message>
         <source>Not Connected</source>
         <translation>وصل‌نشده</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPage</name>
+    <message>
+        <source>Load more messages</source>
+        <translation type="unfinished">بارگیری پیام‌های بیش‌تر</translation>
     </message>
 </context>
 <context>

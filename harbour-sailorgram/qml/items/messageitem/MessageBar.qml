@@ -1,6 +1,6 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../../components"
 import "../../js/TelegramHelper.js" as TelegramHelper
@@ -12,12 +12,12 @@ Item
     property Dialog dialog
 
     id: messagebar
-    height: context.heartbeat.connected ? (Math.max(Math.min(textarea._contentItem.contentHeight, maxHeight), btnselectmedia.height) + lbltime.contentHeight) : Theme.itemSizeSmall
+    height: context.telegram.dcConnected ? (Math.max(Math.min(textarea._contentItem.contentHeight, maxHeight), btnselectmedia.height) + lbltime.contentHeight) : Theme.itemSizeSmall
 
     function sendMessage()
     {
         Qt.inputMethod.commit();
-        messagemodel.sendMessage(textarea.text.trim(), (messagemodel.count > 0 ? true : false));
+        dialogmodel.sendMessage(textarea.text.trim(), (dialogmodel.count > 0 ? true : false));
         textarea.text = "";
     }
 
@@ -43,7 +43,7 @@ Item
     Row
     {
         anchors { left: parent.left; top: parent.top; right: parent.right; bottom: lbltime.top }
-        visible: context.heartbeat.connected
+        visible: context.telegram.dcConnected
 
         TextArea
         {

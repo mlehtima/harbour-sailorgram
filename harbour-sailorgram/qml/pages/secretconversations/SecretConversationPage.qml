@@ -1,6 +1,6 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../../menus/conversation"
 import "../../components"
@@ -62,8 +62,8 @@ Page
             anchors { left: parent.left; top: parent.top; right: parent.right; leftMargin: Theme.horizontalPageMargin; topMargin: Theme.paddingMedium }
             height: context.chatheaderhidden ? 0 : Theme.itemSizeSmall
             context: secretconversationpage.context
-            dialog: secretconversationpage.dialog
-            user: secretconversationpage.user
+            telegramDialog: secretconversationpage.dialog
+            telegramUser: secretconversationpage.user
         }
 
         SilicaListView
@@ -95,7 +95,7 @@ Page
 
             delegate: MessageItem {
                 context: secretconversationpage.context
-                message: item
+                telegramMessage: item
             }
         }
 

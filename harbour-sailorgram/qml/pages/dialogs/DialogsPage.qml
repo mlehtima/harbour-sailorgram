@@ -93,9 +93,9 @@ Page
                     pageStack.push(Qt.resolvedUrl("../secretconversations/SecretConversationPage.qml"), { "context": conversationspage.context, "dialog": item });
                     return;
                 }
-
-                pageStack.push(Qt.resolvedUrl("ConversationPage.qml"), { "context": conversationspage.context, "dialog": item })
                 */
+
+                pageStack.push(Qt.resolvedUrl("DialogPage.qml"), { "context": dialogspage.context, "telegramDialog": dialog })
             }
 
             id: dialogitem

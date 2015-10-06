@@ -54,7 +54,6 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/items/messageitem/media/MessagePhoto.qml \
     qml/items/messageitem/media/MessageDocument.qml \
     qml/components/PopupMessage.qml \
-    qml/pages/dialogs/ConversationPage.qml \
     qml/pages/contacts/UserPage.qml \
     qml/menus/UserMenu.qml \
     qml/components/ClickableLabel.qml \
@@ -114,9 +113,9 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/pages/contacts/ContactsPage.qml \
     qml/items/contact/ContactItem.qml \
     qml/pages/dialogs/DialogsPage.qml \
-    qml/items/dialog/DialogImage.qml \
     qml/items/dialog/DialogItem.qml \
-    qml/menus/dialog/DialogPullDownMenu.qml
+    qml/menus/dialog/DialogPullDownMenu.qml \
+    qml/pages/dialogs/DialogPage.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

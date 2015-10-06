@@ -288,13 +288,6 @@ Minimumslængde er fem tegn.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation>Indlæs flere meddelelser</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -360,6 +353,13 @@ Minimumslængde er fem tegn.</translation>
     <message>
         <source>Not Connected</source>
         <translation>Ikke forbundet</translation>
+    </message>
+</context>
+<context>
+    <name>DialogPage</name>
+    <message>
+        <source>Load more messages</source>
+        <translation type="unfinished">Indlæs flere meddelelser</translation>
     </message>
 </context>
 <context>

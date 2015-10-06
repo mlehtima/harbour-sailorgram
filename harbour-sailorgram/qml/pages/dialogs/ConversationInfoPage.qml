@@ -1,6 +1,6 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../../components"
 import "../../items/peer"
@@ -92,9 +92,9 @@ Page
                 width: parent.width - (x * 2)
                 height: Theme.itemSizeSmall
                 context: conversationinfopage.context
-                dialog: conversationinfopage.dialog
+                telegramDialog: conversationinfopage.dialog
                 chat: conversationinfopage.chat
-                user: conversationinfopage.user
+                telegramUser: conversationinfopage.user
             }
 
             SectionHeader { text: qsTr("Actions") }

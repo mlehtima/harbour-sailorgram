@@ -1,13 +1,12 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.TelegramQml 1.0
-import harbour.sailorgram.TelegramCalendar 1.0
+import harbour.sailorgram.Telegram 1.0
 import "../../js/TelegramHelper.js" as TelegramHelper
 import "../../js/TelegramAction.js" as TelegramAction
 
 Item
 {
-    property Message message
+    property Message telegramMessage
 
     id: messagetext
     height: content.height
@@ -22,13 +21,14 @@ Item
         Label
         {
             id: lbltext
-            anchors { left: message.out ? parent.left : undefined; right: message.out ? undefined : parent.right }
+            anchors { left: telegramMessage.isOut ? parent.left : undefined; right: telegramMessage.isOut ? undefined : parent.right }
             width: parent.width
-            color: TelegramHelper.isActionMessage(message) ? Theme.primaryColor : (message.out ? Theme.highlightColor : Theme.primaryColor)
-            font.pixelSize: TelegramHelper.isActionMessage(message) ? Theme.fontSizeExtraSmall : Theme.fontSizeSmall
-            font.italic: TelegramHelper.isActionMessage(message)
-            horizontalAlignment: TelegramHelper.isActionMessage(message) ? Text.AlignHCenter : (message.out ? Text.AlignLeft : Text.AlignRight)
-            text: TelegramHelper.isActionMessage(message) ? TelegramAction.actionType(context.telegram, dialog, message) : messageitem.message.message
+            color: telegramMessage.isService ? Theme.primaryColor : (telegramMessage.isOut ? Theme.highlightColor : Theme.primaryColor)
+            font.pixelSize: telegramMessage.isService ? Theme.fontSizeExtraSmall : Theme.fontSizeSmall
+            font.italic: telegramMessage.isService
+            horizontalAlignment: telegramMessage.isService ? Text.AlignHCenter : (telegramMessage.isOut ? Text.AlignLeft : Text.AlignRight)
+            //FIXME: text: TelegramHelper.isActionMessage(telegramMessage) ? TelegramAction.actionType(context.telegram, telegramDialog, telegramMessage) : messageitem.message.message
+            text: telegramMessage.message
             verticalAlignment: Text.AlignTop
             wrapMode: Text.WordWrap
             visible: text.length > 0
@@ -36,7 +36,7 @@ Item
 
         Row
         {
-            anchors { right: message.out ? undefined : parent.right; left: message.out ? parent.left : undefined }
+            anchors { right: telegramMessage.isOut ? undefined : parent.right; left: telegramMessage.isOut ? parent.left : undefined }
             spacing: Theme.paddingSmall
 
             MessageStatus
@@ -44,7 +44,7 @@ Item
                 id: msgstatus
                 width: lbldate.contentHeight
                 height: lbldate.contentHeight
-                message: messagetext.message
+                telegramMessage: messagetext.telegramMessage
             }
 
             Label
@@ -52,9 +52,9 @@ Item
                 id: lbldate
                 font.pixelSize: Theme.fontSizeTiny
                 verticalAlignment: Text.AlignBottom
-                horizontalAlignment: message.out ? Text.AlignLeft : Text.AlignRight
-                text: TelegramCalendar.timeToString(message.date)
-                visible: !TelegramHelper.isActionMessage(message)
+                horizontalAlignment: telegramMessage.isOut ? Text.AlignLeft : Text.AlignRight
+                text: TelegramHelper.printableDate(telegramMessage.date)
+                visible: !telegramMessage.isService
             }
         }
     }
