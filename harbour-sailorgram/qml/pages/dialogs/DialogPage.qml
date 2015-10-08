@@ -67,7 +67,7 @@ Page
             BusyIndicator {
                 anchors.centerIn: parent
                 size: BusyIndicatorSize.Large
-                //FIXME: running: messagemodel.refreshing
+                running: dialogmodel.busy
             }
 
             model: DialogModel {
