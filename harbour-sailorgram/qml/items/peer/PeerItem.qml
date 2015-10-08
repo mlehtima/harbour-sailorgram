@@ -18,6 +18,7 @@ Item
         height: peeritem.height
         telegramDialog: peeritem.telegramDialog
         telegramUser: peeritem.telegramDialog.user
+        fallbackText: peeritem.telegramDialog.title
     }
 
     Column

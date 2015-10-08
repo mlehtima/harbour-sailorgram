@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<ChatPhotoObject>("harbour.sailorgram.Telegram", 1, 0, "ChatPhoto");
     qmlRegisterType<MessageObject>("harbour.sailorgram.Telegram", 1, 0, "Message");
     qmlRegisterType<MessageMediaObject>("harbour.sailorgram.Telegram", 1, 0, "MessageMediaObject");
-    qmlRegisterType<MessageMediaObject>("harbour.sailorgram.Telegram", 1, 0, "MessageMediaObject");
+    qmlRegisterType<MessageActionObject>("harbour.sailorgram.Telegram", 1, 0, "MessageActionObject");
 
     qmlRegisterType<ScreenBlank>("harbour.sailorgram.DBus", 1, 0, "ScreenBlank");
     qmlRegisterType<Notifications>("harbour.sailorgram.DBus", 1, 0, "Notifications");

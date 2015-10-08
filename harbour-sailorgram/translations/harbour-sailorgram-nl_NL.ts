@@ -745,6 +745,38 @@ Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het tr
         <source>Last Seen %1</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unknown media</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group created</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group title changed to &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group photo has been changed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group title has been removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 has joined the group</source>
+        <translation type="unfinished">%1 heeft deelgenomen aan de groep</translation>
+    </message>
+    <message>
+        <source>%1 has left the group</source>
+        <translation type="unfinished">%1 heeft de groep verlaten</translation>
+    </message>
+    <message>
+        <source>Unknown service message</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>UserInfo</name>

@@ -119,7 +119,38 @@ function mediaType(messagemedia)
     if(messagemedia.isGeo)
         return qsTr("Geo");
 
-    return qsTr("Unknown");
+    return qsTr("Unknown media");
+}
+
+function serviceType(messageaction, dialogmodel)
+{
+    if(messageaction.isChatCreate)
+        return qsTr("Group created");
+
+    if(messageaction.isEditTitle)
+        return qsTr("Group title changed to '%1'").arg(messageaction.title);
+
+    if(messageaction.isChatEditPhoto)
+        return qsTr("Group photo has been changed");
+
+    if(messageaction.isChatDeletePhoto)
+        return qsTr("Group title has been removed");
+
+    var user = null;
+
+    if(messageaction.isChatAddUser)
+    {
+        user = dialogmodel.user(messageaction.userId);
+        return qsTr("%1 has joined the group", completeName(user));
+    }
+
+    if(messageaction.isChatDeleteUser)
+    {
+        user = dialogmodel.user(messageaction.userId);
+        return qsTr("%1 has left the group", completeName(user));
+    }
+
+    return qsTr("Unknown service message");
 }
 
 function messageContent(message) // NOTE: Deprecated

@@ -746,6 +746,38 @@ wähle einen Kontakt über &quot;Kontakte&quot; im Pull-Down-Menü</translation>
         <source>Last Seen %1</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Unknown media</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group created</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group title changed to &apos;%1&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group photo has been changed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Group title has been removed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 has joined the group</source>
+        <translation type="unfinished">%1 hat die Gruppe betreten</translation>
+    </message>
+    <message>
+        <source>%1 has left the group</source>
+        <translation type="unfinished">%1 hat die Gruppe verlassen</translation>
+    </message>
+    <message>
+        <source>Unknown service message</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>UserInfo</name>
