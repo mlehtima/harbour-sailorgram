@@ -23,7 +23,6 @@ QtObject
     property ErrorsModel errors: ErrorsModel { }
     property SailorGram sailorgram: SailorGram { }
 
-
     property Telegram telegram: Telegram {
         apiId: 27782
         apiHash: "5ce096f34c8afab871edce728e6d64c9"

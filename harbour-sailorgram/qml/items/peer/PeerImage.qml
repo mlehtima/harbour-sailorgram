@@ -14,16 +14,29 @@ Image
     fillMode: Image.PreserveAspectFit
     asynchronous: true
 
+    Component.onCompleted: {
+        if(telegramUser && !telegramUser.photo.photoSmall.downloaded) {
+            telegramUser.photo.photoSmall.download();
+            return;
+        }
+
+        if(telegramDialog) {
+            if(telegramDialog.isChat && !telegramDialog.chat.photo.photoSmall.downloaded)
+                telegramDialog.chat.photo.photoSmall.download();
+            else if(!telegramDialog.user.photo.photoSmall.downloaded)
+                telegramDialog.user.photo.photoSmall.download();
+        }
+    }
+
     source: {
         if(telegramUser)
-            return telegramUser.photo.photoSmall;
+            return telegramUser.photo.photoSmall.filePath;
 
-        if(telegramDialog)
-        {
+        if(telegramDialog) {
             if(telegramDialog.isChat)
-                return telegramDialog.chat.photo.photoSmall;
+                return telegramDialog.chat.photo.photoSmall.filePath;
 
-            return telegramDialog.user.photo.photoSmall;
+            return telegramDialog.user.photo.photoSmall.filePath;
         }
 
         return "";
@@ -60,7 +73,7 @@ Image
         id: imgpeertype
         anchors { bottom: parent.bottom; right: parent.right }
         fillMode: Image.PreserveAspectFit
-         visible: telegramDialog && telegramDialog.isChat
+        visible: telegramDialog && telegramDialog.isChat
 
         source: {
             if(telegramDialog && telegramDialog.isChat)

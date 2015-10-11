@@ -79,17 +79,15 @@ ListItem
     contentWidth: parent.width
     contentHeight: content.height
 
-    /*
     menu: MessageMenu {
         id: messagemenu
         context: messageitem.context
-        message: messageitem.telegramMessage
-        messageMediaItem: loader.item
+        telegramMessage: messageitem.telegramMessage
+        loaderItem: loader.item
 
         onCancelRequested: loader.item.cancelTransfer()
         onDownloadRequested: loader.item.download()
     }
-    */
 
     onClicked: displayMedia()
 
@@ -102,16 +100,18 @@ ListItem
             message: messageitem.telegramMessage
         }
     }
+    */
 
     Component {
         id: photocomponent
 
         MessagePhoto {
             context: messageitem.context
-            message: messageitem.telegramMessage
+            telegramMessage: messageitem.telegramMessage
         }
     }
 
+    /*
     Component {
         id: audiocomponent
 
@@ -150,31 +150,28 @@ ListItem
             color: Theme.secondaryHighlightColor
         }
 
-        /*
         Loader
         {
             id: loader
             anchors { left: message.out ? parent.left : undefined; right: message.out ? undefined : parent.right }
 
             sourceComponent: {
-                if(message.media) {
-                    if(message.media.classType === TelegramConstants.typeMessageMediaPhoto)
+                if(telegramMessage.isMedia) {
+                    if(telegramMessage.media.isPhoto)
                         return photocomponent;
+                    /*
                     else if(message.media.classType === TelegramConstants.typeMessageMediaDocument)
                         return documentcomponent;
                     else if(message.media.classType === TelegramConstants.typeMessageMediaAudio)
                         return audiocomponent;
                     else if(message.media.classType === TelegramConstants.typeMessageMediaVideo)
                         return videocomponent;
+                        */
                 }
 
                 return null;
             }
-
-            onLoaded: {
-            }
         }
-        */
 
         MessageText
         {

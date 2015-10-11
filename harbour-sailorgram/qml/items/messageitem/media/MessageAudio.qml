@@ -6,7 +6,7 @@ import "../../../js/TelegramHelper.js" as TelegramHelper
 
 MessageMediaItem
 {
-    property FileLocation fileLocation: context.telegram.locationOfAudio(message.media.audio)
+    property FileLocation fileLocation: context.telegram.locationOfAudio(telegramMessage.media.audio)
 
     id: messageaudio
     height: row.height
@@ -60,7 +60,7 @@ MessageMediaItem
                 id: lblduration
                 height: parent.height / 3
                 font.pixelSize: Theme.fontSizeExtraSmall
-                text: qsTr("Duration: %1").arg(mediaplayertimings.displayDuration(message.media.audio.duration))
+                text: qsTr("Duration: %1").arg(mediaplayertimings.displayDuration(telegramMessage.media.audio.duration))
             }
         }
     }

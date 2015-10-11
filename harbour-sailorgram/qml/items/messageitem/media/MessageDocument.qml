@@ -6,7 +6,7 @@ import "../../../js/TelegramHelper.js" as TelegramHelper
 
 MessageMediaItem
 {
-    property FileLocation fileLocation: context.telegram.locationOfDocument(message.media.document)
+    property FileLocation fileLocation: context.telegram.locationOfDocument(telegramMessage.media.document)
 
     id: messagedocument
     height: row.height
@@ -40,7 +40,7 @@ MessageMediaItem
                 verticalAlignment: Text.AlignTop
                 horizontalAlignment: Text.AlignLeft
                 font.pixelSize: Theme.fontSizeExtraSmall
-                text: isUpload ? context.sailorgram.fileName(message.upload.location) : fileLocation.fileName
+                text: isUpload ? context.sailorgram.fileName(telegramMessage.upload.location) : fileLocation.fileName
                 wrapMode: Text.NoWrap
                 elide: Text.ElideRight
             }
@@ -62,7 +62,7 @@ MessageMediaItem
                 {
                     id: lblmime
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    text: message.media.document.mimeType
+                    text: telegramMessage.media.document.mimeType
                 }
             }
         }

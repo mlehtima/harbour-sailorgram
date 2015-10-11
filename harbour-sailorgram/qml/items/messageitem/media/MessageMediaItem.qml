@@ -5,89 +5,87 @@ import "../../../js/TelegramConstants.js" as TelegramConstants
 
 Item
 {
-    property alias fileHandler: filehandler
-
     property Context context
-    property Telegram telegram
-    property Message message
+    property Message telegramMessage
 
-    readonly property bool isUpload: message.upload.fileId !== 0
-    readonly property bool transferInProgress: (progressPercent > 0) && (progressPercent < 100)
-    readonly property bool hasMedia: message.media ? (message.media.classType !== TelegramConstants.typeMessageMediaEmpty) : false
-    readonly property real progressPercent: isUpload ? (100 * message.upload.uploaded / message.upload.totalSize) : filehandler.progressPercent
+    readonly property bool isUpload: false //telegramMessage.upload.fileId !== 0
+    readonly property bool hasMedia: telegramMessage.isMedia && !telegramMessage.media.isEmpty
+    readonly property real progressPercent: 0 //isUpload ? (100 * telegramMessage.upload.uploaded / telegramMessage.upload.totalSize) : filehandler.progressPercent
+
+    readonly property bool transferInProgress: {
+        var media = telegramMessage.media;
+
+        if(!media)
+            return false;
+
+        if(media.isPhoto)
+            return media.photo.photoSmall.downloading || media.photo.photoBig.downloading;
+
+        return false;
+    }
 
     readonly property real mediaSize: {
+        /*
         if(isUpload)
             return message.upload.totalSize;
+        */
 
-        if(!message.media)
+        var media = telegramMessage.media;
+
+        if(!media)
             return 0;
 
-        if((message.media.classType === TelegramConstants.typeMessageMediaPhoto) && message.media.photo.sizes.last)
-            return message.media.photo.sizes.last.size;
-        else if(message.media.classType === TelegramConstants.typeMessageMediaVideo)
-            return message.media.video.size;
-        else if(message.media.classType === TelegramConstants.typeMessageMediaAudio)
-            return message.media.audio.size;
-        else if(message.media.classType === TelegramConstants.typeMessageMediaDocument)
-            return message.media.document.size;
+        if(media.isPhoto)
+            return telegramMessage.media.photo.photoBigSize;
+
+        /*
+        if((telegramMessage.media.classType === TelegramConstants.typeMessageMediaPhoto) && telegramMessage.media.photo.sizes.last)
+            return telegramMessage.media.photo.sizes.last.size;
+        else if(telegramMessage.media.classType === TelegramConstants.typeMessageMediaVideo)
+            return telegramMessage.media.video.size;
+        else if(telegramMessage.media.classType === TelegramConstants.typeMessageMediaAudio)
+            return telegramMessage.media.audio.size;
+        else if(telegramMessage.media.classType === TelegramConstants.typeMessageMediaDocument)
+            return telegramMessage.media.document.size;
+        */
 
         return 0;
     }
 
     readonly property string mediaThumbnail: {
-        if(!message.media)
+        var media = telegramMessage.media;
+
+        if(!media)
             return "";
 
-        if(context.telegram.documentIsSticker(message.media.document))
-            return "image://theme/icon-m-other"; //FIXME: WebP: Not Supported
+        //FIXME: if(context.telegram.documentIsSticker(telegramMessage.media.document))
+            //return "image://theme/icon-m-other"; //FIXME: WebP: Not Supported
 
-        return fileHandler.thumbPath;
+        if(!media.photo.photoSmall.downloaded)
+            media.photo.photoSmall.download();
+
+        return media.photo.photoSmall.filePath;
     }
 
     function cancelTransfer() {
         if(isUpload) {
-            telegram.cancelSendGet(message.upload.fileId);
+            //telegram.cancelSendGet(telegramMessage.upload.fizeileId);
             return;
         }
 
-        filehandler.cancelProgress();
+        //filehandler.cancelProgress();
     }
 
     function download() {
         if(isUpload)
             return;
 
-        filehandler.download();
+        var media = telegramMessage.media;
+
+        if(media.isPhoto)
+            media.photo.photoBig.download();
     }
 
     id: messagemediaitem
     visible: hasMedia
-
-    /*
-    FileHandler
-    {
-        id: filehandler
-        telegram: messagemediaitem.context.telegram
-        target: messagemediaitem.message
-        defaultThumbnail: "image://theme/icon-m-other"
-
-        onFilePathChanged: {
-            var filepathstring = filePath.toString();
-
-            if((progressType !== TelegramConstants.typeProgressDownload) || (filepathstring.length <= 0) || (progressPercent < 100) || isSticker)
-                return;
-
-            if(targetType !== FileHandler.TypeTargetMediaDocument)
-                return;
-
-            var type = message.media.document.mimeType.split("/")[0];
-
-            if((type === "audio") || (type === "video") || (type === "image"))
-                return;
-
-            context.sailorgram.moveMediaToDownloads(message.media);
-        }
-    }
-    */
 }

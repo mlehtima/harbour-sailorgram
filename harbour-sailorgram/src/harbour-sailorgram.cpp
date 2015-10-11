@@ -34,6 +34,7 @@
 #include <model/contacts/contactsmodel.h>
 #include <model/dialogs/dialogsmodel.h>
 #include <model/dialogs/dialogmodel.h>
+#include <objects/fileobject.h>
 #include "dbus/screenblank.h"
 #include "dbus/notifications/notifications.h"
 #include "filepicker/folderlistmodel.h"
@@ -45,11 +46,12 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<SailorGram>("harbour.sailorgram.SailorGram", 1, 0, "SailorGram");
 
+    qmlRegisterType<Telegram>("harbour.sailorgram.Telegram", 1, 0, "Telegram");
     qmlRegisterType<TelegramDatabase>("harbour.sailorgram.Telegram", 1, 0, "TelegramDatabase");
+    qmlRegisterType<FileObject>("harbour.sailorgram.Telegram", 1, 0, "File");
     qmlRegisterType<ContactsModel>("harbour.sailorgram.Telegram", 1, 0, "ContactsModel");
     qmlRegisterType<DialogsModel>("harbour.sailorgram.Telegram", 1, 0, "DialogsModel");
     qmlRegisterType<DialogModel>("harbour.sailorgram.Telegram", 1, 0, "DialogModel");
-    qmlRegisterType<Telegram>("harbour.sailorgram.Telegram", 1, 0, "Telegram");
 
     qmlRegisterType<DialogObject>("harbour.sailorgram.Telegram", 1, 0, "Dialog");
     qmlRegisterType<ContactObject>("harbour.sailorgram.Telegram", 1, 0, "Contact");
@@ -59,8 +61,9 @@ int main(int argc, char *argv[])
     qmlRegisterType<ChatObject>("harbour.sailorgram.Telegram", 1, 0, "Chat");
     qmlRegisterType<ChatPhotoObject>("harbour.sailorgram.Telegram", 1, 0, "ChatPhoto");
     qmlRegisterType<MessageObject>("harbour.sailorgram.Telegram", 1, 0, "Message");
-    qmlRegisterType<MessageMediaObject>("harbour.sailorgram.Telegram", 1, 0, "MessageMediaObject");
-    qmlRegisterType<MessageActionObject>("harbour.sailorgram.Telegram", 1, 0, "MessageActionObject");
+    qmlRegisterType<MessageMediaObject>("harbour.sailorgram.Telegram", 1, 0, "MessageMedia");
+    qmlRegisterType<MessageActionObject>("harbour.sailorgram.Telegram", 1, 0, "MessageAction");
+    qmlRegisterType<PhotoObject>("harbour.sailorgram.Telegram", 1, 0, "Photo");
 
     qmlRegisterType<ScreenBlank>("harbour.sailorgram.DBus", 1, 0, "ScreenBlank");
     qmlRegisterType<Notifications>("harbour.sailorgram.DBus", 1, 0, "Notifications");

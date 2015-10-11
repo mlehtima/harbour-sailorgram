@@ -3,7 +3,6 @@ import Sailfish.Silica 1.0
 import harbour.sailorgram.Telegram 1.0
 import "../models"
 import "../items/messageitem/media"
-import "../js/TelegramConstants.js" as TelegramConstants
 
 ContextMenu
 {
@@ -11,16 +10,16 @@ ContextMenu
     signal cancelRequested()
 
     property Context context
-    property Message message
-    property MessageMediaItem messageMediaItem
+    property Message telegramMessage
+    property MessageMediaItem loaderItem
 
     MenuItem
     {
         text: qsTr("Copy")
-        visible: !message.media || (message.media.classType === TelegramConstants.typeMessageMediaEmpty)
+        visible: !telegramMessage.isMedia || telegramMessage.media.isEmpty
 
         onClicked: {
-            Clipboard.text = message.message;
+            Clipboard.text = telegramMessage.message;
             popupmessage.show(qsTr("Message copied to clipboard"));
         }
     }
@@ -31,7 +30,7 @@ ContextMenu
 
         onClicked: {
             messageitem.remorseAction(qsTr("Deleting Message"), function() {
-                context.telegram.deleteMessages([message.id]);
+                //FIXME: context.telegram.deleteMessages([telegramMessage.id]);
             });
         }
     }
@@ -39,7 +38,7 @@ ContextMenu
     MenuItem
     {
         text: qsTr("Download")
-        visible: message.media && (message.media.classType !== TelegramConstants.typeMessageMediaEmpty) && messageMediaItem && !messageMediaItem.fileHandler.downloaded;
+        visible: telegramMessage.isMedia && !telegramMessage.media.isEmpty && loaderItem //FIXME: && !messageMediaItem.fileHandler.downloaded;
 
         onClicked: {
             messageitem.remorseAction(qsTr("Downloading media"), function() {
@@ -51,7 +50,7 @@ ContextMenu
     MenuItem
     {
         text: qsTr("Cancel")
-        visible: false //FIXME: message.out && loader.item && loader.item.transferInProgress
+        visible: telegramMessage.isOut && loaderItem && loaderItem.transferInProgress
         onClicked: cancelRequested()
     }
 }
