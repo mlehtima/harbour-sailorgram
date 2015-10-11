@@ -4,8 +4,8 @@ import Sailfish.Silica 1.0
 Item
 {
     property alias source: image.source
-    property size imageSize: context.sailorgram.imageSize(image.source);
-    property real transferProgress
+    property bool transferInProgress: false
+    property size imageSize
 
     id: messagethumbnail
     width: image.width
@@ -20,7 +20,7 @@ Item
         height: Theme.iconSizeLarge
         width: height ? (height * imageSize.width / imageSize.height) : Theme.iconSizeLarge
         sourceSize: Qt.size(width, height)
-        visible: !progresscircle.visible && (image.status === Image.Ready)
+        visible: !transferInProgress && (image.status === Image.Ready)
     }
 
     BusyIndicator
@@ -29,16 +29,6 @@ Item
         anchors.centerIn: parent
         width: Theme.iconSizeLarge - Theme.paddingSmall
         height: Theme.iconSizeLarge - Theme.paddingSmall
-        running: !progresscircle.visible && (image.status !== Image.Ready)
-    }
-
-    ProgressCircle
-    {
-        id: progresscircle
-        anchors.centerIn: parent
-        width: image.height - Theme.paddingSmall
-        height: image.height - Theme.paddingSmall
-        value: transferProgress / 100
-        visible: (transferProgress > 0) && (transferProgress < 100)
+        running: transferInProgress || (image.status !== Image.Ready)
     }
 }

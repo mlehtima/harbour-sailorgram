@@ -12,6 +12,7 @@ MessageMediaItem
         id: thumb
         anchors { left: parent.left; top: parent.top }
         source: messagephoto.mediaThumbnail
-        transferProgress: progressPercent
+        imageSize: telegramMessage.media.photo.photoSmallImageSize
+        transferInProgress: telegramMessage.media.photo.photoSmall.downloading
     }
 }
