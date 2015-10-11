@@ -37,7 +37,7 @@ CoverBackground
         Label
         {
             width: parent.width
-            text: !context.telegram.dcConnected ? qsTr("Disconnected") : qsTr("Connected")
+            text: context.telegram.dcConnected ? qsTr("Connected") : qsTr("Disconnected")
             horizontalAlignment: Text.AlignHCenter
             truncationMode: TruncationMode.Fade
             color: Theme.secondaryColor
