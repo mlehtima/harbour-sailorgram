@@ -48,16 +48,14 @@ Page
         }
     }
 
-    /*
     Component {
         id: chatinfocomponent
 
         ChatInfo {
             context: dialoginfopage.context
-            telegramChat: dialoginfopage.chat
+            telegramChat: dialoginfopage.telegramDialog.chat
         }
     }
-    */
 
     SilicaFlickable
     {
@@ -154,8 +152,8 @@ Page
                 id: loader
 
                 sourceComponent: {
-                    //if(telegramDialog.isChat)
-                        //return chatinfocomponent;
+                    if(telegramDialog.isChat)
+                        return chatinfocomponent;
 
                     return userinfocomponent;
                 }

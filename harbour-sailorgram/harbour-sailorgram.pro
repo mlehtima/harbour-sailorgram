@@ -109,7 +109,7 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/pages/settings/debug/ErrorsPage.qml \
     qml/models/ErrorsModel.qml \
     qml/pages/contacts/ContactsPage.qml \
-    qml/items/contact/ContactItem.qml \
+    qml/items/user/UserItem.qml \
     qml/pages/dialogs/DialogsPage.qml \
     qml/items/dialog/DialogItem.qml \
     qml/menus/dialog/DialogPullDownMenu.qml \
