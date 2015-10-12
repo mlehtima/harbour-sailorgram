@@ -245,49 +245,6 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
-    <name>ConversationInfoPage</name>
-    <message>
-        <source>Actions</source>
-        <translation>Действия</translation>
-    </message>
-    <message>
-        <source>Delete secret chat</source>
-        <translation>Удалить тайный диалог</translation>
-    </message>
-    <message>
-        <source>Delete group</source>
-        <translation>Удалить беседу</translation>
-    </message>
-    <message>
-        <source>Delete conversation</source>
-        <translation>Удалить диалог</translation>
-    </message>
-    <message>
-        <source>Deleting secret chat</source>
-        <translation>Удаление тайного диалога</translation>
-    </message>
-    <message>
-        <source>Deleting group</source>
-        <translation>Удаление беседы</translation>
-    </message>
-    <message>
-        <source>Deleting conversation</source>
-        <translation>Удаление диалога</translation>
-    </message>
-    <message>
-        <source>Add to contacts</source>
-        <translation>Добавить в контакты</translation>
-    </message>
-    <message>
-        <source>Enable notifications</source>
-        <translation>Включить уведомления</translation>
-    </message>
-    <message>
-        <source>Disable notifications</source>
-        <translation>Отключить уведомления</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -353,6 +310,41 @@ Minimum length is 5 characters.</source>
     <message>
         <source>Not Connected</source>
         <translation>Нет подключения</translation>
+    </message>
+</context>
+<context>
+    <name>DialogInfoPage</name>
+    <message>
+        <source>Delete group</source>
+        <translation type="unfinished">Удалить беседу</translation>
+    </message>
+    <message>
+        <source>Delete conversation</source>
+        <translation type="unfinished">Удалить диалог</translation>
+    </message>
+    <message>
+        <source>Deleting group</source>
+        <translation type="unfinished">Удаление беседы</translation>
+    </message>
+    <message>
+        <source>Deleting conversation</source>
+        <translation type="unfinished">Удаление диалога</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished">Действия</translation>
+    </message>
+    <message>
+        <source>Enable notifications</source>
+        <translation type="unfinished">Включить уведомления</translation>
+    </message>
+    <message>
+        <source>Disable notifications</source>
+        <translation type="unfinished">Отключить уведомления</translation>
+    </message>
+    <message>
+        <source>Add to contacts</source>
+        <translation type="unfinished">Добавить в контакты</translation>
     </message>
 </context>
 <context>

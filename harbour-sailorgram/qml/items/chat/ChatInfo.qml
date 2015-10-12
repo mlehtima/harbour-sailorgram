@@ -11,8 +11,8 @@ Item
 {
     property Context context
     property Dialog dialog
-    property Chat chat
-    property ChatFull chatFull: context.telegram.chatFull(chat.id)
+    property Chat telegramChat
+    property ChatFull chatFull: context.telegram.chatFull(telegramChat.id)
     property bool adminMenu: false
 
     onChatFullChanged: {

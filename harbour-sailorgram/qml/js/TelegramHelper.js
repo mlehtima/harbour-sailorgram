@@ -13,11 +13,6 @@ function completeName(user) // NOTE: Deprecated
     return user.firstName + " " + user.lastName;
 }
 
-function phoneNumber(user)
-{
-    return completePhoneNumber(user.phone);
-}
-
 function fallbackLetters(text)
 {
     var splittext = text.split(" ");

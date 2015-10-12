@@ -245,49 +245,6 @@ A lonxitude mínima é de 5 caracteres.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationInfoPage</name>
-    <message>
-        <source>Actions</source>
-        <translation>Accións</translation>
-    </message>
-    <message>
-        <source>Delete secret chat</source>
-        <translation>Borrar conversa segreda</translation>
-    </message>
-    <message>
-        <source>Delete group</source>
-        <translation>Borrar grupo</translation>
-    </message>
-    <message>
-        <source>Delete conversation</source>
-        <translation>Borrar conversa</translation>
-    </message>
-    <message>
-        <source>Deleting secret chat</source>
-        <translation>Borrando conversa segreda</translation>
-    </message>
-    <message>
-        <source>Deleting group</source>
-        <translation>Borrando grupo</translation>
-    </message>
-    <message>
-        <source>Deleting conversation</source>
-        <translation>Borrando conversa</translation>
-    </message>
-    <message>
-        <source>Add to contacts</source>
-        <translation>Engadir a contactos</translation>
-    </message>
-    <message>
-        <source>Enable notifications</source>
-        <translation>Activar notificacións</translation>
-    </message>
-    <message>
-        <source>Disable notifications</source>
-        <translation>Desactivar notificacións</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -353,6 +310,41 @@ A lonxitude mínima é de 5 caracteres.</translation>
     <message>
         <source>Not Connected</source>
         <translation>Non conectado</translation>
+    </message>
+</context>
+<context>
+    <name>DialogInfoPage</name>
+    <message>
+        <source>Delete group</source>
+        <translation type="unfinished">Borrar grupo</translation>
+    </message>
+    <message>
+        <source>Delete conversation</source>
+        <translation type="unfinished">Borrar conversa</translation>
+    </message>
+    <message>
+        <source>Deleting group</source>
+        <translation type="unfinished">Borrando grupo</translation>
+    </message>
+    <message>
+        <source>Deleting conversation</source>
+        <translation type="unfinished">Borrando conversa</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished">Accións</translation>
+    </message>
+    <message>
+        <source>Enable notifications</source>
+        <translation type="unfinished">Activar notificacións</translation>
+    </message>
+    <message>
+        <source>Disable notifications</source>
+        <translation type="unfinished">Desactivar notificacións</translation>
+    </message>
+    <message>
+        <source>Add to contacts</source>
+        <translation type="unfinished">Engadir a contactos</translation>
     </message>
 </context>
 <context>

@@ -245,49 +245,6 @@ Minimilängd är 5 tecken.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationInfoPage</name>
-    <message>
-        <source>Actions</source>
-        <translation>Åtgärder</translation>
-    </message>
-    <message>
-        <source>Delete secret chat</source>
-        <translation>Ta bort hemlig chatt</translation>
-    </message>
-    <message>
-        <source>Delete group</source>
-        <translation>Ta bort grupp</translation>
-    </message>
-    <message>
-        <source>Delete conversation</source>
-        <translation>Ta bort konversation</translation>
-    </message>
-    <message>
-        <source>Deleting secret chat</source>
-        <translation>Tar bort hemlig chatt</translation>
-    </message>
-    <message>
-        <source>Deleting group</source>
-        <translation>Tar bort grupp</translation>
-    </message>
-    <message>
-        <source>Deleting conversation</source>
-        <translation>Tar bort konversation</translation>
-    </message>
-    <message>
-        <source>Add to contacts</source>
-        <translation>Lägg till i kontakter</translation>
-    </message>
-    <message>
-        <source>Enable notifications</source>
-        <translation>Aktivera aviseringar</translation>
-    </message>
-    <message>
-        <source>Disable notifications</source>
-        <translation>Inaktivera aviseringar</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -353,6 +310,41 @@ Minimilängd är 5 tecken.</translation>
     <message>
         <source>Not Connected</source>
         <translation>Ej ansluten</translation>
+    </message>
+</context>
+<context>
+    <name>DialogInfoPage</name>
+    <message>
+        <source>Delete group</source>
+        <translation type="unfinished">Ta bort grupp</translation>
+    </message>
+    <message>
+        <source>Delete conversation</source>
+        <translation type="unfinished">Ta bort konversation</translation>
+    </message>
+    <message>
+        <source>Deleting group</source>
+        <translation type="unfinished">Tar bort grupp</translation>
+    </message>
+    <message>
+        <source>Deleting conversation</source>
+        <translation type="unfinished">Tar bort konversation</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished">Åtgärder</translation>
+    </message>
+    <message>
+        <source>Enable notifications</source>
+        <translation type="unfinished">Aktivera aviseringar</translation>
+    </message>
+    <message>
+        <source>Disable notifications</source>
+        <translation type="unfinished">Inaktivera aviseringar</translation>
+    </message>
+    <message>
+        <source>Add to contacts</source>
+        <translation type="unfinished">Lägg till i kontakter</translation>
     </message>
 </context>
 <context>

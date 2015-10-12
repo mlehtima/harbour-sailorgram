@@ -7,10 +7,9 @@ import "../../js/TelegramHelper.js" as TelegramHelper
 
 Item
 {
+    property User telegramUser
     property bool allowSendMessage: true
     property bool actionVisible: false
-    property Context context
-    property User user
 
     id: userinfo
     width: content.width
@@ -28,7 +27,7 @@ Item
             height: Theme.itemSizeSmall
             labelFont.pixelSize: Theme.fontSizeSmall
             labelText: qsTr("Send Message")
-            onActionRequested: pageStack.replace(Qt.resolvedUrl("../../pages/conversations/ConversationPage.qml"), { "context": context, "dialog": context.telegram.fakeDialogObject(user.id, false) } )
+            //FIXME: onActionRequested: pageStack.replace(Qt.resolvedUrl("../../pages/dialogs/DialogPage.qml"), { "context": context, "dialog": context.telegram.fakeDialogObject(user.id, false) } )
         }
 
         ClickableLabel
@@ -40,12 +39,14 @@ Item
             labelText: qsTr("Begin Secret Chat")
 
             onActionRequested: {
+                /* FIXME:
                 context.telegram.messagesCreateEncryptedChat(user.id);
 
                 var firstpage = pageStack.currentPage;
 
                 for(var i = pageStack.depth; i > 1; i--)
                     firstpage = pageStack.previousPage(firstpage);
+                    */
 
                 pageStack.pop(firstpage);
             }
@@ -57,7 +58,7 @@ Item
         {
             x: Theme.paddingMedium
             width: parent.width - (x * 2)
-            text: TelegramHelper.phoneNumber(user)
+            text: TelegramHelper.completePhoneNumber(telegramUser.phone)
         }
     }
 }

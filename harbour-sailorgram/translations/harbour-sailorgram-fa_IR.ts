@@ -245,49 +245,6 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
-    <name>ConversationInfoPage</name>
-    <message>
-        <source>Actions</source>
-        <translation>عملکردها</translation>
-    </message>
-    <message>
-        <source>Delete secret chat</source>
-        <translation>حذف گپ محرمانه</translation>
-    </message>
-    <message>
-        <source>Delete group</source>
-        <translation>حذف گروه</translation>
-    </message>
-    <message>
-        <source>Delete conversation</source>
-        <translation>حذف گفت‌وگو</translation>
-    </message>
-    <message>
-        <source>Deleting secret chat</source>
-        <translation>در حال حذف گپ محرمانه</translation>
-    </message>
-    <message>
-        <source>Deleting group</source>
-        <translation>در حال حذف گروه</translation>
-    </message>
-    <message>
-        <source>Deleting conversation</source>
-        <translation>در حال حذف گفت‌وگو</translation>
-    </message>
-    <message>
-        <source>Add to contacts</source>
-        <translation>افزودن به آشنایان</translation>
-    </message>
-    <message>
-        <source>Enable notifications</source>
-        <translation>فعال‌سازی اطلاعیه‌ها</translation>
-    </message>
-    <message>
-        <source>Disable notifications</source>
-        <translation>غیرفعال‌سازی اطلاعیه‌ها</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -353,6 +310,41 @@ Minimum length is 5 characters.</source>
     <message>
         <source>Not Connected</source>
         <translation>وصل‌نشده</translation>
+    </message>
+</context>
+<context>
+    <name>DialogInfoPage</name>
+    <message>
+        <source>Delete group</source>
+        <translation type="unfinished">حذف گروه</translation>
+    </message>
+    <message>
+        <source>Delete conversation</source>
+        <translation type="unfinished">حذف گفت‌وگو</translation>
+    </message>
+    <message>
+        <source>Deleting group</source>
+        <translation type="unfinished">در حال حذف گروه</translation>
+    </message>
+    <message>
+        <source>Deleting conversation</source>
+        <translation type="unfinished">در حال حذف گفت‌وگو</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished">عملکردها</translation>
+    </message>
+    <message>
+        <source>Enable notifications</source>
+        <translation type="unfinished">فعال‌سازی اطلاعیه‌ها</translation>
+    </message>
+    <message>
+        <source>Disable notifications</source>
+        <translation type="unfinished">غیرفعال‌سازی اطلاعیه‌ها</translation>
+    </message>
+    <message>
+        <source>Add to contacts</source>
+        <translation type="unfinished">افزودن به آشنایان</translation>
     </message>
 </context>
 <context>

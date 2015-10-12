@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<DialogObject>("harbour.sailorgram.Telegram", 1, 0, "Dialog");
     qmlRegisterType<ContactObject>("harbour.sailorgram.Telegram", 1, 0, "Contact");
+    qmlRegisterType<PeerNotifySettingsObject>("harbour.sailorgram.Telegram", 1, 0, "PeerNotifySettings");
     qmlRegisterType<UserObject>("harbour.sailorgram.Telegram", 1, 0, "User");
     qmlRegisterType<UserProfilePhotoObject>("harbour.sailorgram.Telegram", 1, 0, "UserProfilePhoto");
     qmlRegisterType<UserStatusObject>("harbour.sailorgram.Telegram", 1, 0, "UserStatusObject");

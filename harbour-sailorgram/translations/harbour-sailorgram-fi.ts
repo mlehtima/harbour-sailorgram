@@ -245,49 +245,6 @@ Vähimmäispituus on 5 merkkiä.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationInfoPage</name>
-    <message>
-        <source>Actions</source>
-        <translation>Toiminnot</translation>
-    </message>
-    <message>
-        <source>Delete secret chat</source>
-        <translation>Poista salainen keskustelu</translation>
-    </message>
-    <message>
-        <source>Delete group</source>
-        <translation>Poista ryhmä</translation>
-    </message>
-    <message>
-        <source>Delete conversation</source>
-        <translation>Poista keskustelu</translation>
-    </message>
-    <message>
-        <source>Deleting secret chat</source>
-        <translation>Salainen keskustelu poistetaan</translation>
-    </message>
-    <message>
-        <source>Deleting group</source>
-        <translation>Ryhmä poistetaan</translation>
-    </message>
-    <message>
-        <source>Deleting conversation</source>
-        <translation>Keskustelu poistetaan</translation>
-    </message>
-    <message>
-        <source>Add to contacts</source>
-        <translation>Lisää yhteyshenkilöihin</translation>
-    </message>
-    <message>
-        <source>Enable notifications</source>
-        <translation>Ota ilmoitukset käyttöön</translation>
-    </message>
-    <message>
-        <source>Disable notifications</source>
-        <translation>Poista ilmoitukset käytöstä</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -353,6 +310,41 @@ Vähimmäispituus on 5 merkkiä.</translation>
     <message>
         <source>Not Connected</source>
         <translation>Ei yhdistetty</translation>
+    </message>
+</context>
+<context>
+    <name>DialogInfoPage</name>
+    <message>
+        <source>Delete group</source>
+        <translation type="unfinished">Poista ryhmä</translation>
+    </message>
+    <message>
+        <source>Delete conversation</source>
+        <translation type="unfinished">Poista keskustelu</translation>
+    </message>
+    <message>
+        <source>Deleting group</source>
+        <translation type="unfinished">Ryhmä poistetaan</translation>
+    </message>
+    <message>
+        <source>Deleting conversation</source>
+        <translation type="unfinished">Keskustelu poistetaan</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished">Toiminnot</translation>
+    </message>
+    <message>
+        <source>Enable notifications</source>
+        <translation type="unfinished">Ota ilmoitukset käyttöön</translation>
+    </message>
+    <message>
+        <source>Disable notifications</source>
+        <translation type="unfinished">Poista ilmoitukset käytöstä</translation>
+    </message>
+    <message>
+        <source>Add to contacts</source>
+        <translation type="unfinished">Lisää yhteyshenkilöihin</translation>
     </message>
 </context>
 <context>

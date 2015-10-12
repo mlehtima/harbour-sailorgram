@@ -245,49 +245,6 @@ La lunghezza minima è di 5 caratteri.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationInfoPage</name>
-    <message>
-        <source>Actions</source>
-        <translation>Azioni</translation>
-    </message>
-    <message>
-        <source>Delete secret chat</source>
-        <translation>Elimina chat segreta</translation>
-    </message>
-    <message>
-        <source>Delete group</source>
-        <translation>Elimina gruppo</translation>
-    </message>
-    <message>
-        <source>Delete conversation</source>
-        <translation>Elimina conversazione</translation>
-    </message>
-    <message>
-        <source>Deleting secret chat</source>
-        <translation>Rimozione chat segreta</translation>
-    </message>
-    <message>
-        <source>Deleting group</source>
-        <translation>Rimozione gruppo</translation>
-    </message>
-    <message>
-        <source>Deleting conversation</source>
-        <translation>Rimozione conversazione</translation>
-    </message>
-    <message>
-        <source>Add to contacts</source>
-        <translation>Aggiungi ai contatti</translation>
-    </message>
-    <message>
-        <source>Enable notifications</source>
-        <translation>Abilita notifiche</translation>
-    </message>
-    <message>
-        <source>Disable notifications</source>
-        <translation>Disabilita notifiche</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -353,6 +310,41 @@ La lunghezza minima è di 5 caratteri.</translation>
     <message>
         <source>Not Connected</source>
         <translation>Non connesso</translation>
+    </message>
+</context>
+<context>
+    <name>DialogInfoPage</name>
+    <message>
+        <source>Delete group</source>
+        <translation type="unfinished">Elimina gruppo</translation>
+    </message>
+    <message>
+        <source>Delete conversation</source>
+        <translation type="unfinished">Elimina conversazione</translation>
+    </message>
+    <message>
+        <source>Deleting group</source>
+        <translation type="unfinished">Rimozione gruppo</translation>
+    </message>
+    <message>
+        <source>Deleting conversation</source>
+        <translation type="unfinished">Rimozione conversazione</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished">Azioni</translation>
+    </message>
+    <message>
+        <source>Enable notifications</source>
+        <translation type="unfinished">Abilita notifiche</translation>
+    </message>
+    <message>
+        <source>Disable notifications</source>
+        <translation type="unfinished">Disabilita notifiche</translation>
+    </message>
+    <message>
+        <source>Add to contacts</source>
+        <translation type="unfinished">Aggiungi ai contatti</translation>
     </message>
 </context>
 <context>

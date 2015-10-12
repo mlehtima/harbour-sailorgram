@@ -245,49 +245,6 @@ Minimumslængde er fem tegn.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationInfoPage</name>
-    <message>
-        <source>Actions</source>
-        <translation>Handlinger</translation>
-    </message>
-    <message>
-        <source>Delete secret chat</source>
-        <translation>Slet hemmelig chat</translation>
-    </message>
-    <message>
-        <source>Delete group</source>
-        <translation>Slet gruppe</translation>
-    </message>
-    <message>
-        <source>Delete conversation</source>
-        <translation>Slet samtale</translation>
-    </message>
-    <message>
-        <source>Deleting secret chat</source>
-        <translation>Sletter hemmelig chat</translation>
-    </message>
-    <message>
-        <source>Deleting group</source>
-        <translation>Sletter gruppe</translation>
-    </message>
-    <message>
-        <source>Deleting conversation</source>
-        <translation>Sletter samtale</translation>
-    </message>
-    <message>
-        <source>Add to contacts</source>
-        <translation>Føj til kontakter</translation>
-    </message>
-    <message>
-        <source>Enable notifications</source>
-        <translation>Aktivér påmindelser</translation>
-    </message>
-    <message>
-        <source>Disable notifications</source>
-        <translation>Deaktivér påmindelser</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -353,6 +310,41 @@ Minimumslængde er fem tegn.</translation>
     <message>
         <source>Not Connected</source>
         <translation>Ikke forbundet</translation>
+    </message>
+</context>
+<context>
+    <name>DialogInfoPage</name>
+    <message>
+        <source>Delete group</source>
+        <translation type="unfinished">Slet gruppe</translation>
+    </message>
+    <message>
+        <source>Delete conversation</source>
+        <translation type="unfinished">Slet samtale</translation>
+    </message>
+    <message>
+        <source>Deleting group</source>
+        <translation type="unfinished">Sletter gruppe</translation>
+    </message>
+    <message>
+        <source>Deleting conversation</source>
+        <translation type="unfinished">Sletter samtale</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished">Handlinger</translation>
+    </message>
+    <message>
+        <source>Enable notifications</source>
+        <translation type="unfinished">Aktivér påmindelser</translation>
+    </message>
+    <message>
+        <source>Disable notifications</source>
+        <translation type="unfinished">Deaktivér påmindelser</translation>
+    </message>
+    <message>
+        <source>Add to contacts</source>
+        <translation type="unfinished">Føj til kontakter</translation>
     </message>
 </context>
 <context>

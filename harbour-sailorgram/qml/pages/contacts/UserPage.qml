@@ -44,7 +44,7 @@ Page
                 width: parent.width - (x * 2)
                 actionVisible: true
                 context: userpage.context
-                user: userpage.user
+                telegramUser: userpage.user
             }
         }
     }

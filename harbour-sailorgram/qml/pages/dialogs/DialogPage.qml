@@ -19,7 +19,7 @@ Page
         if(status !== PageStatus.Active)
             return;
 
-        //pageStack.pushAttached(Qt.resolvedUrl("ConversationInfoPage.qml"), { "context": dialogpage.context, "dialog": dialogpage.dialog, "chat": dialogpage.chat, "user": dialogpage.user });
+        pageStack.pushAttached(Qt.resolvedUrl("DialogInfoPage.qml"), { "context": dialogpage.context, "telegramDialog": dialogpage.telegramDialog });
         //context.foregroundDialog = dialogpage.dialog;
     }
 

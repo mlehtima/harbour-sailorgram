@@ -245,49 +245,6 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
-    <name>ConversationInfoPage</name>
-    <message>
-        <source>Actions</source>
-        <translation>Дзеянні</translation>
-    </message>
-    <message>
-        <source>Delete secret chat</source>
-        <translation>Выдаліць сакрэтную гаворку</translation>
-    </message>
-    <message>
-        <source>Delete group</source>
-        <translation>Выдаліць групу</translation>
-    </message>
-    <message>
-        <source>Delete conversation</source>
-        <translation>Выдаленне размовы</translation>
-    </message>
-    <message>
-        <source>Deleting secret chat</source>
-        <translation>Выдаленне сакрэтнай гаворкі</translation>
-    </message>
-    <message>
-        <source>Deleting group</source>
-        <translation>Выдаленне групы</translation>
-    </message>
-    <message>
-        <source>Deleting conversation</source>
-        <translation>Выдаленне размовы</translation>
-    </message>
-    <message>
-        <source>Add to contacts</source>
-        <translation>Дадаць у кантакты</translation>
-    </message>
-    <message>
-        <source>Enable notifications</source>
-        <translation>Уключыць апавяшчэньні</translation>
-    </message>
-    <message>
-        <source>Disable notifications</source>
-        <translation>Адключыць апавяшчэньні</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -353,6 +310,41 @@ Minimum length is 5 characters.</source>
     <message>
         <source>Not Connected</source>
         <translation>Няма злучэння</translation>
+    </message>
+</context>
+<context>
+    <name>DialogInfoPage</name>
+    <message>
+        <source>Delete group</source>
+        <translation type="unfinished">Выдаліць групу</translation>
+    </message>
+    <message>
+        <source>Delete conversation</source>
+        <translation type="unfinished">Выдаленне размовы</translation>
+    </message>
+    <message>
+        <source>Deleting group</source>
+        <translation type="unfinished">Выдаленне групы</translation>
+    </message>
+    <message>
+        <source>Deleting conversation</source>
+        <translation type="unfinished">Выдаленне размовы</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished">Дзеянні</translation>
+    </message>
+    <message>
+        <source>Enable notifications</source>
+        <translation type="unfinished">Уключыць апавяшчэньні</translation>
+    </message>
+    <message>
+        <source>Disable notifications</source>
+        <translation type="unfinished">Адключыць апавяшчэньні</translation>
+    </message>
+    <message>
+        <source>Add to contacts</source>
+        <translation type="unfinished">Дадаць у кантакты</translation>
     </message>
 </context>
 <context>

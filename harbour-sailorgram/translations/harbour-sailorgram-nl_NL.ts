@@ -245,49 +245,6 @@ De minimale lengte is 5 tekens.</translation>
     </message>
 </context>
 <context>
-    <name>ConversationInfoPage</name>
-    <message>
-        <source>Actions</source>
-        <translation>Acties</translation>
-    </message>
-    <message>
-        <source>Delete secret chat</source>
-        <translation>Geheim chatgesprek verwijderen</translation>
-    </message>
-    <message>
-        <source>Delete group</source>
-        <translation>Groep verwijderen</translation>
-    </message>
-    <message>
-        <source>Delete conversation</source>
-        <translation>Gesprek verwijderen</translation>
-    </message>
-    <message>
-        <source>Deleting secret chat</source>
-        <translation>Bezig met het verwijderen van het geheime chatgesprek</translation>
-    </message>
-    <message>
-        <source>Deleting group</source>
-        <translation>Bezig met het verwijderen van de groep</translation>
-    </message>
-    <message>
-        <source>Deleting conversation</source>
-        <translation>Bezig met het verwijderen van het gesprek</translation>
-    </message>
-    <message>
-        <source>Add to contacts</source>
-        <translation>Toevoegen aan contactpersonen</translation>
-    </message>
-    <message>
-        <source>Enable notifications</source>
-        <translation>Meldingen inschakelen</translation>
-    </message>
-    <message>
-        <source>Disable notifications</source>
-        <translation>Meldingen uitschakelen</translation>
-    </message>
-</context>
-<context>
     <name>CoverPage</name>
     <message>
         <source>Connected</source>
@@ -353,6 +310,41 @@ De minimale lengte is 5 tekens.</translation>
     <message>
         <source>Not Connected</source>
         <translation>Niet verbonden</translation>
+    </message>
+</context>
+<context>
+    <name>DialogInfoPage</name>
+    <message>
+        <source>Delete group</source>
+        <translation type="unfinished">Groep verwijderen</translation>
+    </message>
+    <message>
+        <source>Delete conversation</source>
+        <translation type="unfinished">Gesprek verwijderen</translation>
+    </message>
+    <message>
+        <source>Deleting group</source>
+        <translation type="unfinished">Bezig met het verwijderen van de groep</translation>
+    </message>
+    <message>
+        <source>Deleting conversation</source>
+        <translation type="unfinished">Bezig met het verwijderen van het gesprek</translation>
+    </message>
+    <message>
+        <source>Actions</source>
+        <translation type="unfinished">Acties</translation>
+    </message>
+    <message>
+        <source>Enable notifications</source>
+        <translation type="unfinished">Meldingen inschakelen</translation>
+    </message>
+    <message>
+        <source>Disable notifications</source>
+        <translation type="unfinished">Meldingen uitschakelen</translation>
+    </message>
+    <message>
+        <source>Add to contacts</source>
+        <translation type="unfinished">Toevoegen aan contactpersonen</translation>
     </message>
 </context>
 <context>
