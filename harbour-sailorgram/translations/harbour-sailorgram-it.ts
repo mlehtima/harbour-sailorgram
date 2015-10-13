@@ -742,10 +742,6 @@ Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Group created</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Group title changed to &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -767,6 +763,10 @@ Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
     </message>
     <message>
         <source>Unknown service message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 created group ��%2��</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

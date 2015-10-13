@@ -742,10 +742,6 @@ Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het tr
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Group created</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Group title changed to &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -767,6 +763,10 @@ Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het tr
     </message>
     <message>
         <source>Unknown service message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 created group ��%2��</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

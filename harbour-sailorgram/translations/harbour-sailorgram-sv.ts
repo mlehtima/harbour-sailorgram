@@ -742,10 +742,6 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Group created</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Group title changed to &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -767,6 +763,10 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
     </message>
     <message>
         <source>Unknown service message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 created group ��%2��</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -45,6 +45,9 @@ int main(int argc, char *argv[])
 {
     QScopedPointer<QGuiApplication> application(SailfishApp::application(argc, argv));
 
+    qRegisterMetaType<TLInt>("TLInt");
+    qRegisterMetaType< QList<qint32> >("QList<qint32>");
+
     qmlRegisterType<SailorGram>("harbour.sailorgram.SailorGram", 1, 0, "SailorGram");
 
     qmlRegisterType<Telegram>("harbour.sailorgram.Telegram", 1, 0, "Telegram");

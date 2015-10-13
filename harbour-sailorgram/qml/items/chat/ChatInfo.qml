@@ -31,7 +31,7 @@ Item
 
     id: chatinfo
     width: content.width
-    height: column.height + lvpartecipants.contentHeight
+    height: column.height + lvpartecipants.contentHeight + Theme.paddingMedium
     Component.onCompleted: chatfullprovider.requestObject()
 
     Column
@@ -64,7 +64,7 @@ Item
             height: Theme.itemSizeSmall
             labelText: qsTr("Change title")
             labelFont.pixelSize: Theme.fontSizeSmall
-            onActionRequested: pageStack.push(Qt.resolvedUrl("../../pages/chat/ChangeChatTitle.qml"), { "context": chatinfo.context, "dialog": chatinfo.dialog })
+            //FIXME: onActionRequested: pageStack.push(Qt.resolvedUrl("../../pages/chat/ChangeChatTitle.qml"), { "context": chatinfo.context, "dialog": chatinfo.dialog })
         }
 
         ClickableLabel
@@ -73,7 +73,7 @@ Item
             height: Theme.itemSizeSmall
             labelText: qsTr("Add member")
             labelFont.pixelSize: Theme.fontSizeSmall
-            onActionRequested: pageStack.push(Qt.resolvedUrl("../../pages/chat/AddContactsPage.qml"), { "context": chatinfo.context, "dialog": chatinfo.dialog })
+            //FIXME: onActionRequested: pageStack.push(Qt.resolvedUrl("../../pages/chat/AddContactsPage.qml"), { "context": chatinfo.context, "dialog": chatinfo.dialog })
         }
     }
 

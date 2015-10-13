@@ -742,10 +742,6 @@ Choississez un contact en appuyant sur &quot;Contacts&quot; sur le Menu au-dessu
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Group created</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Group title changed to &apos;%1&apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -767,6 +763,10 @@ Choississez un contact en appuyant sur &quot;Contacts&quot; sur le Menu au-dessu
     </message>
     <message>
         <source>Unknown service message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 created group ��%2��</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

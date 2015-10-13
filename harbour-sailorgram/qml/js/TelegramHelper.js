@@ -5,7 +5,10 @@
 
 function fullName(user)
 {
-    return user.firstName + " " + user.lastName;
+    if(user.lastName.length > 0)
+        return user.firstName + " " + user.lastName;
+
+    return user.firstName;
 }
 
 function completeName(user) // NOTE: Deprecated
@@ -119,8 +122,13 @@ function mediaType(messagemedia)
 
 function serviceType(messageaction, dialogmodel)
 {
+    var user = null;
+
     if(messageaction.isChatCreate)
-        return qsTr("Group created");
+    {
+        user = dialogmodel.user(messageaction.users[0]); // NOTE: first_user = admin ?
+        return qsTr("%1 created group «%2»").arg(fullName(user)).arg(messageaction.title);
+    }
 
     if(messageaction.isEditTitle)
         return qsTr("Group title changed to '%1'").arg(messageaction.title);
@@ -131,18 +139,16 @@ function serviceType(messageaction, dialogmodel)
     if(messageaction.isChatDeletePhoto)
         return qsTr("Group title has been removed");
 
-    var user = null;
-
     if(messageaction.isChatAddUser)
     {
         user = dialogmodel.user(messageaction.userId);
-        return qsTr("%1 has joined the group", completeName(user));
+        return qsTr("%1 has joined the group").arg(completeName(user));
     }
 
     if(messageaction.isChatDeleteUser)
     {
         user = dialogmodel.user(messageaction.userId);
-        return qsTr("%1 has left the group", completeName(user));
+        return qsTr("%1 has left the group", fullName(user));
     }
 
     return qsTr("Unknown service message");
