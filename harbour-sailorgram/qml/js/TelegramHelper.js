@@ -5,6 +5,9 @@
 
 function fullName(user)
 {
+    if(!user)
+        return "";
+
     if(user.lastName.length > 0)
         return user.firstName + " " + user.lastName;
 
@@ -18,6 +21,9 @@ function completeName(user) // NOTE: Deprecated
 
 function fallbackLetters(text)
 {
+    if(text.length <= 0)
+        return "";
+
     var splittext = text.split(" ");
 
     if(splittext.length >= 2)
@@ -28,20 +34,23 @@ function fallbackLetters(text)
 
 function userStatus(user)
 {
-    if(user.status.isOnline)
-        return qsTr("Online");
+    if(user)
+    {
+        if(user.status.isOnline)
+            return qsTr("Online");
 
-    if(user.status.isOffline)
-        return qsTr("Last Seen %1").arg(printableDate(user.status.wasOnline));
+        if(user.status.isOffline)
+            return qsTr("Last Seen %1").arg(printableDate(user.status.wasOnline));
 
-    if(user.status.isRecently)
-        return qsTr("Recently");
+        if(user.status.isRecently)
+            return qsTr("Recently");
 
-    if(user.status.isLastMonth)
-        return qsTr("Last Month");
+        if(user.status.isLastMonth)
+            return qsTr("Last Month");
 
-    if(user.status.isLastWeek)
-        return qsTr("Last Week");
+        if(user.status.isLastWeek)
+            return qsTr("Last Week");
+    }
 
     return qsTr("Unknown");
 }
