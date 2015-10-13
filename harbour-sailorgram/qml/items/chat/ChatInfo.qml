@@ -32,6 +32,7 @@ Item
     id: chatinfo
     width: content.width
     height: column.height + lvpartecipants.contentHeight
+    Component.onCompleted: chatfullprovider.requestObject()
 
     Column
     {
@@ -81,8 +82,8 @@ Item
         id: lvpartecipants
         spacing: Theme.paddingMedium
         anchors { left: parent.left; top: column.bottom; right: parent.right; bottom: parent.bottom }
-        model: chatfullprovider.chatFull ? chatfullprovider.chatFull.participants : null
-        header: SectionHeader { id: secheader; text: qsTr("Members") }
+        model: chatfullprovider.chatFull ? chatfullprovider.chatFull.participants.participants : null
+        header: SectionHeader { text: qsTr("Members") }
 
         delegate: ListItem {
             id: liparticipant
