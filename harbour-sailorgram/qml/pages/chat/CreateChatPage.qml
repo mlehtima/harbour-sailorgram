@@ -1,6 +1,6 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
-import harbour.sailorgram.Telegram 1.0 as TelegramQml
+import harbour.sailorgram.Telegram 1.0 as Telegram
 import "../../models"
 import "../../items/user"
 import "../../js/TelegramHelper.js" as TelegramHelper
@@ -26,7 +26,7 @@ Dialog
         for(var prop in dlgcreatechat.users)
             userlist.push(dlgcreatechat.users[prop]);
 
-        context.telegram.messagesCreateChat(userlist, tfgroupname.text);
+        //FIXME: context.telegram.messagesCreateChat(userlist, tfgroupname.text);
     }
 
     SilicaFlickable
@@ -53,7 +53,7 @@ Dialog
             spacing: Theme.paddingMedium
             clip: true
 
-            model: TelegramQml.ContactsModel {
+            model: Telegram.ContactsModel {
                 telegram: context.telegram
             }
 
@@ -68,8 +68,7 @@ Dialog
                 UserItem {
                     id: useritem
                     anchors { left: parent.left; top: parent.top; right: swselectcontact.right; bottom: parent.bottom; leftMargin: Theme.paddingMedium; rightMargin: Theme.paddingMedium }
-                    context: dlgcreatechat.context
-                    user: context.telegram.user(item.userId)
+                    telegramUser: contact.user
                 }
 
                 Switch {
@@ -81,7 +80,7 @@ Dialog
                         checked ? count++ : count--
 
                         if(checked)
-                            users[index] = item.userId;
+                            users[index] = contact.user.id;
                         else
                             delete users[index];
                     }
