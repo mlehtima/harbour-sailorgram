@@ -4,24 +4,13 @@ import "../../models"
 
 Dialog
 {
-    property bool usernameOk: false
-    property Context context
-    property var user
-
-    Connections
-    {
-        target: context.telegram
-
-        onAccountUsernameChecked: {
-            dlgchangeusername.usernameOk = ok;
-        }
-    }
+    property var selfUserProvider // LibTelegram 'Dialog' type collides with Silica one, use 'var'
 
     Timer // Don't flood Telegram server
     {
         id: timwait
         interval: 1000
-        onTriggered: context.telegram.accountCheckUsername(tfusername.text);
+        onTriggered: selfUserProvider.checkUsername(tfusername.text);
     }
 
     function validateUsername() {
@@ -31,9 +20,8 @@ Dialog
     id: dlgchangeusername
     allowedOrientations: defaultAllowedOrientations
     acceptDestinationAction: PageStackAction.Pop
-    canAccept: !timwait.running && (usernameOk && validateUsername() || !tfusername.text.length);
-
-    onAccepted: context.telegram.accountUpdateUsername(tfusername.text);
+    canAccept: !timwait.running && (selfUserProvider.isAvailable && validateUsername() || !tfusername.text.length);
+    onAccepted: selfUserProvider.updateUsername(tfusername.text);
 
     SilicaFlickable
     {
@@ -46,10 +34,7 @@ Dialog
             width: parent.width
             spacing: Theme.paddingMedium
 
-            DialogHeader
-            {
-                acceptText: qsTr("Change")
-            }
+            DialogHeader { acceptText: qsTr("Change") }
 
             TextField
             {
@@ -57,7 +42,7 @@ Dialog
                 anchors { left: parent.left; right: parent.right; leftMargin: Theme.paddingSmall; rightMargin: Theme.paddingSmall }
                 placeholderText: qsTr("Username")
                 inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
-                errorHighlight: !timwait.running && validateUsername() && !usernameOk
+                errorHighlight: !timwait.running && validateUsername() && !selfUserProvider.isAvailable
 
                 onTextChanged: {
                     if(!validateUsername()) {
@@ -83,7 +68,7 @@ Dialog
                 horizontalAlignment: Text.AlignHCenter
                 font.pixelSize: Theme.fontSizeSmall
                 color: Theme.highlightColor
-                visible: !timwait.running && validateUsername() && !usernameOk
+                visible: !timwait.running && validateUsername() && !selfUserProvider.isAvailable
                 text: qsTr("This username is already occupied")
             }
 

@@ -33,7 +33,7 @@ Page
             MenuItem
             {
                 text: qsTr("Change Username")
-                //FIXME: onClicked: pageStack.push(Qt.resolvedUrl("ChangeUsernamePage.qml"), { "context": profilepage.context, "user": profilepage.user } )
+                onClicked: pageStack.push(Qt.resolvedUrl("ChangeUsernamePage.qml"), { "selfUserProvider": selfuserprovider } )
             }
 
             MenuItem
