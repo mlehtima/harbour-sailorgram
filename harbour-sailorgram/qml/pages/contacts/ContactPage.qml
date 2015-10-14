@@ -1,8 +1,6 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
 import harbour.sailorgram.Telegram 1.0
-import "../../models"
-import "../../components"
 import "../../items/user"
 import "../../js/TelegramHelper.js" as TelegramHelper
 
