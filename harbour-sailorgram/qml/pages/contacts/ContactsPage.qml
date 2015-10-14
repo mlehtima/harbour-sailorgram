@@ -3,7 +3,7 @@ import Sailfish.Silica 1.0
 import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../../items/user"
-import "../../menus"
+import "../../menus/contact"
 
 Page
 {
@@ -26,15 +26,12 @@ Page
             contentWidth: parent.width
             contentHeight: Theme.itemSizeSmall
 
-            /* FIXME:
             menu: ContactMenu {
                 id: contactmenu
-                context: contactspage.context
-                user: context.telegram.user(item.userId)
+                onProfileRequested: pageStack.push(Qt.resolvedUrl("ContactPage.qml"), { "telegramUser": contact.user } );
             }
-            */
 
-            onClicked: pageStack.replace(Qt.resolvedUrl("../dialogs/ConversationPage.qml"), { "context": contactspage.context, "dialog": context.telegram.fakeDialogObject(item.userId, false) } )
+            //FIXME: onClicked: pageStack.replace(Qt.resolvedUrl("../dialogs/ConversationPage.qml"), { "context": contactspage.context, "dialog": context.telegram.fakeDialogObject(item.userId, false) } )
 
             UserItem {
                 id: useritem

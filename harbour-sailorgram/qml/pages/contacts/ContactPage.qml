@@ -8,11 +8,9 @@ import "../../js/TelegramHelper.js" as TelegramHelper
 
 Page
 {
-    property bool actionVisible: true
-    property Context context
-    property User user
+    property User telegramUser
 
-    id: userpage
+    id: contactpage
     allowedOrientations: defaultAllowedOrientations
 
     SilicaFlickable
@@ -27,15 +25,14 @@ Page
             width: parent.width
             spacing: Theme.paddingMedium
 
-            PageHeader { title: TelegramHelper.completeName(user) }
+            PageHeader { title: TelegramHelper.completeName(telegramUser) }
 
             UserItem
             {
                 x: Theme.paddingMedium
                 width: parent.width - (x * 2)
                 height: Theme.itemSizeSmall
-                context: userpage.context
-                user: userpage.user
+                telegramUser: contactpage.telegramUser
             }
 
             UserInfo
@@ -43,8 +40,7 @@ Page
                 x: Theme.paddingMedium
                 width: parent.width - (x * 2)
                 actionVisible: true
-                context: userpage.context
-                telegramUser: userpage.user
+                telegramUser: contactpage.telegramUser
             }
         }
     }

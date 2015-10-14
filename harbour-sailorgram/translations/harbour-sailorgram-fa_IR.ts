@@ -238,6 +238,13 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
+    <name>ContactMenu</name>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished">نمایه</translation>
+    </message>
+</context>
+<context>
     <name>ContactsPage</name>
     <message>
         <source>Contacts</source>

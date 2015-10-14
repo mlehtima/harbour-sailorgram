@@ -238,6 +238,13 @@ De minimale lengte is 5 tekens.</translation>
     </message>
 </context>
 <context>
+    <name>ContactMenu</name>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished">Profiel</translation>
+    </message>
+</context>
+<context>
     <name>ContactsPage</name>
     <message>
         <source>Contacts</source>

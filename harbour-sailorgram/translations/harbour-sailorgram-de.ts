@@ -238,6 +238,13 @@ Minimum sind 5 Zeichen.</translation>
     </message>
 </context>
 <context>
+    <name>ContactMenu</name>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished">Profil</translation>
+    </message>
+</context>
+<context>
     <name>ContactsPage</name>
     <message>
         <source>Contacts</source>

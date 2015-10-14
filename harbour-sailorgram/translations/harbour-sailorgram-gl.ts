@@ -238,6 +238,13 @@ A lonxitude mínima é de 5 caracteres.</translation>
     </message>
 </context>
 <context>
+    <name>ContactMenu</name>
+    <message>
+        <source>Profile</source>
+        <translation type="unfinished">Perfil</translation>
+    </message>
+</context>
+<context>
     <name>ContactsPage</name>
     <message>
         <source>Contacts</source>
