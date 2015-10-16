@@ -72,7 +72,6 @@ Page
 
             model: DialogModel {
                 id: dialogmodel
-                reversed: true
                 telegram: context.telegram
                 dialog: dialogpage.telegramDialog
             }
@@ -89,7 +88,7 @@ Page
             id: messagebar
             anchors { left: parent.left; bottom: parent.bottom; right: parent.right }
             context: dialogpage.context
-            dialog: dialogpage.telegramDialog
+            telegramDialog: dialogpage.telegramDialog
         }
     }
 }

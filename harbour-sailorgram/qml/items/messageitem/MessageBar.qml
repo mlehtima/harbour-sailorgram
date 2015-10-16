@@ -9,7 +9,7 @@ Item
 {
     readonly property real maxHeight: pageStack.currentPage.height / 2
     property Context context
-    property Dialog dialog
+    property Dialog telegramDialog
 
     id: messagebar
     height: context.telegram.dcConnected ? (Math.max(Math.min(textarea._contentItem.contentHeight, maxHeight), btnselectmedia.height) + lbltime.contentHeight) : Theme.itemSizeSmall
@@ -17,7 +17,7 @@ Item
     function sendMessage()
     {
         Qt.inputMethod.commit();
-        dialogmodel.sendMessage(textarea.text.trim(), (dialogmodel.count > 0 ? true : false));
+        dialogmodel.sendMessage(textarea.text.trim());
         textarea.text = "";
     }
 
@@ -86,7 +86,7 @@ Item
                 var picker = pageStack.push(Qt.resolvedUrl("../../pages/picker/FilePickerPage.qml"), { "rootPage": pageStack.currentPage });
 
                 picker.filePicked.connect(function(file) {
-                    context.telegram.sendFile(TelegramHelper.peerId(dialog), file);
+                    //FIXME: context.telegram.sendFile(TelegramHelper.peerId(telegramDialog), file);
                 });
             }
         }

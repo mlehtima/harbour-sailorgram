@@ -14,8 +14,8 @@ Image
         if(!telegramMessage.isUnread)
             return "qrc:///res/read.png";
 
-        /* FIXME: if(telegramMessage.sent)
-            return "qrc:///res/sent.png"; */
+        if(telegramMessage.isSent)
+            return "qrc:///res/sent.png";
 
         return "qrc:///res/out.png";
     }

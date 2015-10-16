@@ -110,7 +110,7 @@ Page
                 id: messagebar
                 anchors { left: parent.left; bottom: parent.bottom; right: parent.right }
                 context: secretconversationpage.context
-                dialog: secretconversationpage.dialog
+                telegramDialog: secretconversationpage.dialog
                 visible: chat && (chat.classType !== TelegramConstants.typeEncryptedChatDiscarded) && (chat.classType !== TelegramConstants.typeEncryptedChatWaiting)
             }
 
