@@ -86,8 +86,6 @@ Page
             telegram: dialogspage.context.telegram
         }
 
-        onCountChanged: console.log(count)
-
         delegate: ListItem {
             function displayConversation() {
                 /*
