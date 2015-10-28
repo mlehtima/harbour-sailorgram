@@ -21,7 +21,7 @@ MediaPage
                 text: qsTr("Save in Gallery")
 
                 onClicked: {
-                    context.sailorgram.moveMediaToGallery(message.media);
+                    //FIXME: context.sailorgram.moveMediaToGallery(telegramFile);
                     popupmessage.show(qsTr("Image saved in Gallery"));
                 }
             }
@@ -66,13 +66,13 @@ MediaPage
             fillMode: Image.PreserveAspectFit
             asynchronous: true
             cache: false
-            source: fileHandler.filePath
+            source: telegramFile.filePath
 
             BusyIndicator
             {
                 anchors.centerIn: parent
                 size: BusyIndicatorSize.Medium
-                running: (fileHandler.progressPercent > 0) && (fileHandler.progressPercent < 100)
+                running: telegramFile.downloading
             }
         }
     }

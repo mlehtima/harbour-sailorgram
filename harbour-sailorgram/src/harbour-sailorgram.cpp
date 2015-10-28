@@ -58,6 +58,7 @@ int main(int argc, char *argv[])
     qmlRegisterType<DialogsModel>("harbour.sailorgram.Telegram", 1, 0, "DialogsModel");
     qmlRegisterType<DialogModel>("harbour.sailorgram.Telegram", 1, 0, "DialogModel");
 
+    qmlRegisterType<FileObject>("harbour.sailorgram.Telegram", 1, 0, "File");
     qmlRegisterType<DialogObject>("harbour.sailorgram.Telegram", 1, 0, "Dialog");
     qmlRegisterType<ContactObject>("harbour.sailorgram.Telegram", 1, 0, "Contact");
     qmlRegisterType<PeerNotifySettingsObject>("harbour.sailorgram.Telegram", 1, 0, "PeerNotifySettings");
@@ -73,6 +74,10 @@ int main(int argc, char *argv[])
     qmlRegisterType<MessageMediaObject>("harbour.sailorgram.Telegram", 1, 0, "MessageMedia");
     qmlRegisterType<MessageActionObject>("harbour.sailorgram.Telegram", 1, 0, "MessageAction");
     qmlRegisterType<PhotoObject>("harbour.sailorgram.Telegram", 1, 0, "Photo");
+    qmlRegisterType<DocumentObject>("harbour.sailorgram.Telegram", 1, 0, "Document");
+    qmlRegisterType<DocumentAttributeObject>("harbour.sailorgram.Telegram", 1, 0, "DocumentAttribute");
+    qmlRegisterType<VideoObject>("harbour.sailorgram.Telegram", 1, 0, "Video");
+    qmlRegisterType<AudioObject>("harbour.sailorgram.Telegram", 1, 0, "Audio");
 
     qmlRegisterType<SelfUserProvider>("harbour.sailorgram.Telegram", 1, 0, "SelfUserProvider");
     qmlRegisterType<ChatFullProvider>("harbour.sailorgram.Telegram", 1, 0, "ChatFullProvider");

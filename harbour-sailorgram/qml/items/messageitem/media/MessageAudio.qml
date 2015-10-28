@@ -6,11 +6,10 @@ import "../../../js/TelegramHelper.js" as TelegramHelper
 
 MessageMediaItem
 {
-    property FileLocation fileLocation: context.telegram.locationOfAudio(telegramMessage.media.audio)
-
     id: messageaudio
     height: row.height
     width: Math.min(messageitem.width, row.width)
+    telegramFile: telegramMessage.media.audio.location
 
     MediaPlayerTimings { id: mediaplayertimings }
 
@@ -25,8 +24,8 @@ MessageMediaItem
         MessageThumbnail
         {
             id: imgpreview
-            source: messageaudio.mediaThumbnail || "image://theme/icon-m-sounds"
-            transferProgress: progressPercent
+            source: "image://theme/icon-m-sounds"
+            transferInProgress: telegramMessage.media.audio.location.downloading
         }
 
         Column
@@ -52,7 +51,7 @@ MessageMediaItem
                 id: lblsize
                 height: parent.height / 3
                 font.pixelSize: Theme.fontSizeExtraSmall
-                text: qsTr("Size: %1").arg(TelegramHelper.formatBytes(mediaSize, 2))
+                text: qsTr("Size: %1").arg(TelegramHelper.formatBytes(telegramMessage.media.audio.size, 2))
             }
 
             Label

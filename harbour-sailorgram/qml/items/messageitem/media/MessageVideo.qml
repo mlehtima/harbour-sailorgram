@@ -6,11 +6,10 @@ import "../../../js/TelegramHelper.js" as TelegramHelper
 
 MessageMediaItem
 {
-    property FileLocation fileLocation: context.telegram.locationOfVideo(telegramMessage.media.video)
-
     id: messagevideo
     height: row.height
     width: Math.min(messageitem.width, row.width)
+    telegramFile: telegramMessage.media.video.location
 
     MediaPlayerTimings { id: mediaplayertimings }
 
@@ -25,8 +24,14 @@ MessageMediaItem
         MessageThumbnail
         {
             id: imgpreview
-            source: messagevideo.mediaThumbnail || "image://theme/icon-l-video"
-            transferProgress: progressPercent
+            transferInProgress: telegramMessage.media.video.location.downloading
+
+            source: {
+                if(!telegramMessage.media.video.thumb.downloaded)
+                    telegramMessage.media.video.thumb.download();
+
+                return telegramMessage.media.video.thumb.filePath;
+            }
         }
 
         Column
@@ -52,7 +57,7 @@ MessageMediaItem
                 id: lblsize
                 height: parent.height / 3
                 font.pixelSize: Theme.fontSizeExtraSmall
-                text: qsTr("Size: %1").arg(TelegramHelper.formatBytes(mediaSize, 2))
+                text: qsTr("Size: %1").arg(TelegramHelper.formatBytes(telegramMessage.media.video.size, 2))
             }
 
             Label

@@ -7,6 +7,9 @@ import "../../components/mediaplayer"
 
 MediaPage
 {
+    property string mediaCaption
+    property File mediaThumbnail
+
     id: mediaplayerpage
     allowedOrientations: defaultAllowedOrientations
 
@@ -22,9 +25,18 @@ MediaPage
     {
         id: mediaplayer
         anchors.fill: parent
-        videoThumbnail: message.media.video.thumb.location.download.location
-        videoTitle: message.media.video.caption
-        videoSource: fileHandler.filePath
+        videoTitle: mediaCaption
+        videoSource: telegramFile.filePath
+
+        videoThumbnail: {
+            if(!videoThumbnail)
+                return "";
+
+            if(!videoThumbnail.downloaded)
+                videoThumbnail.download();
+
+            return videoThumbnail.filePath;
+        }
     }
 
     ProgressCircle
@@ -32,7 +44,7 @@ MediaPage
         anchors.centerIn: parent
         width: Theme.iconSizeLarge
         height: Theme.iconSizeLarge
-        visible: (fileHandler.progressPercent > 0) && (fileHandler.progressPercent < 100)
-        progressValue: fileHandler.progressPercent / 100
+        visible: telegramFile.downloading
+        //FIXME: progressValue: fileHandler.progressPercent / 100
     }
 }

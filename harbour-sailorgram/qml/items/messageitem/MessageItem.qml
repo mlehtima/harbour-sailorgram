@@ -13,65 +13,77 @@ ListItem
     property Message telegramMessage
     property User telegramFromUser
 
-    function remorseNeeded(mediatype, type) {
-        if(loader.item.fileHandler.downloaded) // No remorse for downloaded medias
+    function remorseNeeded(media) {
+        if(loader.item.telegramFile.downloaded) // No remorse for downloaded medias
             return false;
 
-        if((mediatype === TelegramConstants.typeMessageMediaVideo) || (mediatype === TelegramConstants.typeMessageMediaAudio))
+        if(media.isVideo || media.isAudio)
             return true;
 
-        if((type === "audio") || (type === "video"))
+        if(media.isDocument && (media.document.attributes.isAudio || media.document.attributes.isVideo))
             return true;
 
-        if((mediatype === TelegramConstants.typeMessageMediaDocument) && (type !== "image"))
+        if(media.isDocument && media.document.attributes.isImage)
             return true;
 
         return false;
     }
 
-    function openOrDownloadMedia(canbeviewed, type) {
-        if(!loader.item.fileHandler.downloaded)
-            loader.item.fileHandler.download();
+    function openOrDownloadMedia(canbeviewed) {
+        if(!loader.item.telegramFile.downloaded)
+            loader.item.telegramFile.download();
 
-        if((telegramMessage.media.classType === TelegramConstants.typeMessageMediaPhoto) || (type === "image")) {
-            pageStack.push(Qt.resolvedUrl("../../pages/media/MediaPhotoPage.qml"), { "context": messageitem.context, "message": messageitem.telegramMessage, "fileHandler": loader.item.fileHandler });
+        if((telegramMessage.media.isPhoto) || (telegramMessage.media.isDocument && telegramMessage.media.document.attributes.isImage)) {
+            pageStack.push(Qt.resolvedUrl("../../pages/media/MediaPhotoPage.qml"), { "context": messageitem.context, "telegramFile": loader.item.telegramFile });
             return;
         }
 
-        if((telegramMessage.media.classType === TelegramConstants.typeMessageMediaVideo) || (telegramMessage.media.classType === TelegramConstants.typeMessageMediaAudio) || (type === "audio") || (type === "video")) {
-            pageStack.push(Qt.resolvedUrl("../../pages/media/MediaPlayerPage.qml"), { "context": messageitem.context, "message": messageitem.telegramMessage, "fileHandler": loader.item.fileHandler });
+        if(telegramMessage.media.isAudio || (telegramMessage.media.isDocument && telegramMessage.media.document.attributes.isAudio)) {
+            if(telegramMessage.media.isAudio)
+                pageStack.push(Qt.resolvedUrl("../../pages/media/MediaPlayerPage.qml"), { "context": messageitem.context, "telegramFile": loader.item.telegramFile });
+            else
+                pageStack.push(Qt.resolvedUrl("../../pages/media/MediaPlayerPage.qml"), { "context": messageitem.context, "telegramFile": loader.item.telegramFile });
+
             return;
         }
 
-        if(!loader.item.fileHandler.downloaded)
+        if(telegramMessage.media.isVideo || (telegramMessage.media.isDocument && telegramMessage.media.document.attributes.isVideo)) {
+            if(telegramMessage.media.isVideo) {
+                pageStack.push(Qt.resolvedUrl("../../pages/media/MediaPlayerPage.qml"), { "context": messageitem.context, "telegramFile": loader.item.telegramFile,
+                                                                                          "videoCaption": telegramMessage.media.video.caption,
+                                                                                          "mediaThumbnail": telegramMessage.media.video.thumb });
+            }
+            else
+                pageStack.push(Qt.resolvedUrl("../../pages/media/MediaPlayerPage.qml"), { "context": messageitem.context, "telegramFile": loader.item.telegramFile });
+
+            return;
+        }
+
+        if(!loader.item.telegramFile.downloaded)
             return;
 
         popupmessage.show(qsTr("Opening media"));
-        Qt.openUrlExternally(loader.item.fileHandler.filePath);
+        Qt.openUrlExternally(loader.item.telegramFile.filePath);
     }
 
     function displayMedia() {
         if(!telegramMessage.media)
             return;
 
-        var type = "";
-        var canbeviewed = (telegramMessage.media.classType === TelegramConstants.typeMessageMediaPhoto) ||
-                          (telegramMessage.media.classType === TelegramConstants.typeMessageMediaVideo) ||
-                          (telegramMessage.media.classType === TelegramConstants.typeMessageMediaAudio);
+        var canbeviewed = telegramMessage.media.isPhoto || telegramMessage.media.isAudio || telegramMessage.media.isVideo;
 
-        if(telegramMessage.media.classType === TelegramConstants.typeMessageMediaDocument) {
-            var mime = telegramMessage.media.document.mimeType;
-            type = mime.split("/")[0];
-            canbeviewed = ((type === "video") || (type === "audio") || (type === "image")) ? true : false;
+        if(telegramMessage.media.isDocument) {
+            var attributes = telegramMessage.media.document.attributes;
+            canbeviewed = attributes.isVideo || attributes.isAudio || attributes.isImage;
         }
 
-        if(!remorseNeeded(telegramMessage.media.classType, type)) {
-            openOrDownloadMedia(canbeviewed, type);
+        if(!remorseNeeded(telegramMessage.media)) {
+            openOrDownloadMedia(canbeviewed);
             return;
         }
 
         messageitem.remorseAction((canbeviewed ? qsTr("Opening Media") : qsTr("Downloading Media")), function() {
-            openOrDownloadMedia(canbeviewed, type);
+            openOrDownloadMedia(canbeviewed);
         });
     }
 
@@ -91,16 +103,14 @@ ListItem
 
     onClicked: displayMedia()
 
-    /*
     Component {
         id: documentcomponent
 
         MessageDocument {
             context: messageitem.context
-            message: messageitem.telegramMessage
+            telegramMessage: messageitem.telegramMessage
         }
     }
-    */
 
     Component {
         id: photocomponent
@@ -111,13 +121,12 @@ ListItem
         }
     }
 
-    /*
     Component {
         id: audiocomponent
 
         MessageAudio {
             context: messageitem.context
-            message: messageitem.telegramMessage
+            telegramMessage: messageitem.telegramMessage
         }
     }
 
@@ -126,10 +135,9 @@ ListItem
 
         MessageVideo {
             context: messageitem.context
-            message: messageitem.telegramMessage
+            telegramMessage: messageitem.telegramMessage
         }
     }
-    */
 
     Column
     {
@@ -159,14 +167,12 @@ ListItem
                 if(telegramMessage.isMedia) {
                     if(telegramMessage.media.isPhoto)
                         return photocomponent;
-                    /*
-                    else if(message.media.classType === TelegramConstants.typeMessageMediaDocument)
+                    else if(telegramMessage.media.isDocument)
                         return documentcomponent;
-                    else if(message.media.classType === TelegramConstants.typeMessageMediaAudio)
+                    else if(telegramMessage.media.isAudio)
                         return audiocomponent;
-                    else if(message.media.classType === TelegramConstants.typeMessageMediaVideo)
+                    else if(telegramMessage.media.isVideo)
                         return videocomponent;
-                        */
                 }
 
                 return null;

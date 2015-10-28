@@ -38,7 +38,7 @@ ContextMenu
     MenuItem
     {
         text: qsTr("Download")
-        visible: telegramMessage.isMedia && !telegramMessage.media.isEmpty && loaderItem //FIXME: && !messageMediaItem.fileHandler.downloaded;
+        visible: telegramMessage.isMedia && !telegramMessage.media.isEmpty && (loaderItem && !loaderItem.telegramFile.downloaded)
 
         onClicked: {
             messageitem.remorseAction(qsTr("Downloading media"), function() {
@@ -50,7 +50,7 @@ ContextMenu
     MenuItem
     {
         text: qsTr("Cancel")
-        visible: telegramMessage.isOut && loaderItem && loaderItem.transferInProgress
+        visible: telegramMessage.isOut && (loaderItem && loaderItem.telegramFile.downloading)
         onClicked: cancelRequested()
     }
 }

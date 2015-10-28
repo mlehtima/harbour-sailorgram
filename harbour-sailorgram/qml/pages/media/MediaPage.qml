@@ -7,6 +7,5 @@ Page
 {
     readonly property bool isMediaPage: true
     property Context context
-    property Message message
-    property FileHandler fileHandler
+    property File telegramFile
 }

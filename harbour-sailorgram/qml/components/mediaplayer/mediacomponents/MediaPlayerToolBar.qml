@@ -95,7 +95,7 @@ Rectangle
             restoreOpacity();
 
             remorsepopup.execute(qsTr("Downloading media"), function() {
-                context.sailorgram.moveMediaToGallery(message.media);
+                context.sailorgram.moveMediaToGallery(telegramMessage.media);
                 popupmessage.show(qsTr("Media saved in Gallery"));
             });
         }

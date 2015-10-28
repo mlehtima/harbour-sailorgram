@@ -6,11 +6,10 @@ import "../../../js/TelegramHelper.js" as TelegramHelper
 
 MessageMediaItem
 {
-    property FileLocation fileLocation: context.telegram.locationOfDocument(telegramMessage.media.document)
-
     id: messagedocument
     height: row.height
     width: Math.min(messageitem.width, row.width)
+    telegramFile: telegramMessage.media.document.location
 
     Row
     {
@@ -23,8 +22,23 @@ MessageMediaItem
         MessageThumbnail
         {
             id: imgpreview
-            source: messagedocument.mediaThumbnail || "image://theme/icon-m-document"
-            transferProgress: progressPercent
+
+            transferInProgress: {
+                if(telegramMessage.media.document.attributes.isSticker)
+                    return false;
+
+                return telegramMessage.media.document.location.downloading;
+            }
+
+            source: {
+                if(telegramMessage.media.document.attributes.isSticker)
+                    return "image://theme/icon-m-other"; // FIXME: WebP not supported by SailfishOS
+
+                if(!telegramMessage.media.document.thumb.downloaded)
+                    telegramMessage.media.document.thumb.download();
+
+                return telegramMessage.media.document.thumb.filePath;
+            }
         }
 
         Column
@@ -40,7 +54,7 @@ MessageMediaItem
                 verticalAlignment: Text.AlignTop
                 horizontalAlignment: Text.AlignLeft
                 font.pixelSize: Theme.fontSizeExtraSmall
-                text: isUpload ? context.sailorgram.fileName(telegramMessage.upload.location) : fileLocation.fileName
+                text: telegramMessage.media.document.attributes.fileName
                 wrapMode: Text.NoWrap
                 elide: Text.ElideRight
             }
@@ -55,7 +69,7 @@ MessageMediaItem
                 {
                     id: lblsize
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    text: TelegramHelper.formatBytes(mediaSize, 2)
+                    text: TelegramHelper.formatBytes(telegramMessage.media.document.size, 2)
                 }
 
                 Label
