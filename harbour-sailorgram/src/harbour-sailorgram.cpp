@@ -35,7 +35,6 @@
 #include <model/dialogs/dialogsmodel.h>
 #include <model/dialogs/dialogmodel.h>
 #include <objects/providers/user/selfuserprovider.h>
-#include <objects/providers/chat/chatfullprovider.h>
 #include <objects/fileobject.h>
 #include "dbus/screenblank.h"
 #include "dbus/notifications/notifications.h"
@@ -66,10 +65,8 @@ int main(int argc, char *argv[])
     qmlRegisterType<UserProfilePhotoObject>("harbour.sailorgram.Telegram", 1, 0, "UserProfilePhoto");
     qmlRegisterType<UserStatusObject>("harbour.sailorgram.Telegram", 1, 0, "UserStatusObject");
     qmlRegisterType<ChatObject>("harbour.sailorgram.Telegram", 1, 0, "Chat");
-    qmlRegisterType<ChatFullObject>("harbour.sailorgram.Telegram", 1, 0, "ChatFull");
     qmlRegisterType<ChatPhotoObject>("harbour.sailorgram.Telegram", 1, 0, "ChatPhoto");
     qmlRegisterType<ChatParticipantObject>("harbour.sailorgram.Telegram", 1, 0, "ChatParticipant");
-    qmlRegisterType<ChatParticipantsObject>("harbour.sailorgram.Telegram", 1, 0, "ChatParticipants");
     qmlRegisterType<MessageObject>("harbour.sailorgram.Telegram", 1, 0, "Message");
     qmlRegisterType<MessageMediaObject>("harbour.sailorgram.Telegram", 1, 0, "MessageMedia");
     qmlRegisterType<MessageActionObject>("harbour.sailorgram.Telegram", 1, 0, "MessageAction");
@@ -80,7 +77,6 @@ int main(int argc, char *argv[])
     qmlRegisterType<AudioObject>("harbour.sailorgram.Telegram", 1, 0, "Audio");
 
     qmlRegisterType<SelfUserProvider>("harbour.sailorgram.Telegram", 1, 0, "SelfUserProvider");
-    qmlRegisterType<ChatFullProvider>("harbour.sailorgram.Telegram", 1, 0, "ChatFullProvider");
 
     qmlRegisterType<ScreenBlank>("harbour.sailorgram.DBus", 1, 0, "ScreenBlank");
     qmlRegisterType<Notifications>("harbour.sailorgram.DBus", 1, 0, "Notifications");

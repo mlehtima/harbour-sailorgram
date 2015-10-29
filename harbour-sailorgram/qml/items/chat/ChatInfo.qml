@@ -14,25 +14,15 @@ Item
     property Chat telegramChat
 
     property bool adminMenu: {
-        if(chatfullprovider.chatFull && chatfullprovider.chatFull.participants.admin) {
-            var admin = chatfullprovider.chatFull.participants.admin;
-            return admin.id === context.telegram.myId;
-        }
+        if(telegramChat.admin)
+            return telegramChat.admin.isSelf;
 
         return false;
-    }
-
-    ChatFullProvider
-    {
-        id: chatfullprovider
-        telegram: context.telegram
-        chat: chatinfo.telegramChat
     }
 
     id: chatinfo
     width: content.width
     height: column.height + lvpartecipants.contentHeight + Theme.paddingMedium
-    Component.onCompleted: chatfullprovider.requestObject()
 
     Column
     {
@@ -82,7 +72,7 @@ Item
         id: lvpartecipants
         spacing: Theme.paddingMedium
         anchors { left: parent.left; top: column.bottom; right: parent.right; bottom: parent.bottom }
-        model: chatfullprovider.chatFull ? chatfullprovider.chatFull.participants.participants : null
+        model: telegramChat.participants
         header: SectionHeader { text: qsTr("Members") }
 
         delegate: ListItem {

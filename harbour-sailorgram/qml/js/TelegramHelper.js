@@ -129,34 +129,34 @@ function mediaType(messagemedia)
     return qsTr("Unknown media");
 }
 
-function serviceType(messageaction, dialogmodel)
+function serviceType(message, dialogmodel)
 {
     var user = null;
 
-    if(messageaction.isChatCreate)
+    if(message.action.isChatCreate)
     {
-        user = dialogmodel.user(messageaction.users[0]); // NOTE: first_user = admin ?
-        return qsTr("%1 created group «%2»").arg(fullName(user)).arg(messageaction.title);
+        user = dialogmodel.user(message.fromId);
+        return qsTr("%1 created group «%2»").arg(fullName(user)).arg(message.action.title);
     }
 
-    if(messageaction.isEditTitle)
-        return qsTr("Group title changed to '%1'").arg(messageaction.title);
+    if(message.action.isEditTitle)
+        return qsTr("Group title changed to '%1'").arg(message.action.title);
 
-    if(messageaction.isChatEditPhoto)
+    if(message.action.isChatEditPhoto)
         return qsTr("Group photo has been changed");
 
-    if(messageaction.isChatDeletePhoto)
+    if(message.action.isChatDeletePhoto)
         return qsTr("Group title has been removed");
 
-    if(messageaction.isChatAddUser)
+    if(message.action.isChatAddUser)
     {
-        user = dialogmodel.user(messageaction.userId);
+        user = dialogmodel.user(message.action.userId);
         return qsTr("%1 has joined the group").arg(completeName(user));
     }
 
-    if(messageaction.isChatDeleteUser)
+    if(message.action.isChatDeleteUser)
     {
-        user = dialogmodel.user(messageaction.userId);
+        user = dialogmodel.user(message.action.userId);
         return qsTr("%1 has left the group", fullName(user));
     }
 

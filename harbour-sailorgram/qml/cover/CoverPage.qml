@@ -60,7 +60,7 @@ CoverBackground
 
     CoverActionList
     {
-        enabled: true //FIXME: pageStack.currentPage.isMediaPage !== true
+        enabled: pageStack.currentPage.isMediaPage !== true
 
         CoverAction
         {
@@ -68,7 +68,7 @@ CoverBackground
 
             onTriggered: {
                 preparePages();
-                pageStack.push(Qt.resolvedUrl("../pages/users/UsersPage.qml"), { "context": context }, PageStackAction.Immediate);
+                pageStack.push(Qt.resolvedUrl("../pages/contacts/ContactsPage.qml"), { "context": context }, PageStackAction.Immediate);
                 mainwindow.activate();
             }
         }
