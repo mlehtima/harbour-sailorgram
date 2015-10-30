@@ -31,7 +31,7 @@ Page
                 onProfileRequested: pageStack.push(Qt.resolvedUrl("ContactPage.qml"), { "telegramUser": contact.user } );
             }
 
-            //FIXME: onClicked: pageStack.replace(Qt.resolvedUrl("../dialogs/ConversationPage.qml"), { "context": contactspage.context, "dialog": context.telegram.fakeDialogObject(item.userId, false) } )
+            onClicked: pageStack.replace(Qt.resolvedUrl("../dialogs/DialogPage.qml"), { "context": contactspage.context, "telegramDialog": context.dialogsmodel.createDialog(contact.user) })
 
             UserItem {
                 id: useritem

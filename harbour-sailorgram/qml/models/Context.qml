@@ -46,4 +46,8 @@ QtObject
             pageStack.replace(Qt.resolvedUrl("../pages/dialogs/DialogsPage.qml"), { "context": context });
         }
     }
+
+    property DialogsModel dialogsmodel: DialogsModel {
+        telegram: context.telegram
+    }
 }

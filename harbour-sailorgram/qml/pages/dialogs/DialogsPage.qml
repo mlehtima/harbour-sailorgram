@@ -82,9 +82,7 @@ Page
             }
         }
 
-        model: DialogsModel {
-            telegram: dialogspage.context.telegram
-        }
+        model: context.dialogsmodel
 
         delegate: ListItem {
             function displayConversation() {

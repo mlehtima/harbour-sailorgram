@@ -7,9 +7,9 @@ import "../items/messageitem/media"
 ContextMenu
 {
     signal downloadRequested()
+    signal deleteRequested()
     signal cancelRequested()
 
-    property Context context
     property Message telegramMessage
     property MessageMediaItem loaderItem
 
@@ -30,7 +30,7 @@ ContextMenu
 
         onClicked: {
             messageitem.remorseAction(qsTr("Deleting Message"), function() {
-                //FIXME: context.telegram.deleteMessages([telegramMessage.id]);
+                deleteRequested();
             });
         }
     }

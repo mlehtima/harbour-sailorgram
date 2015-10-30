@@ -93,12 +93,12 @@ ListItem
 
     menu: MessageMenu {
         id: messagemenu
-        context: messageitem.context
         telegramMessage: messageitem.telegramMessage
         loaderItem: loader.item
 
-        onCancelRequested: loader.item.cancelTransfer()
         onDownloadRequested: loader.item.download()
+        onDeleteRequested: dialogmodel.deleteMessage(messageitem.telegramMessage)
+        onCancelRequested: loader.item.cancelTransfer()
     }
 
     onClicked: displayMedia()

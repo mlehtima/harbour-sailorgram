@@ -108,6 +108,9 @@ Item
                     font.italic: telegramDialog.topMessage.isService
 
                     text: {
+                        if(telegramDialog.topMessage.isEmpty)
+                            return "";
+
                         if(telegramDialog.topMessage.isMedia)
                             return TelegramHelper.mediaType(telegramDialog.topMessage.media);
 
