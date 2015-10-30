@@ -353,6 +353,14 @@ Minimilängd är 5 tecken.</translation>
         <source>Add to contacts</source>
         <translation type="unfinished">Lägg till i kontakter</translation>
     </message>
+    <message>
+        <source>Enabling notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disabling notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DialogPage</name>
@@ -790,6 +798,22 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
     <message>
         <source>Phone Number</source>
         <translation>Telefonnummer</translation>
+    </message>
+    <message>
+        <source>Unblock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blocking user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unblocking user</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

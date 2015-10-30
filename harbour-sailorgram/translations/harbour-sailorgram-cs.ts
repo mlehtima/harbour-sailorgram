@@ -353,6 +353,14 @@ Minimální délka je 5 znaků .</translation>
         <source>Add to contacts</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Enabling notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disabling notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DialogPage</name>
@@ -790,6 +798,22 @@ Přidejte osobu výběrem &quot;Kontakty&quot; z menu</translation>
     <message>
         <source>Phone Number</source>
         <translation>Telefoní číslo</translation>
+    </message>
+    <message>
+        <source>Unblock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blocking user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unblocking user</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

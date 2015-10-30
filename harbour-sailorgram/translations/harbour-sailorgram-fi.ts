@@ -353,6 +353,14 @@ Vähimmäispituus on 5 merkkiä.</translation>
         <source>Add to contacts</source>
         <translation type="unfinished">Lisää yhteyshenkilöihin</translation>
     </message>
+    <message>
+        <source>Enabling notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disabling notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DialogPage</name>
@@ -790,6 +798,22 @@ Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta v
     <message>
         <source>Phone Number</source>
         <translation>Puhelinnumero</translation>
+    </message>
+    <message>
+        <source>Unblock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blocking user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unblocking user</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

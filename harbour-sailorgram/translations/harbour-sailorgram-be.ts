@@ -353,6 +353,14 @@ Minimum length is 5 characters.</source>
         <source>Add to contacts</source>
         <translation type="unfinished">Дадаць у кантакты</translation>
     </message>
+    <message>
+        <source>Enabling notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disabling notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DialogPage</name>
@@ -790,6 +798,22 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     <message>
         <source>Phone Number</source>
         <translation>Нумар тэлефона</translation>
+    </message>
+    <message>
+        <source>Unblock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blocking user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unblocking user</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

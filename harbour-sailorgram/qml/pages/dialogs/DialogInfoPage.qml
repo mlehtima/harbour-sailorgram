@@ -12,7 +12,6 @@ Page
 {
     property Context context
     property Dialog telegramDialog
-    property bool muted: !telegramDialog.peerNotifySettings.isEmpty && telegramDialog.peerNotifySettings.isMuted
     property bool actionVisible: true
 
     id: dialoginfopage
@@ -81,10 +80,12 @@ Page
 
             ClickableLabel
             {
-                labelText: dialoginfopage.muted ? qsTr("Enable notifications") : qsTr("Disable notifications")
+                labelText: telegramDialog.notifySettings.isMuted ? qsTr("Enable notifications") : qsTr("Disable notifications")
                 labelFont.pixelSize: Theme.fontSizeSmall
                 width: parent.width
                 height: Theme.itemSizeSmall
+                remorseRequired: true
+                remorseMessage: telegramDialog.notifySettings.isMuted ? qsTr("Enabling notifications") : qsTr("Disabling notifications")
 
                 onActionRequested: {
                     /*
@@ -100,18 +101,9 @@ Page
 
                         return;
                     }
-
-                    var peerid = TelegramHelper.peerId(dialoginfopage.telegramDialog);
-
-                    if(context.telegram.userData.isMuted(peerid)) {
-                        context.telegram.unmute(peerid);
-                        dialoginfopage.muted = false;
-                    }
-                    else {
-                        context.telegram.mute(peerid);
-                        dialoginfopage.muted = true;
-                    }
                     */
+
+                    telegramDialog.notifySettings.isMuted = !telegramDialog.notifySettings.isMuted;
                 }
             }
 

@@ -4,7 +4,6 @@ import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../../items/peer"
 import "../../js/TelegramHelper.js" as TelegramHelper
-import "../../js/TelegramAction.js" as TelegramAction
 
 Item
 {
@@ -60,7 +59,7 @@ Item
                     id: imgmute
                     width: Theme.iconSizeSmall
                     height: Theme.iconSizeSmall
-                    visible: false // conversationitem.muted
+                    visible: telegramDialog.notifySettings.isMuted
                     source: "image://theme/icon-m-speaker-mute"
                     anchors.verticalCenter: parent.verticalCenter
                     fillMode: Image.PreserveAspectFit

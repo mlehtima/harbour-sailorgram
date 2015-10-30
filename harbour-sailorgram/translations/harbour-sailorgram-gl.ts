@@ -353,6 +353,14 @@ A lonxitude mínima é de 5 caracteres.</translation>
         <source>Add to contacts</source>
         <translation type="unfinished">Engadir a contactos</translation>
     </message>
+    <message>
+        <source>Enabling notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disabling notifications</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DialogPage</name>
@@ -790,6 +798,22 @@ Elixa un contacto seleccionando &quot;Contactos&quot; no menu despregable</trans
     <message>
         <source>Phone Number</source>
         <translation>Número de teléfono</translation>
+    </message>
+    <message>
+        <source>Unblock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blocking user</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unblocking user</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

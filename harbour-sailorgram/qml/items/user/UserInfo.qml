@@ -52,6 +52,21 @@ Item
             }
         }
 
+        ClickableLabel
+        {
+            visible: actionVisible
+            width: parent.width
+            height: Theme.itemSizeSmall
+            labelFont.pixelSize: Theme.fontSizeSmall
+            labelText: telegramUser.isBlocked ? qsTr("Unblock") : qsTr("Block")
+            remorseRequired: true
+            remorseMessage: telegramUser.isBlocked ? qsTr("Unblocking user") : qsTr("Blocking user")
+
+            onActionRequested: {
+                telegramUser.isBlocked = !telegramUser.isBlocked;
+            }
+        }
+
         SectionHeader { text: qsTr("Phone Number") }
 
         Label
