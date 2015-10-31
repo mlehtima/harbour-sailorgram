@@ -522,6 +522,10 @@ Přidejte osobu výběrem &quot;Kontakty&quot; z menu</translation>
         <source>Opening media</source>
         <translation>Otevírání media</translation>
     </message>
+    <message>
+        <source>You</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MessageMenu</name>

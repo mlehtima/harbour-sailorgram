@@ -522,6 +522,10 @@ Vælg en kontakt fra menuen ovenfor</translation>
         <source>Opening media</source>
         <translation>Åbner medie</translation>
     </message>
+    <message>
+        <source>You</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MessageMenu</name>

@@ -522,6 +522,10 @@ Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta v
         <source>Opening media</source>
         <translation>Avataan mediatiedostoa</translation>
     </message>
+    <message>
+        <source>You</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MessageMenu</name>

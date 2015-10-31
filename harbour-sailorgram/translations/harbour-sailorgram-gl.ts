@@ -522,6 +522,10 @@ Elixa un contacto seleccionando &quot;Contactos&quot; no menu despregable</trans
         <source>Opening media</source>
         <translation>Abrindo media</translation>
     </message>
+    <message>
+        <source>You</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MessageMenu</name>

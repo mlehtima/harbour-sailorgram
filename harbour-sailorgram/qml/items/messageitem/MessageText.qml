@@ -8,6 +8,7 @@ Item
 {
     property Context context
     property Message telegramMessage
+    property real calculatedWidth: Math.max(mtctextcontent.paintedWidth, (msgstatus.width + lbldate.paintedWidth))
 
     id: messagetext
     height: content.height
@@ -24,7 +25,6 @@ Item
             id: mtctextcontent
             anchors { left: telegramMessage.isOut ? parent.left : undefined; right: telegramMessage.isOut ? undefined : parent.right }
             width: parent.width
-            color: telegramMessage.isService ? Theme.primaryColor : (telegramMessage.isOut ? Theme.highlightColor : Theme.primaryColor)
             font.pixelSize: telegramMessage.isService ? Theme.fontSizeExtraSmall : Theme.fontSizeSmall
             font.italic: telegramMessage.isService
             horizontalAlignment: telegramMessage.isService ? Text.AlignHCenter : (telegramMessage.isOut ? Text.AlignLeft : Text.AlignRight)
@@ -33,6 +33,13 @@ Item
             verticalAlignment: Text.AlignTop
             wrapMode: Text.WordWrap
             visible: text.length > 0
+
+            color: {
+                 if(telegramMessage.isOut)
+                     return Theme.highlightDimmerColor;
+
+                 return Theme.primaryColor;
+            }
         }
 
         Row
@@ -56,6 +63,13 @@ Item
                 horizontalAlignment: telegramMessage.isOut ? Text.AlignLeft : Text.AlignRight
                 text: TelegramHelper.printableDate(telegramMessage.date)
                 visible: !telegramMessage.isService
+
+                color: {
+                    if(telegramMessage.isOut || telegramMessage.isService)
+                        return Theme.highlightDimmerColor;
+
+                    return Theme.primaryColor;
+                }
             }
         }
     }

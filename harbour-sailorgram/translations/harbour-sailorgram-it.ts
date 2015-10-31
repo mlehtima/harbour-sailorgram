@@ -522,6 +522,10 @@ Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
         <source>Opening media</source>
         <translation>Apertura file multimediale</translation>
     </message>
+    <message>
+        <source>You</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MessageMenu</name>

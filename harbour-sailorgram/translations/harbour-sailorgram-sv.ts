@@ -522,6 +522,10 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
         <source>Opening media</source>
         <translation>Öppnar media</translation>
     </message>
+    <message>
+        <source>You</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MessageMenu</name>

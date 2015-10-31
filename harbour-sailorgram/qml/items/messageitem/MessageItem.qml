@@ -139,6 +139,50 @@ ListItem
         }
     }
 
+    Rectangle
+    {
+        anchors {
+            left: telegramMessage.isOut ? parent.left : undefined;
+            right: telegramMessage.isOut ? undefined : parent.right
+            leftMargin: telegramMessage.isOut ? Theme.paddingMedium : 0
+            rightMargin: telegramMessage.isOut ? 0 : Theme.paddingMedium
+        }
+
+        radius: 10
+
+        width: {
+            if(telegramMessage.isService)
+                return 0;
+
+            if(telegramMessage.isMedia)
+                return Math.max(lbluser.width, loader.width) + Theme.paddingMedium;
+
+            return Math.max(lbluser.width, messagetext.calculatedWidth) + Theme.paddingMedium;
+        }
+
+        height: {
+            if(telegramMessage.isService)
+                return 0;
+
+            var h = lbluser.height + messagetext.height + Theme.paddingSmall;
+
+            if(telegramMessage.isMedia)
+                h += loader.height;
+
+            return h;
+        }
+
+        color: {
+            if(telegramMessage.isService)
+                return "transparent"
+
+            if(telegramMessage.isOut)
+                return Theme.secondaryColor;
+
+            return Theme.rgba(Qt.tint(Theme.secondaryHighlightColor, Theme.rgba(Theme.highlightDimmerColor, 0.3)), 0.7);
+        }
+    }
+
     Column
     {
         id: content
@@ -148,20 +192,35 @@ ListItem
         {
             id: lbluser
             anchors { left: telegramMessage.isOut ? parent.left : undefined; right: telegramMessage.isOut ? undefined : parent.right }
-            visible: !telegramMessage.isService && !telegramMessage.isOut
-            text: (!telegramMessage.isService && telegramMessage.isOut) ? "" : TelegramHelper.fullName(telegramFromUser)
+            visible: !telegramMessage.isService
             font.bold: true
             font.pixelSize: Theme.fontSizeMedium
             wrapMode: Text.NoWrap
             horizontalAlignment: Text.AlignRight
             verticalAlignment: Text.AlignVCenter
-            color: Theme.secondaryHighlightColor
+
+            color: {
+                if(telegramMessage.isOut)
+                    return Theme.rgba(Theme.highlightDimmerColor, 1.0);
+
+                return Theme.rgba(Theme.secondaryColor, 1.0);
+            }
+
+            text: {
+                if(telegramMessage.isService)
+                    return "";
+
+                if(telegramMessage.isOut)
+                    return qsTr("You");
+
+                return TelegramHelper.fullName(telegramFromUser);
+            }
         }
 
         Loader
         {
             id: loader
-            anchors { left: message.out ? parent.left : undefined; right: message.out ? undefined : parent.right }
+            anchors { left: telegramMessage.isOut ? parent.left : undefined; right: telegramMessage.isOut ? undefined : parent.right }
 
             sourceComponent: {
                 if(telegramMessage.isMedia) {

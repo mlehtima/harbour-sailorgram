@@ -523,6 +523,10 @@ wähle einen Kontakt über &quot;Kontakte&quot; im Pull-Down-Menü</translation>
         <source>Opening media</source>
         <translation>Öffne Media</translation>
     </message>
+    <message>
+        <source>You</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MessageMenu</name>
