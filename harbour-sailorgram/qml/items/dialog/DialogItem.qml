@@ -3,6 +3,7 @@ import Sailfish.Silica 1.0
 import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../../items/peer"
+import "../messageitem"
 import "../../js/TelegramHelper.js" as TelegramHelper
 
 Item
@@ -99,15 +100,46 @@ Item
 
                 Label
                 {
+                    id: lblfrom
+                    height: parent.height
+                    elide: Text.ElideRight
+                    verticalAlignment: Text.AlignVCenter
+                    color: Theme.highlightColor
+                    font.pixelSize: Theme.fontSizeExtraSmall
+
+                    visible: {
+                        if(telegramDialog.isChat)
+                            return true;
+
+                        return !telegramDialog.topMessage.isEmpty && telegramDialog.topMessage.isOut;
+                    }
+
+                    text: {
+                        if(telegramDialog.isChat)
+                        {
+                            var user = context.dialogsmodel.user(telegramDialog.topMessage.fromId);
+                            return TelegramHelper.fullName(user) + ": ";
+                        }
+
+                        if(!telegramDialog.topMessage.isEmpty && telegramDialog.topMessage.isOut)
+                            return qsTr("You:") + " ";
+
+                        return "";
+                    }
+                }
+
+                MessageTextContext
+                {
                     id: lbllastmessage
-                    width: parent.width - rectunread.width
+                    width: parent.width - rectunread.width - lblfrom.width
                     height: parent.height
                     elide: Text.ElideRight
                     verticalAlignment: Text.AlignVCenter
                     font.pixelSize: Theme.fontSizeExtraSmall
                     font.italic: telegramDialog.topMessage.isService
+                    emojiPath: context.sailorgram.emojiPath
 
-                    text: {
+                    rawText: {
                         if(telegramDialog.topMessage.isEmpty)
                             return "";
 

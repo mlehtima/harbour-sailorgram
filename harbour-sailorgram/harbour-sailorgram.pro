@@ -16,7 +16,7 @@ CONFIG += sailfishapp c++11
 QT += sql dbus
 
 LIBS += -L$$OUT_PWD/../LibTelegram -lTelegram
-INCLUDEPATH +=  /usr/include/openssl $$PWD/../LibTelegram
+INCLUDEPATH += /usr/include/openssl $$PWD/../LibTelegram
 
 # LibTelegram
 libtelegram.files = $$OUT_PWD/../LibTelegram/*.so*
@@ -27,6 +27,11 @@ INSTALLS += libtelegram
 server_pub.files = $$PWD/server.pub
 server_pub.path = /usr/share/$$TARGET
 INSTALLS += server_pub
+
+# Emoji Set
+emoji.files = $$PWD/res/emoji/*.png
+emoji.path = /usr/share/$$TARGET/emoji
+INSTALLS += emoji
 
 SOURCES += src/harbour-sailorgram.cpp \
     src/dbus/notifications/notifications.cpp \
@@ -116,7 +121,8 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/pages/dialogs/DialogInfoPage.qml \
     qml/items/user/UserInfo.qml \
     qml/pages/contacts/ContactPage.qml \
-    qml/menus/contact/ContactMenu.qml
+    qml/menus/contact/ContactMenu.qml \
+    qml/items/messageitem/MessageTextContext.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

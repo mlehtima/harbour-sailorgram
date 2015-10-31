@@ -1,0 +1,50 @@
+import QtQuick 2.1
+import Sailfish.Silica 1.0
+
+Label
+{
+    property string emojiPath
+    property string rawText
+
+    QtObject
+    {
+        id: textelaborator
+
+        function surrogatePairToUnicodeScalar(hi, lo) {
+            if (hi >= 0xD800 && hi <= 0xDBFF && lo >= 0xDC00 && lo <= 0xDFFF)
+                return ((hi - 0xD800) * 0x400) + (lo - 0xDC00) + 0x10000;
+            else
+                console.log("Invalid surrogate pair");
+
+            return 0;
+        }
+
+        function emojify(s) {
+            if(!emojiPath.length) {
+                console.log("Invalid emoji path");
+                return;
+            }
+
+            var ranges = [ "\ud83c[\udf00-\udfff]",    // U+1F300 to U+1F3FF
+                           "\ud83d[\udc00-\ude4f]",    // U+1F400 to U+1F64F
+                           "\ud83d[\ude80-\udeff]" ];  // U+1F680 to U+1F6FF
+
+            return s.replace(new RegExp(ranges.join("|"), "g"),
+                             function(match) {
+                                 var uniscalar = surrogatePairToUnicodeScalar(match.charCodeAt(0), match.charCodeAt(1));
+                                 return "<img src=\"" + emojiPath + uniscalar.toString(16).toLowerCase() + ".png\">";
+                             });
+        }
+
+        function elaborate(s) {
+            s = emojify(s);
+
+            return s;
+        }
+    }
+
+    id: messagetextcontent
+    clip: true
+    textFormat: Text.StyledText
+    text: textelaborator.elaborate(rawText)
+}

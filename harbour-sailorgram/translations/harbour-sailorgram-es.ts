@@ -363,6 +363,13 @@ La longitud mínima es de 5 caracteres.</translation>
     </message>
 </context>
 <context>
+    <name>DialogItem</name>
+    <message>
+        <source>You:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DialogPage</name>
     <message>
         <source>Load more messages</source>

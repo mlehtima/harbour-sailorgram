@@ -2,6 +2,7 @@
 
 const QString SailorGram::TELEGRAM_CONFIG = "libtelegram";
 const QString SailorGram::TELEGRAM_PUBLIC_KEY = "server.pub";
+const QString SailorGram::EMOJI_FOLDER = "emoji";
 
 SailorGram::SailorGram(QObject *parent): QObject(parent)
 {
@@ -17,4 +18,9 @@ QString SailorGram::telegramConfigPath() const
 QString SailorGram::telegramPublicKey() const
 {
     return qApp->applicationDirPath() + QDir::separator() + "../share/" + qApp->applicationName() + QDir::separator() + SailorGram::TELEGRAM_PUBLIC_KEY;
+}
+
+QString SailorGram::emojiPath() const
+{
+    return qApp->applicationDirPath() + QDir::separator() + "../share/" + qApp->applicationName() + QDir::separator() + SailorGram::EMOJI_FOLDER + QDir::separator();
 }

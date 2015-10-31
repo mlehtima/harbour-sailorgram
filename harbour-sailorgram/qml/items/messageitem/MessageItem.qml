@@ -183,6 +183,7 @@ ListItem
         {
             id: messagetext
             width: parent.width
+            context: messageitem.context
             telegramMessage: messageitem.telegramMessage
         }
     }
