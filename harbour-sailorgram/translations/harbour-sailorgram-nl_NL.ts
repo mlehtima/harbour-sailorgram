@@ -799,6 +799,10 @@ Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het tr
         <source>%1 created group ��%2��</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Sticker</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>UserInfo</name>

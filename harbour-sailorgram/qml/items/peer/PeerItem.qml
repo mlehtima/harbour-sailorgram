@@ -46,7 +46,7 @@ Item
                 id: imgmute
                 width: Theme.iconSizeSmall
                 height: Theme.iconSizeSmall
-                visible: telegramDialog.notifySettings.isMuted
+                visible: !telegramDialog.notifySettings.isEmpty && telegramDialog.notifySettings.isMuted
                 source: "image://theme/icon-m-speaker-mute"
                 anchors.verticalCenter: parent.verticalCenter
                 fillMode: Image.PreserveAspectFit

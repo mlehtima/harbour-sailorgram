@@ -105,8 +105,6 @@ Page
                     onCheckedChanged: {
                         checked ? count++ : count--
 
-                        console.log(contact.user);
-
                         if(checked)
                             users[index] = contact.user;
                         else

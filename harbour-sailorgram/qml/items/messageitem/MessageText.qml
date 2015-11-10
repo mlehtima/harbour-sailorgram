@@ -35,6 +35,9 @@ Item
             visible: text.length > 0
 
             color: {
+                if(telegramMessage.isService)
+                    return Theme.secondaryHighlightColor;
+
                  if(telegramMessage.isOut)
                      return Theme.highlightDimmerColor;
 

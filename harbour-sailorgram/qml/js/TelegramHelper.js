@@ -106,7 +106,12 @@ function peerId(dialog)
 function mediaType(messagemedia)
 {
     if(messagemedia.isDocument)
+    {
+        if(messagemedia.document.attributes.isStricker)
+            return qsTr("Sticker");
+
         return qsTr("Document");
+    }
 
     if(messagemedia.isContact)
         return qsTr("Contact");

@@ -799,6 +799,10 @@ Elije un contacto seleccionando &quot;Contactos&quot; en el menú de desplegable
         <source>%1 created group ��%2��</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Sticker</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>UserInfo</name>

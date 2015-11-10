@@ -60,7 +60,7 @@ Item
                     id: imgmute
                     width: Theme.iconSizeSmall
                     height: Theme.iconSizeSmall
-                    visible: telegramDialog.notifySettings.isMuted
+                    visible: !telegramDialog.notifySettings.isEmpty && telegramDialog.notifySettings.isMuted
                     source: "image://theme/icon-m-speaker-mute"
                     anchors.verticalCenter: parent.verticalCenter
                     fillMode: Image.PreserveAspectFit
@@ -108,6 +108,9 @@ Item
                     font.pixelSize: Theme.fontSizeExtraSmall
 
                     visible: {
+                        if(telegramDialog.topMessage.isService)
+                            return false;
+
                         if(telegramDialog.isChat)
                             return true;
 
@@ -115,14 +118,17 @@ Item
                     }
 
                     text: {
-                        if(telegramDialog.isChat)
+                        if(!telegramDialog.topMessage.isService)
                         {
-                            var user = context.dialogsmodel.user(telegramDialog.topMessage.fromId);
-                            return TelegramHelper.fullName(user) + ": ";
-                        }
+                            if(telegramDialog.isChat)
+                            {
+                                var user = context.dialogsmodel.user(telegramDialog.topMessage.fromId);
+                                return TelegramHelper.fullName(user) + ": ";
+                            }
 
-                        if(!telegramDialog.topMessage.isEmpty && telegramDialog.topMessage.isOut)
-                            return qsTr("You:") + " ";
+                            if(!telegramDialog.topMessage.isEmpty && telegramDialog.topMessage.isOut)
+                                return qsTr("You:") + " ";
+                        }
 
                         return "";
                     }
@@ -136,8 +142,18 @@ Item
                     elide: Text.ElideRight
                     verticalAlignment: Text.AlignVCenter
                     font.pixelSize: Theme.fontSizeExtraSmall
-                    font.italic: telegramDialog.topMessage.isService
                     emojiPath: context.sailorgram.emojiPath
+                    color: telegramDialog.topMessage.isService ? Theme.highlightColor : Theme.primaryColor
+
+                    font.italic: {
+                        if(telegramDialog.topMessage.isService)
+                            return true;
+
+                        if(telegramDialog.topMessage.isMedia && telegramDialog.topMessage.media.isDocument && telegramDialog.topMessage.media.document.attributes.isSticker)
+                            return true;
+
+                        return false;
+                    }
 
                     rawText: {
                         if(telegramDialog.topMessage.isEmpty)
@@ -145,6 +161,9 @@ Item
 
                         if(telegramDialog.topMessage.isMedia)
                             return TelegramHelper.mediaType(telegramDialog.topMessage.media);
+
+                        if(telegramDialog.topMessage.isService)
+                            return TelegramHelper.serviceType(telegramDialog.topMessage, context.dialogsmodel);
 
                         return telegramDialog.topMessage.message;
                     }

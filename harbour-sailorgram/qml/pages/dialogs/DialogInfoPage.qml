@@ -80,12 +80,12 @@ Page
 
             ClickableLabel
             {
-                labelText: telegramDialog.notifySettings.isMuted ? qsTr("Enable notifications") : qsTr("Disable notifications")
+                labelText: (!telegramDialog.notifySettings.isEmpty && telegramDialog.notifySettings.isMuted) ? qsTr("Enable notifications") : qsTr("Disable notifications")
                 labelFont.pixelSize: Theme.fontSizeSmall
                 width: parent.width
                 height: Theme.itemSizeSmall
                 remorseRequired: true
-                remorseMessage: telegramDialog.notifySettings.isMuted ? qsTr("Enabling notifications") : qsTr("Disabling notifications")
+                remorseMessage: (!telegramDialog.notifySettings.isEmpty && telegramDialog.notifySettings.isMuted) ? qsTr("Enabling notifications") : qsTr("Disabling notifications")
 
                 onActionRequested: {
                     /*
