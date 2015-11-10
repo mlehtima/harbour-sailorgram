@@ -280,6 +280,10 @@ Minimilängd är 5 tecken.</translation>
         <source>New Group</source>
         <translation>Ny grupp</translation>
     </message>
+    <message>
+        <source>Create Group</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateSecretConversationPage</name>

@@ -280,6 +280,10 @@ De minimale lengte is 5 tekens.</translation>
         <source>New Group</source>
         <translation>Nieuwe groep</translation>
     </message>
+    <message>
+        <source>Create Group</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateSecretConversationPage</name>

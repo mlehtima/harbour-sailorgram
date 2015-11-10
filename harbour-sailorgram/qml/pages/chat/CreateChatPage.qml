@@ -5,43 +5,68 @@ import "../../models"
 import "../../items/user"
 import "../../js/TelegramHelper.js" as TelegramHelper
 
-Dialog
+Page
 {
     property Context context
     property int count: 0
     property var users
 
-    id: dlgcreatechat
-    allowedOrientations: defaultAllowedOrientations
-    acceptDestinationAction: PageStackAction.Pop
-    canAccept: (count > 0) && (tfgroupname.text.length > 0)
+    function createGroup() {
+        busyindicator.running = true;
 
-    Component.onCompleted: {
-        dlgcreatechat.users = new Object;
-    }
-
-    onAccepted: {
         var userlist = new Array;
 
-        for(var prop in dlgcreatechat.users)
-            userlist.push(dlgcreatechat.users[prop]);
+        for(var prop in createchatpage.users)
+            userlist.push(createchatpage.users[prop]);
 
-        //FIXME: context.telegram.messagesCreateChat(userlist, tfgroupname.text);
+        context.dialogsmodel.createChat(userlist, tfgroupname.text);
+    }
+
+    id: createchatpage
+    allowedOrientations: defaultAllowedOrientations
+
+    Component.onCompleted: {
+        createchatpage.users = new Object;
+    }
+
+    Connections
+    {
+        target: context.dialogsmodel
+        onDialogCreated: pageStack.replace(Qt.resolvedUrl("../dialogs/DialogPage.qml"), { "context": createchatpage.context, "telegramDialog": dialog })
     }
 
     SilicaFlickable
     {
         anchors.fill: parent
 
-        DialogHeader
+        PullDownMenu
+        {
+            MenuItem
+            {
+                text: qsTr("Create Group")
+                enabled: (count > 0) && (tfgroupname.text.length > 0)
+                onClicked: createGroup()
+            }
+        }
+
+        BusyIndicator
+        {
+            id: busyindicator
+            anchors.centerIn: parent
+            size: BusyIndicatorSize.Large
+            running: false
+        }
+
+        PageHeader
         {
             id: dlgheader
-            acceptText: qsTr("New Group")
+            title: qsTr("New Group")
         }
 
         TextField
         {
             id: tfgroupname
+            enabled: !busyindicator.running
             anchors { left: parent.left; top: dlgheader.bottom; right: parent.right }
             placeholderText: qsTr("Group Name")
         }
@@ -51,6 +76,7 @@ Dialog
             id: lvcontacts
             anchors { left: parent.left; top: tfgroupname.bottom; right: parent.right; bottom: parent.bottom }
             spacing: Theme.paddingMedium
+            enabled: !busyindicator.running
             clip: true
 
             model: Telegram.ContactsModel {
@@ -79,8 +105,10 @@ Dialog
                     onCheckedChanged: {
                         checked ? count++ : count--
 
+                        console.log(contact.user);
+
                         if(checked)
-                            users[index] = contact.user.id;
+                            users[index] = contact.user;
                         else
                             delete users[index];
                     }

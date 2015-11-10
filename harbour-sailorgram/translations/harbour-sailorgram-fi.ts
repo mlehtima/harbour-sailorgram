@@ -280,6 +280,10 @@ Vähimmäispituus on 5 merkkiä.</translation>
         <source>New Group</source>
         <translation>Uusi ryhmä</translation>
     </message>
+    <message>
+        <source>Create Group</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateSecretConversationPage</name>

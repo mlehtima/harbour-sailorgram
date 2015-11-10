@@ -280,6 +280,10 @@ Minimumslængde er fem tegn.</translation>
         <source>New Group</source>
         <translation>Ny Gruppe</translation>
     </message>
+    <message>
+        <source>Create Group</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateSecretConversationPage</name>

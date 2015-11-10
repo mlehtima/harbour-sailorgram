@@ -280,6 +280,10 @@ Minimale Länge sind 5 Zeichen</translation>
         <source>New Group</source>
         <translation>Neue Gruppe</translation>
     </message>
+    <message>
+        <source>Create Group</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateSecretConversationPage</name>

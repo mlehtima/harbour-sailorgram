@@ -12,11 +12,25 @@ Page
     id: contactspage
     allowedOrientations: defaultAllowedOrientations
 
+    Connections
+    {
+        target: context.dialogsmodel
+        onDialogCreated: pageStack.replace(Qt.resolvedUrl("../dialogs/DialogPage.qml"), { "context": contactspage.context, "telegramDialog": dialog })
+    }
+
     SilicaListView
     {
         anchors.fill: parent
         spacing: Theme.paddingMedium
         header: PageHeader { title: qsTr("Contacts") }
+
+        BusyIndicator
+        {
+            id: busyindicator
+            anchors.centerIn: parent
+            size: BusyIndicatorSize.Large
+            running: false
+        }
 
         model: ContactsModel {
             telegram: context.telegram
@@ -31,7 +45,10 @@ Page
                 onProfileRequested: pageStack.push(Qt.resolvedUrl("ContactPage.qml"), { "telegramUser": contact.user } );
             }
 
-            onClicked: pageStack.replace(Qt.resolvedUrl("../dialogs/DialogPage.qml"), { "context": contactspage.context, "telegramDialog": context.dialogsmodel.createDialog(contact.user) })
+            onClicked: {
+                busyindicator.running = true;
+                context.dialogsmodel.createDialog(contact.user);
+            }
 
             UserItem {
                 id: useritem

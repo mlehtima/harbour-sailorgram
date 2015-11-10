@@ -280,6 +280,10 @@ Minimální délka je 5 znaků .</translation>
         <source>New Group</source>
         <translation>Nová skupina</translation>
     </message>
+    <message>
+        <source>Create Group</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateSecretConversationPage</name>
