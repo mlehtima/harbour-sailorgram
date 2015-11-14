@@ -19,8 +19,8 @@ function emojify(s, emojipath)
     }
 
     var ranges = [ "\ud83c[\udf00-\udfff]",    // U+1F300 to U+1F3FF
-                  "\ud83d[\udc00-\ude4f]",    // U+1F400 to U+1F64F
-                  "\ud83d[\ude80-\udeff]" ];  // U+1F680 to U+1F6FF
+                   "\ud83d[\udc00-\ude4f]",    // U+1F400 to U+1F64F
+                   "\ud83d[\ude80-\udeff]" ];  // U+1F680 to U+1F6FF
 
     return s.replace(new RegExp(ranges.join("|"), "g"),
                      function(match) {
@@ -29,7 +29,14 @@ function emojify(s, emojipath)
                      });
 }
 
+function replaceNewlines(s)
+{
+    return s.replace(/(?:\r\n|\r|\n)/g, "<br/>");
+}
+
 function elaborate(s, emojipath)
 {
-    return emojify(s, emojipath);
+    var res = replaceNewlines(s);
+    res = emojify(res, emojipath);
+    return res;
 }

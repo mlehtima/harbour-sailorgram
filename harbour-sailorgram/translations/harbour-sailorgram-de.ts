@@ -499,13 +499,6 @@ wähle einen Kontakt über &quot;Kontakte&quot; im Pull-Down-Menü</translation>
     </message>
 </context>
 <context>
-    <name>MessageBar</name>
-    <message>
-        <source>Message...</source>
-        <translation>Nachricht...</translation>
-    </message>
-</context>
-<context>
     <name>MessageItem</name>
     <message>
         <source>Downloading Media</source>

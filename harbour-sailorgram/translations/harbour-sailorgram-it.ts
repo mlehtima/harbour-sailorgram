@@ -498,13 +498,6 @@ Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
     </message>
 </context>
 <context>
-    <name>MessageBar</name>
-    <message>
-        <source>Message...</source>
-        <translation>Messaggio...</translation>
-    </message>
-</context>
-<context>
     <name>MessageItem</name>
     <message>
         <source>Downloading Media</source>

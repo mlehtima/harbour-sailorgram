@@ -498,13 +498,6 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     </message>
 </context>
 <context>
-    <name>MessageBar</name>
-    <message>
-        <source>Message...</source>
-        <translation>Паведамленне...</translation>
-    </message>
-</context>
-<context>
     <name>MessageItem</name>
     <message>
         <source>Downloading Media</source>

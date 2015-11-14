@@ -498,13 +498,6 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
     </message>
 </context>
 <context>
-    <name>MessageBar</name>
-    <message>
-        <source>Message...</source>
-        <translation>Meddelande...</translation>
-    </message>
-</context>
-<context>
     <name>MessageItem</name>
     <message>
         <source>Downloading Media</source>

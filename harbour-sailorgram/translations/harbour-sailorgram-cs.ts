@@ -498,13 +498,6 @@ Přidejte osobu výběrem &quot;Kontakty&quot; z menu</translation>
     </message>
 </context>
 <context>
-    <name>MessageBar</name>
-    <message>
-        <source>Message...</source>
-        <translation>Zpráva...</translation>
-    </message>
-</context>
-<context>
     <name>MessageItem</name>
     <message>
         <source>Downloading Media</source>

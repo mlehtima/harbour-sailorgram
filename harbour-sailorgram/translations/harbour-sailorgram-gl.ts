@@ -498,13 +498,6 @@ Elixa un contacto seleccionando &quot;Contactos&quot; no menu despregable</trans
     </message>
 </context>
 <context>
-    <name>MessageBar</name>
-    <message>
-        <source>Message...</source>
-        <translation>Mensaxe...</translation>
-    </message>
-</context>
-<context>
     <name>MessageItem</name>
     <message>
         <source>Downloading Media</source>
