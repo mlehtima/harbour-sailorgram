@@ -225,16 +225,8 @@ De minimale lengte is 5 tekens.</translation>
         <translation>Bezig met verbinden</translation>
     </message>
     <message>
-        <source>Login Again</source>
-        <translation>Opnieuw inloggen</translation>
-    </message>
-    <message>
         <source>Telegram Status</source>
         <translation>Telegram-status</translation>
-    </message>
-    <message>
-        <source>Error log</source>
-        <translation type="unfinished">Foutenlogbestand</translation>
     </message>
 </context>
 <context>
@@ -374,13 +366,6 @@ De minimale lengte is 5 tekens.</translation>
     </message>
 </context>
 <context>
-    <name>DialogPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation type="unfinished">Meer berichten laden</translation>
-    </message>
-</context>
-<context>
     <name>DialogPullDownMenu</name>
     <message>
         <source>Profile</source>
@@ -397,6 +382,13 @@ De minimale lengte is 5 tekens.</translation>
     <message>
         <source>Contacts</source>
         <translation type="unfinished">Contactpersonen</translation>
+    </message>
+</context>
+<context>
+    <name>DialogTextInput</name>
+    <message>
+        <source>Message...</source>
+        <translation type="unfinished">Bericht...</translation>
     </message>
 </context>
 <context>
@@ -635,6 +627,33 @@ Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het tr
     </message>
 </context>
 <context>
+    <name>RegistrationPage</name>
+    <message>
+        <source>Sign Up</source>
+        <translation type="unfinished">Registreren</translation>
+    </message>
+    <message>
+        <source>You have entered a wrong Authorization Code</source>
+        <translation type="unfinished">U heeft een verkeerde autorisatiecode ingevoerd</translation>
+    </message>
+    <message>
+        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
+        <translation type="unfinished">Wacht op de SMS met activatiecode en klik op &apos;Registreren&apos;</translation>
+    </message>
+    <message>
+        <source>First Name</source>
+        <translation type="unfinished">Voornaam</translation>
+    </message>
+    <message>
+        <source>Last Name (Optional)</source>
+        <translation type="unfinished">Achternaam (optioneel)</translation>
+    </message>
+    <message>
+        <source>Authorization Code</source>
+        <translation type="unfinished">Autorisatiecode</translation>
+    </message>
+</context>
+<context>
     <name>SecretChatDiscarded</name>
     <message>
         <source>Secret chat cancelled</source>
@@ -665,33 +684,6 @@ Kies een contactpersoon door &quot;Contactpersonen&quot; te selecteren in het tr
     <message>
         <source>About</source>
         <translation>Over</translation>
-    </message>
-</context>
-<context>
-    <name>SignUpPage</name>
-    <message>
-        <source>Sign Up</source>
-        <translation>Registreren</translation>
-    </message>
-    <message>
-        <source>You have entered a wrong Authorization Code</source>
-        <translation>U heeft een verkeerde autorisatiecode ingevoerd</translation>
-    </message>
-    <message>
-        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
-        <translation>Wacht op de SMS met activatiecode en klik op &apos;Registreren&apos;</translation>
-    </message>
-    <message>
-        <source>First Name</source>
-        <translation>Voornaam</translation>
-    </message>
-    <message>
-        <source>Last Name (Optional)</source>
-        <translation>Achternaam (optioneel)</translation>
-    </message>
-    <message>
-        <source>Authorization Code</source>
-        <translation>Autorisatiecode</translation>
     </message>
 </context>
 <context>

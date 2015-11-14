@@ -225,16 +225,8 @@ Minimilängd är 5 tecken.</translation>
         <translation>Ansluter</translation>
     </message>
     <message>
-        <source>Login Again</source>
-        <translation>Logga in igen</translation>
-    </message>
-    <message>
         <source>Telegram Status</source>
         <translation>Telegram-status</translation>
-    </message>
-    <message>
-        <source>Error log</source>
-        <translation type="unfinished">Fellogg</translation>
     </message>
 </context>
 <context>
@@ -374,13 +366,6 @@ Minimilängd är 5 tecken.</translation>
     </message>
 </context>
 <context>
-    <name>DialogPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation type="unfinished">Läs in fler meddelanden</translation>
-    </message>
-</context>
-<context>
     <name>DialogPullDownMenu</name>
     <message>
         <source>Profile</source>
@@ -397,6 +382,13 @@ Minimilängd är 5 tecken.</translation>
     <message>
         <source>Contacts</source>
         <translation type="unfinished">Kontakter</translation>
+    </message>
+</context>
+<context>
+    <name>DialogTextInput</name>
+    <message>
+        <source>Message...</source>
+        <translation type="unfinished">Meddelande...</translation>
     </message>
 </context>
 <context>
@@ -635,6 +627,33 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
     </message>
 </context>
 <context>
+    <name>RegistrationPage</name>
+    <message>
+        <source>Sign Up</source>
+        <translation type="unfinished">Registrera</translation>
+    </message>
+    <message>
+        <source>You have entered a wrong Authorization Code</source>
+        <translation type="unfinished">Du har angett fel auktoriseringskod</translation>
+    </message>
+    <message>
+        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
+        <translation type="unfinished">Vänta på det SMS som innehåller aktiveringskoden och tryck &apos;Registrera&apos;</translation>
+    </message>
+    <message>
+        <source>First Name</source>
+        <translation type="unfinished">Förnamn</translation>
+    </message>
+    <message>
+        <source>Last Name (Optional)</source>
+        <translation type="unfinished">Efternamn (Tillval)</translation>
+    </message>
+    <message>
+        <source>Authorization Code</source>
+        <translation type="unfinished">Auktoriseringskod</translation>
+    </message>
+</context>
+<context>
     <name>SecretChatDiscarded</name>
     <message>
         <source>Secret chat cancelled</source>
@@ -665,33 +684,6 @@ Välj en kontakt genom att gå till &quot;Kontakter&quot; i ovanstående meny</t
     <message>
         <source>About</source>
         <translation>Om</translation>
-    </message>
-</context>
-<context>
-    <name>SignUpPage</name>
-    <message>
-        <source>Sign Up</source>
-        <translation>Registrera</translation>
-    </message>
-    <message>
-        <source>You have entered a wrong Authorization Code</source>
-        <translation>Du har angett fel auktoriseringskod</translation>
-    </message>
-    <message>
-        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
-        <translation>Vänta på det SMS som innehåller aktiveringskoden och tryck &apos;Registrera&apos;</translation>
-    </message>
-    <message>
-        <source>First Name</source>
-        <translation>Förnamn</translation>
-    </message>
-    <message>
-        <source>Last Name (Optional)</source>
-        <translation>Efternamn (Tillval)</translation>
-    </message>
-    <message>
-        <source>Authorization Code</source>
-        <translation>Auktoriseringskod</translation>
     </message>
 </context>
 <context>

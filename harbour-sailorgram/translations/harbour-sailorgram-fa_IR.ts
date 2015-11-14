@@ -225,16 +225,8 @@ Minimum length is 5 characters.</source>
         <translation>در حال اتصال</translation>
     </message>
     <message>
-        <source>Login Again</source>
-        <translation>دوباره وارد شوید</translation>
-    </message>
-    <message>
         <source>Telegram Status</source>
         <translation>وضعیت تلگرام</translation>
-    </message>
-    <message>
-        <source>Error log</source>
-        <translation type="unfinished">نگاره‌ی خطا</translation>
     </message>
 </context>
 <context>
@@ -374,13 +366,6 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
-    <name>DialogPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation type="unfinished">بارگیری پیام‌های بیش‌تر</translation>
-    </message>
-</context>
-<context>
     <name>DialogPullDownMenu</name>
     <message>
         <source>Profile</source>
@@ -397,6 +382,13 @@ Minimum length is 5 characters.</source>
     <message>
         <source>Contacts</source>
         <translation type="unfinished">آشنایان</translation>
+    </message>
+</context>
+<context>
+    <name>DialogTextInput</name>
+    <message>
+        <source>Message...</source>
+        <translation type="unfinished">پیام…‏</translation>
     </message>
 </context>
 <context>
@@ -635,6 +627,33 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     </message>
 </context>
 <context>
+    <name>RegistrationPage</name>
+    <message>
+        <source>Sign Up</source>
+        <translation type="unfinished">نام‌نویسی</translation>
+    </message>
+    <message>
+        <source>You have entered a wrong Authorization Code</source>
+        <translation type="unfinished">کد تأیید را اشتباه وارد کرده اید</translation>
+    </message>
+    <message>
+        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
+        <translation type="unfinished">منتظر پیامک حاوی کد فعال‌سازی بمانید، و «نام‌نویسی» را بزنید </translation>
+    </message>
+    <message>
+        <source>First Name</source>
+        <translation type="unfinished">نام کوچک</translation>
+    </message>
+    <message>
+        <source>Last Name (Optional)</source>
+        <translation type="unfinished">نام خانوادگی (اختیاری)</translation>
+    </message>
+    <message>
+        <source>Authorization Code</source>
+        <translation type="unfinished">کد تأیید</translation>
+    </message>
+</context>
+<context>
     <name>SecretChatDiscarded</name>
     <message>
         <source>Secret chat cancelled</source>
@@ -665,33 +684,6 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     <message>
         <source>About</source>
         <translation>درباره</translation>
-    </message>
-</context>
-<context>
-    <name>SignUpPage</name>
-    <message>
-        <source>Sign Up</source>
-        <translation>نام‌نویسی</translation>
-    </message>
-    <message>
-        <source>You have entered a wrong Authorization Code</source>
-        <translation>کد تأیید را اشتباه وارد کرده اید</translation>
-    </message>
-    <message>
-        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
-        <translation>منتظر پیامک حاوی کد فعال‌سازی بمانید، و «نام‌نویسی» را بزنید </translation>
-    </message>
-    <message>
-        <source>First Name</source>
-        <translation>نام کوچک</translation>
-    </message>
-    <message>
-        <source>Last Name (Optional)</source>
-        <translation>نام خانوادگی (اختیاری)</translation>
-    </message>
-    <message>
-        <source>Authorization Code</source>
-        <translation>کد تأیید</translation>
     </message>
 </context>
 <context>

@@ -222,15 +222,7 @@ Minimum length is 5 characters.</source>
         <translation>Συνδέοντας</translation>
     </message>
     <message>
-        <source>Login Again</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Telegram Status</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Error log</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -371,13 +363,6 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
-    <name>DialogPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>DialogPullDownMenu</name>
     <message>
         <source>Profile</source>
@@ -394,6 +379,13 @@ Minimum length is 5 characters.</source>
     <message>
         <source>Contacts</source>
         <translation type="unfinished">Επαφές</translation>
+    </message>
+</context>
+<context>
+    <name>DialogTextInput</name>
+    <message>
+        <source>Message...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -630,6 +622,33 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     </message>
 </context>
 <context>
+    <name>RegistrationPage</name>
+    <message>
+        <source>Sign Up</source>
+        <translation type="unfinished">Εγγραφή</translation>
+    </message>
+    <message>
+        <source>You have entered a wrong Authorization Code</source>
+        <translation type="unfinished">Έχετε εισάγει έναν λάθος Κωδικό Εξουσιοδότησης</translation>
+    </message>
+    <message>
+        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
+        <translation type="unfinished">Περιμένετε για το SMS που περιέχει τον κωδικό ενεργοποίησης και πατήστε &apos;Εγγραφή&apos;</translation>
+    </message>
+    <message>
+        <source>First Name</source>
+        <translation type="unfinished">Όνομα</translation>
+    </message>
+    <message>
+        <source>Last Name (Optional)</source>
+        <translation type="unfinished">Επίθετο (προαιρετικό)</translation>
+    </message>
+    <message>
+        <source>Authorization Code</source>
+        <translation type="unfinished">Κωδικός Εξουσιοδότησης</translation>
+    </message>
+</context>
+<context>
     <name>SecretChatDiscarded</name>
     <message>
         <source>Secret chat cancelled</source>
@@ -660,34 +679,6 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     <message>
         <source>About</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>SignUpPage</name>
-    <message>
-        <source>Sign Up</source>
-        <translation>Εγγραφή</translation>
-    </message>
-    <message>
-        <source>You have entered a wrong Authorization Code</source>
-        <translation>Έχετε εισάγει ένα λάθος Κωδικό Εξουσιοδότησης</translation>
-    </message>
-    <message>
-        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
-        <translation>Περιμένετε για το SMS που περιέχει τον κωδικό ενεργοποίησης και πατήστε &apos;Εγγραφή&apos;</translation>
-    </message>
-    <message>
-        <source>First Name</source>
-        <translation>Όνομα</translation>
-    </message>
-    <message>
-        <source>Last Name (Optional)</source>
-        <translation>Επίθετο (προαιρετικό)</translation>
-    </message>
-    <message>
-        <source>Authorization Code</source>
-        <translation> Κωδικός Εξουσιοδότησης
-</translation>
     </message>
 </context>
 <context>

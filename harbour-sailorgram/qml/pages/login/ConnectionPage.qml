@@ -15,25 +15,8 @@ Page
         if(forwardNavigation || (connectionpage.status !== PageStatus.Active))
             return;
 
-        timlogin.restart();
-        timdisplaystatus.restart();
-
         if(!context.telegram.dcConnected)
             context.telegram.connectToDC(context.apiAddress, context.apiPort, context.dcId);
-    }
-
-    Timer
-    {
-        id: timlogin
-        interval: 10000 // 10s
-        running: true
-    }
-
-    Timer
-    {
-        id: timdisplaystatus
-        //interval: context.heartbeat.interval / 2
-        running: true
     }
 
     Row
@@ -56,7 +39,6 @@ Page
         {
             id: csitem
             context: connectionpage.context
-            forceActive: timdisplaystatus.running
         }
     }
 
@@ -76,35 +58,5 @@ Page
         anchors.centerIn: parent
         size: BusyIndicatorSize.Large
         running: true
-    }
-
-    Row
-    {
-        anchors { horizontalCenter: parent.horizontalCenter; bottom: parent.bottom; bottomMargin: Theme.paddingLarge }
-
-        Button
-        {
-            text: qsTr("Login Again")
-            visible: !timlogin.running
-
-            onClicked: {
-                if(context.telegram.phoneNumber.length > 0) {
-                    pageStack.replace(Qt.resolvedUrl("AuthorizationPage.qml"), { "context": connectionpage.context, "resendCode": true });
-                }
-                else
-                    pageStack.replace(Qt.resolvedUrl("PhoneNumberPage.qml"), { "context": connectionpage.context });
-            }
-        }
-
-        Button
-        {
-            text: qsTr("Error log")
-            visible: !timlogin.running
-
-            onClicked: {
-                pageStack.pushAttached(Qt.resolvedUrl("../settings/DebugSettingsPage.qml"), { "context": connectionpage.context });
-                pageStack.navigateForward(PageStackAction.Animated);
-            }
-        }
     }
 }

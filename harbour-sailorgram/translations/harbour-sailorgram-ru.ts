@@ -225,16 +225,8 @@ Minimum length is 5 characters.</source>
         <translation>Подключение</translation>
     </message>
     <message>
-        <source>Login Again</source>
-        <translation>Войти ещё раз</translation>
-    </message>
-    <message>
         <source>Telegram Status</source>
         <translation>Состояние Telegram</translation>
-    </message>
-    <message>
-        <source>Error log</source>
-        <translation type="unfinished">Журнал ошибок</translation>
     </message>
 </context>
 <context>
@@ -374,13 +366,6 @@ Minimum length is 5 characters.</source>
     </message>
 </context>
 <context>
-    <name>DialogPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>DialogPullDownMenu</name>
     <message>
         <source>Profile</source>
@@ -397,6 +382,13 @@ Minimum length is 5 characters.</source>
     <message>
         <source>Contacts</source>
         <translation type="unfinished">Контакты</translation>
+    </message>
+</context>
+<context>
+    <name>DialogTextInput</name>
+    <message>
+        <source>Message...</source>
+        <translation type="unfinished">Сообщение...</translation>
     </message>
 </context>
 <context>
@@ -635,6 +627,33 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     </message>
 </context>
 <context>
+    <name>RegistrationPage</name>
+    <message>
+        <source>Sign Up</source>
+        <translation type="unfinished">Войти</translation>
+    </message>
+    <message>
+        <source>You have entered a wrong Authorization Code</source>
+        <translation type="unfinished">Вы ввели неверный код авторизации</translation>
+    </message>
+    <message>
+        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
+        <translation type="unfinished">Дождитесь SMS с кодом активации и нажмите &apos;Войти&apos;</translation>
+    </message>
+    <message>
+        <source>First Name</source>
+        <translation type="unfinished">Имя</translation>
+    </message>
+    <message>
+        <source>Last Name (Optional)</source>
+        <translation type="unfinished">Фамилия (по желанию)</translation>
+    </message>
+    <message>
+        <source>Authorization Code</source>
+        <translation type="unfinished">Код авторизации</translation>
+    </message>
+</context>
+<context>
     <name>SecretChatDiscarded</name>
     <message>
         <source>Secret chat cancelled</source>
@@ -665,33 +684,6 @@ Pick a contact by selecting &quot;Contacts&quot; from the Menu above</source>
     <message>
         <source>About</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>SignUpPage</name>
-    <message>
-        <source>Sign Up</source>
-        <translation>Войти</translation>
-    </message>
-    <message>
-        <source>You have entered a wrong Authorization Code</source>
-        <translation>Вы ввели неверный код авторизации</translation>
-    </message>
-    <message>
-        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
-        <translation>Дождитесь SMS с кодом активации и нажмите &apos;Войти&apos;</translation>
-    </message>
-    <message>
-        <source>First Name</source>
-        <translation>Имя</translation>
-    </message>
-    <message>
-        <source>Last Name (Optional)</source>
-        <translation>Фамилия (по желанию)</translation>
-    </message>
-    <message>
-        <source>Authorization Code</source>
-        <translation>Код авторизации</translation>
     </message>
 </context>
 <context>

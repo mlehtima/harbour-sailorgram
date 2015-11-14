@@ -225,16 +225,8 @@ Minimální délka je 5 znaků .</translation>
         <translation>Připojuji</translation>
     </message>
     <message>
-        <source>Login Again</source>
-        <translation>Znovu se přihlásit</translation>
-    </message>
-    <message>
         <source>Telegram Status</source>
         <translation>Status Telegramu</translation>
-    </message>
-    <message>
-        <source>Error log</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -374,13 +366,6 @@ Minimální délka je 5 znaků .</translation>
     </message>
 </context>
 <context>
-    <name>DialogPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>DialogPullDownMenu</name>
     <message>
         <source>Profile</source>
@@ -397,6 +382,13 @@ Minimální délka je 5 znaků .</translation>
     <message>
         <source>Contacts</source>
         <translation type="unfinished">Kontakty</translation>
+    </message>
+</context>
+<context>
+    <name>DialogTextInput</name>
+    <message>
+        <source>Message...</source>
+        <translation type="unfinished">Zpráva...</translation>
     </message>
 </context>
 <context>
@@ -635,6 +627,33 @@ Přidejte osobu výběrem &quot;Kontakty&quot; z menu</translation>
     </message>
 </context>
 <context>
+    <name>RegistrationPage</name>
+    <message>
+        <source>Sign Up</source>
+        <translation type="unfinished">Registrace</translation>
+    </message>
+    <message>
+        <source>You have entered a wrong Authorization Code</source>
+        <translation type="unfinished">Falešný autorizační kód</translation>
+    </message>
+    <message>
+        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
+        <translation type="unfinished">Počkejte na SMS s aktivačným kódem a stiskněte &apos;Registrace&apos;</translation>
+    </message>
+    <message>
+        <source>First Name</source>
+        <translation type="unfinished">Jméno</translation>
+    </message>
+    <message>
+        <source>Last Name (Optional)</source>
+        <translation type="unfinished">Příjmení (volitelný)</translation>
+    </message>
+    <message>
+        <source>Authorization Code</source>
+        <translation type="unfinished">Autorizační kód</translation>
+    </message>
+</context>
+<context>
     <name>SecretChatDiscarded</name>
     <message>
         <source>Secret chat cancelled</source>
@@ -665,33 +684,6 @@ Přidejte osobu výběrem &quot;Kontakty&quot; z menu</translation>
     <message>
         <source>About</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>SignUpPage</name>
-    <message>
-        <source>Sign Up</source>
-        <translation>Registrace</translation>
-    </message>
-    <message>
-        <source>You have entered a wrong Authorization Code</source>
-        <translation>Falešný autorizační kód</translation>
-    </message>
-    <message>
-        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
-        <translation>Počkejte na SMS s aktivačným kódem a stiskněte &apos;Registrace&apos;</translation>
-    </message>
-    <message>
-        <source>First Name</source>
-        <translation>Jméno</translation>
-    </message>
-    <message>
-        <source>Last Name (Optional)</source>
-        <translation>Příjmení (volitelný)</translation>
-    </message>
-    <message>
-        <source>Authorization Code</source>
-        <translation>Autorizační kód</translation>
     </message>
 </context>
 <context>

@@ -51,21 +51,19 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/pages/login/AuthorizationPage.qml \
     qml/js/Settings.js \
     qml/js/CountryList.js \
-    qml/items/messageitem/MessageBar.qml \
-    qml/items/messageitem/MessageItem.qml \
+    qml/items/message/messageitem/MessageItem.qml \
     qml/js/TelegramHelper.js \
-    qml/items/messageitem/MessageText.qml \
-    qml/items/messageitem/media/MessageMediaItem.qml \
-    qml/items/messageitem/media/MessagePhoto.qml \
-    qml/items/messageitem/media/MessageDocument.qml \
+    qml/items/message/messageitem/MessageText.qml \
+    qml/items/message/messageitem/media/MessageMediaItem.qml \
+    qml/items/message/messageitem/media/MessagePhoto.qml \
+    qml/items/message/messageitem/media/MessageDocument.qml \
     qml/components/PopupMessage.qml \
     qml/menus/UserMenu.qml \
     qml/components/ClickableLabel.qml \
-    qml/items/messageitem/media/MessageThumbnail.qml \
+    qml/items/message/messageitem/media/MessageThumbnail.qml \
     qml/js/TelegramConstants.js \
     qml/pages/picker/FilePickerPage.qml \
     qml/components/pickers/FilePicker.qml \
-    qml/pages/login/SignUpPage.qml \
     qml/items/peer/PeerItem.qml \
     qml/items/peer/PeerImage.qml \
     qml/items/chat/ChatInfo.qml \
@@ -97,14 +95,13 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/pages/secretconversations/CreateSecretConversationPage.qml \
     qml/pages/secretconversations/SecretConversationPage.qml \
     qml/items/secretconversation/SecretConversationItem.qml \
-    qml/components/TelegramBackground.qml \
     qml/items/secretconversation/SecretChatDiscarded.qml \
     qml/items/secretconversation/SecretChatWaiting.qml \
-    qml/items/messageitem/MessageStatus.qml \
+    qml/items/message/messageitem/MessageStatus.qml \
     qml/pages/settings/SettingsPage.qml \
     qml/pages/chat/ChangeChatTitle.qml \
-    qml/items/messageitem/media/MessageAudio.qml \
-    qml/items/messageitem/media/MessageVideo.qml \
+    qml/items/message/messageitem/media/MessageAudio.qml \
+    qml/items/message/messageitem/media/MessageVideo.qml \
     qml/pages/media/MediaPage.qml \
     qml/components/SettingLabel.qml \
     qml/pages/settings/ChatSettingsPage.qml \
@@ -122,7 +119,9 @@ OTHER_FILES += qml/harbour-sailorgram.qml \
     qml/items/user/UserInfo.qml \
     qml/pages/contacts/ContactPage.qml \
     qml/menus/contact/ContactMenu.qml \
-    qml/items/messageitem/MessageTextContext.qml
+    qml/items/message/messageitem/MessageTextContext.qml \
+    qml/components/telegram/TelegramBackground.qml \
+    qml/js/TextElaborator.js
 
 # to disable building translations every time, comment out the
 # following CONFIG line
@@ -157,4 +156,9 @@ HEADERS += \
 
 RESOURCES += \
     resources.qrc
+
+DISTFILES += \
+    qml/items/message/MessageView.qml \
+    qml/items/dialog/DialogTextInput.qml \
+    qml/pages/login/RegistrationPage.qml
 

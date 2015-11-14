@@ -17,8 +17,10 @@ Dialog
     onAccepted: context.telegram.signIn(tfcode.text)
 
     onResendCodeChanged: {
-        if(dlgauthorization.resendCode)
-            context.telegram.sendSms();
+        if(!dlgauthorization.resendCode)
+            return;
+
+        context.sendCode();
     }
 
     acceptDestination: Component {
@@ -42,7 +44,7 @@ Dialog
 
                 onClicked: {
                     remorsepopup.execute(qsTr("Sending Activation Code"), function() {
-                        context.telegram.sendCode();
+                        context.sendCode();
                     });
                 }
             }

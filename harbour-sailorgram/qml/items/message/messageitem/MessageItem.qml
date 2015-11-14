@@ -1,11 +1,10 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
 import harbour.sailorgram.Telegram 1.0
-import "../../models"
-import "../../menus"
+import "../../../models"
+import "../../../menus"
 import "media"
-import "../../js/TelegramConstants.js" as TelegramConstants
-import "../../js/TelegramHelper.js" as TelegramHelper
+import "../../../js/TelegramHelper.js" as TelegramHelper
 
 ListItem
 {

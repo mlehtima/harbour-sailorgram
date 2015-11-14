@@ -1,8 +1,8 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
 import harbour.sailorgram.Telegram 1.0
-import "../../models"
-import "../../js/TelegramHelper.js" as TelegramHelper
+import "../../../models"
+import "../../../js/TelegramHelper.js" as TelegramHelper
 
 Item
 {
@@ -48,15 +48,6 @@ Item
         Row
         {
             anchors { right: telegramMessage.isOut ? undefined : parent.right; left: telegramMessage.isOut ? parent.left : undefined }
-            spacing: Theme.paddingSmall
-
-            MessageStatus
-            {
-                id: msgstatus
-                width: lbldate.contentHeight
-                height: lbldate.contentHeight
-                telegramMessage: messagetext.telegramMessage
-            }
 
             Label
             {
@@ -66,6 +57,7 @@ Item
                 horizontalAlignment: telegramMessage.isOut ? Text.AlignLeft : Text.AlignRight
                 text: TelegramHelper.printableDate(telegramMessage.date)
                 visible: !telegramMessage.isService
+                width: messagetext.calculatedWidth - msgstatus.paintedWidth
 
                 color: {
                     if(telegramMessage.isOut || telegramMessage.isService)
@@ -73,6 +65,13 @@ Item
 
                     return Theme.primaryColor;
                 }
+            }
+
+            MessageStatus
+            {
+                id: msgstatus
+                height: lbldate.paintedHeight
+                telegramMessage: messagetext.telegramMessage
             }
         }
     }

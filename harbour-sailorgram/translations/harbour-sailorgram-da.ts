@@ -225,16 +225,8 @@ Minimumslængde er fem tegn.</translation>
         <translation>Forbinder</translation>
     </message>
     <message>
-        <source>Login Again</source>
-        <translation>Log På Igen</translation>
-    </message>
-    <message>
         <source>Telegram Status</source>
         <translation>Telegramstatus</translation>
-    </message>
-    <message>
-        <source>Error log</source>
-        <translation type="unfinished">Fejllog</translation>
     </message>
 </context>
 <context>
@@ -374,13 +366,6 @@ Minimumslængde er fem tegn.</translation>
     </message>
 </context>
 <context>
-    <name>DialogPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation type="unfinished">Indlæs flere meddelelser</translation>
-    </message>
-</context>
-<context>
     <name>DialogPullDownMenu</name>
     <message>
         <source>Profile</source>
@@ -397,6 +382,13 @@ Minimumslængde er fem tegn.</translation>
     <message>
         <source>Contacts</source>
         <translation type="unfinished">Kontakter</translation>
+    </message>
+</context>
+<context>
+    <name>DialogTextInput</name>
+    <message>
+        <source>Message...</source>
+        <translation type="unfinished">Meddelelse...</translation>
     </message>
 </context>
 <context>
@@ -635,6 +627,33 @@ Vælg en kontakt fra menuen ovenfor</translation>
     </message>
 </context>
 <context>
+    <name>RegistrationPage</name>
+    <message>
+        <source>Sign Up</source>
+        <translation type="unfinished">Tilmeld</translation>
+    </message>
+    <message>
+        <source>You have entered a wrong Authorization Code</source>
+        <translation type="unfinished">Du har indtastet en forkert autorisationskode</translation>
+    </message>
+    <message>
+        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
+        <translation type="unfinished">Vent på SMS med aktiveringskode og tryk på &apos;Tilmeld&apos;</translation>
+    </message>
+    <message>
+        <source>First Name</source>
+        <translation type="unfinished">Fornavn</translation>
+    </message>
+    <message>
+        <source>Last Name (Optional)</source>
+        <translation type="unfinished">Efternavn (Valgfrit)</translation>
+    </message>
+    <message>
+        <source>Authorization Code</source>
+        <translation type="unfinished">Autorisationskode</translation>
+    </message>
+</context>
+<context>
     <name>SecretChatDiscarded</name>
     <message>
         <source>Secret chat cancelled</source>
@@ -665,33 +684,6 @@ Vælg en kontakt fra menuen ovenfor</translation>
     <message>
         <source>About</source>
         <translation>Om</translation>
-    </message>
-</context>
-<context>
-    <name>SignUpPage</name>
-    <message>
-        <source>Sign Up</source>
-        <translation>Tilmeld</translation>
-    </message>
-    <message>
-        <source>You have entered a wrong Authorization Code</source>
-        <translation>Du har indtastet en forkert autorisationskode</translation>
-    </message>
-    <message>
-        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
-        <translation>Vent på SMS med aktiveringskode og tryk på &apos;Tilmeld&apos;</translation>
-    </message>
-    <message>
-        <source>First Name</source>
-        <translation>Fornavn</translation>
-    </message>
-    <message>
-        <source>Last Name (Optional)</source>
-        <translation>Efternavn (Valgfrit)</translation>
-    </message>
-    <message>
-        <source>Authorization Code</source>
-        <translation>Autorisationskode</translation>
     </message>
 </context>
 <context>

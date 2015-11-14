@@ -4,8 +4,9 @@ import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../../components"
 import "../../items/peer"
-import "../../items/messageitem"
-import "../../js/TelegramHelper.js" as TelegramHelper
+import "../../items/dialog"
+import "../../items/message"
+import "../../items/message/messageitem"
 
 Page
 {
@@ -31,64 +32,57 @@ Page
         anchors { left: parent.left; top: parent.top; right: parent.right }
     }
 
-    SilicaFlickable
+    BusyIndicator
     {
-        id: flickable
-        anchors.fill: parent
+        anchors.centerIn: parent
+        size: BusyIndicatorSize.Large
+        running: dialogmodel.busy
+        z: running ? 2 : 0
+    }
 
-        PullDownMenu
-        {
-            MenuItem
-            {
-                text: qsTr("Load more messages")
-                //FIXME: onClicked: messagemodel.loadMore()
-            }
+    PeerItem
+    {
+        id: header
+        visible: !context.chatheaderhidden
+        anchors { left: parent.left; top: parent.top; right: parent.right; leftMargin: Theme.horizontalPageMargin; topMargin: context.chatheaderhidden ? 0 : Theme.paddingMedium }
+        height: context.chatheaderhidden ? 0 : (dialogpage.isPortrait ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall)
+        telegramDialog: dialogpage.telegramDialog
+    }
+
+    MessageView
+    {
+        id: messageview
+        anchors { left: parent.left; top: header.bottom; right: parent.right; bottom: parent.bottom }
+        context: dialogpage.context
+
+        model: DialogModel {
+            id: dialogmodel
+            telegram: context.telegram
+            dialog: dialogpage.telegramDialog
         }
 
-        PeerItem
-        {
-            id: header
-            visible: !context.chatheaderhidden
-            anchors { left: parent.left; top: parent.top; right: parent.right; leftMargin: Theme.horizontalPageMargin; topMargin: context.chatheaderhidden ? 0 : Theme.paddingMedium }
-            height: context.chatheaderhidden ? 0 : (dialogpage.isPortrait ? Theme.itemSizeSmall : Theme.itemSizeExtraSmall)
-            telegramDialog: dialogpage.telegramDialog
-        }
-
-        SilicaListView
-        {
-            id: lvconversation
-            anchors { left: parent.left; top: header.bottom; right: parent.right; bottom: messagebar.top; topMargin: Theme.paddingSmall }
-            verticalLayoutDirection: ListView.BottomToTop
-            spacing: Theme.paddingLarge
-            clip: true
-
-            TelegramBackground { id: telegrambackground; visible: !context.backgrounddisabled; z: -1 }
-
-            BusyIndicator {
-                anchors.centerIn: parent
-                size: BusyIndicatorSize.Large
-                running: dialogmodel.busy
-            }
-
-            model: DialogModel {
-                id: dialogmodel
-                telegram: context.telegram
-                dialog: dialogpage.telegramDialog
-            }
-
-            delegate: MessageItem {
-                context: dialogpage.context
-                telegramMessage: message
-                telegramFromUser: fromUser
-            }
-        }
-
-        MessageBar
-        {
-            id: messagebar
-            anchors { left: parent.left; bottom: parent.bottom; right: parent.right }
+        delegate: MessageItem {
             context: dialogpage.context
-            telegramDialog: dialogpage.telegramDialog
+            telegramMessage: message
+            telegramFromUser: fromUser
+        }
+
+        header: Item {
+            width: messageview.width
+            height: dialogtextinput.height
+        }
+
+        Column {
+            id: headerarea
+            y: messageview.headerItem.y
+            parent: messageview.contentItem
+            width: parent.width
+
+            DialogTextInput {
+                id: dialogtextinput
+                width: parent.width
+                context: dialogpage.context
+            }
         }
     }
 }

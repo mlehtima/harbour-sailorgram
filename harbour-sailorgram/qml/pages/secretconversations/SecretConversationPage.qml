@@ -103,6 +103,8 @@ Page
         {
             id: bottomcontainer
             anchors { left: parent.left; bottom: parent.bottom; right: parent.right }
+
+            /* FIXME:
             height: messagebar.height
 
             MessageBar
@@ -113,6 +115,7 @@ Page
                 telegramDialog: secretconversationpage.dialog
                 visible: chat && (chat.classType !== TelegramConstants.typeEncryptedChatDiscarded) && (chat.classType !== TelegramConstants.typeEncryptedChatWaiting)
             }
+            */
 
             SecretChatDiscarded
             {

@@ -7,17 +7,17 @@ Dialog
     property alias authError: tfcode.errorHighlight
     property Context context
 
-    id: dlgsignup
+    id: dlgregistration
     allowedOrientations: defaultAllowedOrientations
     canAccept: (tffirstname.text.length > 0) && (tfcode.text.length > 0)
 
     acceptDestination: Component {
         ConnectionPage {
-            context: dlgsignup.context
+            context: dlgregistration.context
         }
     }
 
-    onAccepted: context.telegram.authSignUp(tfcode.text, tffirstname.text, tfflastname.text)
+    onAccepted: context.telegram.signUp(tffirstname.text, tfflastname.text, tfcode.text)
 
     SilicaFlickable
     {

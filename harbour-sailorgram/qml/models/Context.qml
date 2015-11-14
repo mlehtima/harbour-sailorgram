@@ -9,6 +9,8 @@ QtObject
 {
     id: context
 
+    readonly property bool testMode: true // NOTE: Testing mode enabled
+    readonly property string testApiAddress: "149.154.167.40"
     readonly property string apiAddress: "149.154.167.50"
     readonly property int apiPort: 443
     readonly property int dcId: 2
@@ -33,9 +35,15 @@ QtObject
         publicKey: sailorgram.telegramPublicKey
 
         onSignInRequested: {
+            sendCode();
             pageStack.completeAnimation();
-            context.telegram.sendCode(); // NOTE: Change to sendSms()
             pageStack.replace(Qt.resolvedUrl("../pages/login/AuthorizationPage.qml"), { "context": context });
+        }
+
+        onSignUpRequested: {
+            context.telegram.sendSms();
+            pageStack.completeAnimation();
+            pageStack.replace(Qt.resolvedUrl("../pages/login/RegistrationPage.qml"), { "context": context });
         }
 
         onLoggedInChanged: {
@@ -49,5 +57,12 @@ QtObject
 
     property DialogsModel dialogsmodel: DialogsModel {
         telegram: context.telegram
+    }
+
+    function sendCode() {
+        if(testMode)
+            context.telegram.sendCode();
+        else
+            context.telegram.sendSms();
     }
 }

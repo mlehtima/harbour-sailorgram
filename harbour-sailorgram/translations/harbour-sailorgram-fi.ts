@@ -225,16 +225,8 @@ Vähimmäispituus on 5 merkkiä.</translation>
         <translation>Yhdistää</translation>
     </message>
     <message>
-        <source>Login Again</source>
-        <translation>Kirjaudu uudelleen</translation>
-    </message>
-    <message>
         <source>Telegram Status</source>
         <translation>Telegramin tila</translation>
-    </message>
-    <message>
-        <source>Error log</source>
-        <translation type="unfinished">Virheloki</translation>
     </message>
 </context>
 <context>
@@ -374,13 +366,6 @@ Vähimmäispituus on 5 merkkiä.</translation>
     </message>
 </context>
 <context>
-    <name>DialogPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation type="unfinished">Lataa lisää viestejä</translation>
-    </message>
-</context>
-<context>
     <name>DialogPullDownMenu</name>
     <message>
         <source>Profile</source>
@@ -397,6 +382,13 @@ Vähimmäispituus on 5 merkkiä.</translation>
     <message>
         <source>Contacts</source>
         <translation type="unfinished">Yhteyshenkilöt</translation>
+    </message>
+</context>
+<context>
+    <name>DialogTextInput</name>
+    <message>
+        <source>Message...</source>
+        <translation type="unfinished">Viesti...</translation>
     </message>
 </context>
 <context>
@@ -635,6 +627,33 @@ Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta v
     </message>
 </context>
 <context>
+    <name>RegistrationPage</name>
+    <message>
+        <source>Sign Up</source>
+        <translation type="unfinished">Rekisteröidy</translation>
+    </message>
+    <message>
+        <source>You have entered a wrong Authorization Code</source>
+        <translation type="unfinished">Olet syöttänyt väärän pääsykoodin.</translation>
+    </message>
+    <message>
+        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
+        <translation type="unfinished">Odota tekstiviestiä, jossa on aktivointikoodi. Paina sitten &quot;Kirjaudu&quot;.</translation>
+    </message>
+    <message>
+        <source>First Name</source>
+        <translation type="unfinished">Etunimi</translation>
+    </message>
+    <message>
+        <source>Last Name (Optional)</source>
+        <translation type="unfinished">Sukunimi (vapaaehtoinen)</translation>
+    </message>
+    <message>
+        <source>Authorization Code</source>
+        <translation type="unfinished">Pääsykoodi</translation>
+    </message>
+</context>
+<context>
     <name>SecretChatDiscarded</name>
     <message>
         <source>Secret chat cancelled</source>
@@ -665,33 +684,6 @@ Hae yhteyshenkilö valitsemalla &quot;Yhteystiedot&quot; yläpuolella olevasta v
     <message>
         <source>About</source>
         <translation>Tietoa</translation>
-    </message>
-</context>
-<context>
-    <name>SignUpPage</name>
-    <message>
-        <source>Sign Up</source>
-        <translation>Rekisteröidy</translation>
-    </message>
-    <message>
-        <source>You have entered a wrong Authorization Code</source>
-        <translation>Olet antanut väärän pääsykoodin.</translation>
-    </message>
-    <message>
-        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
-        <translation>Odota tekstiviestiä, jossa on aktivointikoodi. Paina sitten &quot;Kirjaudu&quot;.</translation>
-    </message>
-    <message>
-        <source>First Name</source>
-        <translation>Etunimi</translation>
-    </message>
-    <message>
-        <source>Last Name (Optional)</source>
-        <translation>Sukunimi (vapaaehtoinen)</translation>
-    </message>
-    <message>
-        <source>Authorization Code</source>
-        <translation>Pääsykoodi</translation>
     </message>
 </context>
 <context>

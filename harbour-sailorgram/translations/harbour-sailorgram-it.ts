@@ -225,16 +225,8 @@ La lunghezza minima è di 5 caratteri.</translation>
         <translation>Connessione</translation>
     </message>
     <message>
-        <source>Login Again</source>
-        <translation>Riesegui l&apos;accesso</translation>
-    </message>
-    <message>
         <source>Telegram Status</source>
         <translation>Stato Telegram</translation>
-    </message>
-    <message>
-        <source>Error log</source>
-        <translation type="unfinished">Log degli errori</translation>
     </message>
 </context>
 <context>
@@ -374,13 +366,6 @@ La lunghezza minima è di 5 caratteri.</translation>
     </message>
 </context>
 <context>
-    <name>DialogPage</name>
-    <message>
-        <source>Load more messages</source>
-        <translation type="unfinished">Carica altri messaggi</translation>
-    </message>
-</context>
-<context>
     <name>DialogPullDownMenu</name>
     <message>
         <source>Profile</source>
@@ -397,6 +382,13 @@ La lunghezza minima è di 5 caratteri.</translation>
     <message>
         <source>Contacts</source>
         <translation type="unfinished">Contatti</translation>
+    </message>
+</context>
+<context>
+    <name>DialogTextInput</name>
+    <message>
+        <source>Message...</source>
+        <translation type="unfinished">Messaggio...</translation>
     </message>
 </context>
 <context>
@@ -635,6 +627,33 @@ Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
     </message>
 </context>
 <context>
+    <name>RegistrationPage</name>
+    <message>
+        <source>Sign Up</source>
+        <translation type="unfinished">Registrati</translation>
+    </message>
+    <message>
+        <source>You have entered a wrong Authorization Code</source>
+        <translation type="unfinished">Hai inserito un codice di autorizzazione errato</translation>
+    </message>
+    <message>
+        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
+        <translation type="unfinished">Attendi l&apos;SMS contenente il codice di attivazione e premi &apos;Registrati&apos;</translation>
+    </message>
+    <message>
+        <source>First Name</source>
+        <translation type="unfinished">Nome</translation>
+    </message>
+    <message>
+        <source>Last Name (Optional)</source>
+        <translation type="unfinished">Cognome (opzionale)</translation>
+    </message>
+    <message>
+        <source>Authorization Code</source>
+        <translation type="unfinished">Codice di autorizzazione</translation>
+    </message>
+</context>
+<context>
     <name>SecretChatDiscarded</name>
     <message>
         <source>Secret chat cancelled</source>
@@ -665,33 +684,6 @@ Per iniziare, seleziona &quot;Contatti&quot; dal menu superiore</translation>
     <message>
         <source>About</source>
         <translation>Crediti</translation>
-    </message>
-</context>
-<context>
-    <name>SignUpPage</name>
-    <message>
-        <source>Sign Up</source>
-        <translation>Registrati</translation>
-    </message>
-    <message>
-        <source>You have entered a wrong Authorization Code</source>
-        <translation>Hai inserito un codice di autorizzazione errato</translation>
-    </message>
-    <message>
-        <source>Wait for the SMS containing the activation code and press &apos;Sign Up&apos;</source>
-        <translation>Attendi l&apos;SMS contenente il codice di attivazione e premi &apos;Registrati&apos;</translation>
-    </message>
-    <message>
-        <source>First Name</source>
-        <translation>Nome</translation>
-    </message>
-    <message>
-        <source>Last Name (Optional)</source>
-        <translation>Cognome (opzionale)</translation>
-    </message>
-    <message>
-        <source>Authorization Code</source>
-        <translation>Codice di autorizzazione</translation>
     </message>
 </context>
 <context>
