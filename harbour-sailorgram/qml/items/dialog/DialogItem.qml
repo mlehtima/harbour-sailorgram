@@ -3,7 +3,7 @@ import Sailfish.Silica 1.0
 import harbour.sailorgram.Telegram 1.0
 import "../../models"
 import "../../items/peer"
-import "../messageitem"
+import "../message/messageitem"
 import "../../js/TelegramHelper.js" as TelegramHelper
 
 Item
