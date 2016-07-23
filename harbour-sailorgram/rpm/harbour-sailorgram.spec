@@ -35,6 +35,7 @@ BuildRequires:  pkgconfig(Qt5Concurrent)
 BuildRequires:  pkgconfig(Qt5Location)
 BuildRequires:  pkgconfig(Qt5Positioning)
 BuildRequires:  pkgconfig(openssl)
+BuildRequires:  fdupes
 BuildRequires:  desktop-file-utils
 
 %description
@@ -67,6 +68,7 @@ rm -rf %{buildroot}
 # >> install post
 mkdir -p %{buildroot}/usr/lib/systemd/user/post-user-session.target.wants
 ln -s ../harbour-sailorgram-notifications.service %{buildroot}/usr/lib/systemd/user/post-user-session.target.wants/harbour-sailorgram-notifications.service
+%fdupes -s %{buildroot}%{_datadir}/harbour-sailorgram
 # << install post
 
 desktop-file-install --delete-original       \
@@ -97,7 +99,13 @@ fi
 systemctl-user restart mce.service
 systemctl-user restart ngfd.service
 systemctl-user restart harbour-sailorgram-notifications.service
+/sbin/ldconfig
 # << post
+
+%postun
+# >> postun
+/sbin/ldconfig
+# << postun
 
 %files
 %defattr(-,root,root,-)
@@ -110,7 +118,8 @@ systemctl-user restart harbour-sailorgram-notifications.service
 %{_datadir}/dbus-1/services/*.service
 %{_libdir}/systemd/user/harbour-sailorgram-notifications.service
 %{_libdir}/systemd/user/post-user-session.target.wants/harbour-sailorgram-notifications.service
-%{_sysconfdir}/mce/10sailorgram-led.ini
+%config %{_sysconfdir}/mce/10sailorgram-led.ini
 %exclude %{_libdir}/cmake/*
+%exclude %{_datadir}/%{name}/lib/*.so
 # >> files
 # << files
