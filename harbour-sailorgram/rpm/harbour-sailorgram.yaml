@@ -33,8 +33,8 @@ PkgConfigBR:
   - Qt5Positioning
   - openssl
 # Build dependencies without a pkgconfig setup can be listed here
-# PkgBR:
-#  - openssl-devel
+PkgBR:
+  - fdupes
 
 # Runtime dependencies which are not automatically detected
 Requires:
@@ -43,6 +43,7 @@ Requires:
 RpmLintIgnore: 
   - arch-dependent-file-in-usr-share
   - filename-too-long-for-joliet
+  - no-changelogname-tag
 # All installed files
 Files:
   - '%{_bindir}/%{name}'
@@ -54,8 +55,9 @@ Files:
   - '%{_datadir}/dbus-1/services/*.service'
   - '%{_libdir}/systemd/user/harbour-sailorgram-notifications.service'
   - '%{_libdir}/systemd/user/post-user-session.target.wants/harbour-sailorgram-notifications.service'
-  - '%{_sysconfdir}/mce/10sailorgram-led.ini'
+  - '%config %{_sysconfdir}/mce/10sailorgram-led.ini'
   - '%exclude %{_libdir}/cmake/*'
+  - '%exclude %{_datadir}/%{name}/lib/*.so'
 
 # For more information about yaml and what's supported in Sailfish OS
 # build system, please see https://wiki.merproject.org/wiki/Spectacle
